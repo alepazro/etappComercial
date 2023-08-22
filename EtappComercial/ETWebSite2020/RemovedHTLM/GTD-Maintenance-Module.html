@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+    <title>EasiTrack Maintenance Module</title>
+    <meta name='description' content='EasiTrack Maintenance Module is a powerful tool to keep track of all the maintenance tasks that are due in each one of your vehicles.' />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <link href="images/img//favicon.png" rel="icon">
+    <link href="themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/common_v2.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/ws_v2.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/InTrackGPS.css" rel="stylesheet" type="text/css" />
+    <link href="carouselSkins/tango/skin2.css" rel="stylesheet" type="text/css" />
+     <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Main Stylesheet File -->
+    <link href="Styles/style.css" rel="stylesheet">
+
+    
+    <style type="text/css">
+        .mainMenu a{
+	        display:block;
+	        padding-left:115px;
+	        padding-top:35px;
+	        padding-right:10px;
+	        height:95px;
+        }
+    </style>
+
+    <!--    Javascript includes -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.jcarousel.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.jshowoff.min.js" type="text/javascript"></script>
+    <script src="Scripts/db.js" type="text/javascript"></script>
+    <script src="Scripts/InTrackGPS.js" type="text/javascript"></script>
+    <script src="Scripts/webForms.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            $("#ourSystemSubMenu").offset({ top: $('.ourSystemMenu').position().top + 25, left: $('.ourSystemMenu').position().left })
+            $('.ourSystemMenu').hover(ourSystemHoverIn, ourSystemHoverOut);
+            $('#ourSystemSubMenu').hover(ourSystemSubMenuHoverIn, ourSystemSubMenuHoverOut);
+            $('.featuresMenuItem').hover(menuItemHoverIn, menuItemHoverOut);
+            menuItemClicked(document.getElementById('mainMenuToolsA'));
+        });
+    </script>
+
+</head>
+<body>
+      <!--==========================
+  Header
+  ============================-->
+    <header id="header" class="fixed-top navbar navbar-expand-lg navbar-light ">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="images/img/Home/EasiTracD04aR02bP01ZL-Jefferson2b_mdm.png" alt="" class="img-fluid"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav main-nav float-right">
+                    <li class="nav-item active"><a href="index.html">Home</a> </li>
+                    <li class="nav-item " id="feature"><a href="GTD-GPS-System.html">Features</a></li>
+                    <li class="nav-item "><a href="GTD-GPS-Installation.html" class="mainMenuOptionText">Installation</a></li>
+                    <li class="nav-item "><a href="about-us.html">About Us</a></li>
+                    <li class="nav-item "><a href="buy-now.html">Order Now</a></li>
+                    <li class="nav-item "><a href="contact-us.html">Contact Us</a></li> <a href="login.html" class="btn-get-started ">Login</a> </ul>
+            </div>
+        </div>
+    </header>
+    <br style="clear:both" />
+    <div id="mainContent" style="width:100%;background-color:#ffffff;border-top:1px solid #15476e;border-bottom:1px solid #000000;">
+        <div class="mainWrapper">
+            <div style="width:100%;overflow:hidden;">
+        	    <div class="featuresContent">
+                    <div style="width:620px;text-align:center; padding:10px;">
+                        <a href="javascript:void(null);" style="text-decoration:none;" onclick="loadOtherContent('RequestADemo')"><img src="ITImages/RequestADemo.png" alt="Live Demo" width="200" height="40" style="border:none;padding:0px 10px;" /></a>
+                        <a href="javascript:void(null);" style="text-decoration:none;" onclick="loadOtherContent('GetAQuote')"><img src="ITImages/GetAQuote.png" alt="Get A Quote" width="140" height="40" style="border:none;padding:0px 10px;" /></a>
+                    </div>
+
+                    <div style="width:620px; margin:10px auto;">
+                        <div><img src="ITImages/RoundCornersTop620.png" width="620" height="20" alt="" /></div>
+            	        <div id="featureContent" style="background-color:#ffffff;padding:10px;">
+                            <div style="width:100%;">
+                                <div style="width:100%;text-align:center;">
+                                    <h1 class="featureTitle">Preventive Maintenance Module</h1>
+                                    <h2 class="featureSubTitle">Extend the life of your vehicles and keeps your fleet productive</h2>
+                                </div>
+
+                                <div style="padding:20px 10px 10px;">
+                                    <!--Unlimited Tasks-->
+                                    <div style="padding:15px 5px;">
+                                        <h3 style="color:#0a3e85;padding:5px 0px;">Control unlimited maintenance tasks</h3>
+                                        <p class="featureParagraph">With EasiTrack's Maintenance Module, you can create unlimited preventive maintenance tasks based on Miles, Engine Hours, Time.  Some examples of tasks include:</p>
+                                        <ul style="margin-left:20px;color:#666666; padding:10px;">
+                                            <li>Oil Change</li>
+                                            <li>Tire Rotation</li>
+                                            <li>Insurance Renewal</li>
+                                            <li>Break pads changing</li>
+                                            <li>License Driver Verification</li>
+                                            <li>... and much more</li>
+                                        </ul>
+                                    </div>
+                                    <div style="width:100%;text-align:center;">
+                                        <img src="ITImages/MaintenanceTasks.png" alt="Vehicle Maintenance Tasks" width="500" height="290" />
+                                    </div>
+
+                                    <!-- Individual Schedules -->
+                                    <div style="padding:15px 5px;">
+                                        <h3 style="color:#0a3e85;padding:5px 0px;">Create a schedule for each vehicle</h3>
+                                        <p class="featureParagraph">You can program all the tasks individually for each one of your fleet's vehicles.  You will be notified via Emails and/or SMS when a task execution is approaching.  Thanks to the unique technology of EasiTrack's hardware, the system can keep track of the miles, engine hours, and calendar, to make sure every single task is accounted for, on time.</p>
+                                    </div>
+                                    <div style="width:100%;text-align:center;">
+                                        <img src="ITImages/MaintenanceSchedules.png" alt="Vehicle Maintenance Schedules" width="500" height="343" />
+                                    </div>
+
+                                    <!-- Maintenance History -->
+                                    <div style="padding:15px 5px;">
+                                        <h3 style="color:#0a3e85;padding:5px 0px;">Maintenance History</h3>
+                                        <p class="featureParagraph">The Maintenance module provides the option to register every maintenance and every fueling event.  All the history of maintenances per vehicle will be kept in the module's history.  You will have a perfect record, in one site, backed up for whenever you need it.</p>
+                                    </div>
+                                    <div style="width:100%;text-align:center;">
+                                        <img src="ITImages/MaintenanceHistory.png" alt="Vehicle Maintenance History" width="500" height="116" />
+                                    </div>
+                                </div>
+
+                                <script type="text/javascript">
+                                    document.title = "Maintenance Module"
+                                </script>
+
+                            </div>
+                        </div>
+                        <div><img src="ITImages/RoundCornersx620Bottom.png" width="620" height="20" alt="" /></div>
+                    </div>
+                </div>
+        	    <div class="mainMenuPanel">
+                    <div style="width:230px; margin:20px auto;">
+                	    <div><img src="ITImages/RoundCornersTop.png" width="231" height="18" alt="Top Corners" /></div>
+                        <ul class="mainMenu">
+                            <li id="mainMenuTracking" class="featuresMenuItem" data-imgTag="Tracking" data-content="Tracking"><a id="mainMenuTrackingA" href="GTD-Fleet-Tracking.html"><span>Fleet Tracking</span></a></li>
+                            <li id="mainMenuOBD" class="featuresMenuItem" data-imgTag="OBD" data-content="OBD"><a id="mainMenuOBDA" href="GTD-OBD.html"><span>Easy OBD Installation</span></a></li>
+                            <li id="mainMenuTrail" class="featuresMenuItem" data-imgTag="Trail" data-content="Trail"><a id="mainMenuTrailA" href="GTD-BreadcrumbTrail.html">Breadcrumb Trail</a></li>
+                            <li id="mainMenuSpeedLimit" class="featuresMenuItem" data-imgTag="SpeedLimit" data-content="SpeedLimit"><a id="mainMenuSpeedLimitA" href="GTD-PostedSpeedLimit.html">True Speed Control</a></li>
+                            <li id="mainMenuGeofences" class="featuresMenuItem" data-imgTag="Geofence" data-content="Geofences"><a id="mainMenuGeofencesA" href="GTD-Geofences.html">Geofences</a></li>
+                            <li id="mainMenuIgnition" class="featuresMenuItem" data-imgTag="Ignition" data-content="Ignition"><a id="mainMenuIgnitionA" href="GTD-Ignition.html">Starter Disable</a></li>
+                            <li id="mainMenuTelemetry" class="featuresMenuItem" data-imgTag="Telemetry" data-content="Telemetry"><a id="mainMenuTelemetryA" href="GTD-Telemetry.html">Telemetry</a></li>
+                            <li id="mainMenuAlerts" class="featuresMenuItem" data-imgTag="Alerts" data-content="Alerts"><a id="mainMenuAlertsA" href="GTD-Real-Time-Alerts.html">Real Time Alerts</a></li>
+                            <li id="mainMenuDispatch" class="featuresMenuItem" data-imgTag="Dispatch" data-content="Dispatch"><a id="mainMenuDispatchA" href="GTD-Dispatching.html">Dispatching</a></li>
+                            <li id="mainMenuELog" class="featuresMenuItem" data-imgTag="eLog" data-content="eLog"><a id="mainMenuELogA" href="GTD-eLog.html">eLog HOS</a></li>
+                            <li id="mainMenuHotSpots" class="featuresMenuItem" data-imgTag="HotSpot" data-content="HotSpot"><a id="mainMenuHotSpotA" href="GTD-HotSpots.html">Hot Spots</a></li>
+                            <li id="mainMenuMobile" class="featuresMenuItem" data-imgTag="Mobile" data-content="Mobile"><a id="mainMenuMobileA" href="GTD-Mobile-Application.html">Mobile Application</a></li>
+                            <li id="mainMenuTools" class="featuresMenuItem" data-imgTag="Tools" data-content="Maintenance"><a id="mainMenuToolsA" href="GTD-Maintenance-Module.html">Maintenance Module</a></li>
+                            <li id="mainMenuFuelLog" class="featuresMenuItem" data-imgTag="FuelLog" data-content="FuelLog"><a id="mainMenuFuelLogA" href="GTD-FuelLog-Module.html">Fuel Log Module</a></li>
+                            <li id="mainMenuReports" class="featuresMenuItem" data-imgTag="Reports" data-content="Reports"><a id="mainMenuReportsA" href="GTD-Reports.html">Over 30+ Reports</a></li>
+                            <li id="mainMenuTemperature" class="featuresMenuItem" data-imgTag="Temperature" data-content="Temperature"><a id="mainMenuTemperatureA" href="GTD-Temperature.html">Temperature Monitor</a></li>
+                            <li id="mainMenuIButton" class="featuresMenuItem" data-imgTag="IButton" data-content="IButton"><a id="mainMenuIButtonA" href="GTD-IButton.html" >Driver Identification</a></li>
+                            <li id="mainMenuMultiMap" class="featuresMenuItem" data-imgTag="MultiMap" data-content="MultiMap"><a id="mainMenuMultiMapA" href="GTD-MultiMaps.html">Multi-Map Tracking</a></li>
+                        </ul>
+                        <div><img src="ITImages/RoundCornersBottom.png" width="230" height="18" alt="Bottom Corners" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact">
+      <div class="container">
+        <div class="row ">
+          <div class="col-lg-12">
+            <nav class="main-nav">
+              <ul>
+                <li><a href="gps-tracker.html">GPS Tracker Info</a></li>
+                <li><a href="gps-service.html">Web Application Info</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="faq.html">F.A.Q.</a></li>
+                <li><a target="_blank" href="https://www.privacypolicies.com/privacy/view/ed7c28d730bef2361658a1b6d5a20e80">Privacy Policy</a></li>
+              </ul>
+            </nav>
+            <!-- .main-nav -->
+          </div>
+          <!--  <h5 class="col-lg-4 pull-right"> <img class="padding-top" src="images/img/Home/telephone1.png" class="img-fluid" alt="">   (888) 744-6449</h5> -->
+        </div>
+      </div>
+    </section>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-64561832-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+<!-- BEGIN ProvideSupport.com Graphics Chat Button Code -->
+<div id="ciamp8" style="z-index:100;position:absolute"></div><div id="scamp8" style="display:inline;position:fixed;z-index:9999;top:0px;left:0px;"></div><div id="sdamp8" style="display:none"></div><script type="text/javascript">                                                                                                                                                                                                         var seamp8 = document.createElement("script"); seamp8.type = "text/javascript"; var seamp8s = (location.protocol.indexOf("https") == 0 ? "https" : "http") + "://image.providesupport.com/js/0325vm2g5aj6809q0cspkf44yw/safe-standard.js?ps_h=amp8&ps_t=" + new Date().getTime(); setTimeout("seamp8.src=seamp8s;document.getElementById('sdamp8').appendChild(seamp8)", 1)</script><noscript><div style="display:inline"><a href="https://www.providesupport.com?messenger=0325vm2g5aj6809q0cspkf44yw">Customer Support Chat</a></div></noscript>
+<!-- END ProvideSupport.com Graphics Chat Button Code -->
+
+
+</body>
+</html>

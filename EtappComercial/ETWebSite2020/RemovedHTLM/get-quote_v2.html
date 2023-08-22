@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+    <title>EasiTrack - Get a Quote</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="images/img//favicon.png" rel="icon">
+    <!--    CSS includes -->
+    <link href="Styles/common.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/logo.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/ws.css" rel="stylesheet" type="text/css" />
+
+    <!--    Javascript includes -->
+    <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/ibp.js" type="text/javascript"></script>
+    <script src="Scripts/db.js" type="text/javascript"></script>
+    <script src="Scripts/webForms.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            loadPrices(1);
+            $("#shippingOptions").change(function () {
+                calcForm()
+            });
+
+            //If there is a previous shopping cart, load it...
+            loadForm();
+        });
+    </script>
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-25669991-1']);
+        _gaq.push(['_setDomainName', '.easitrack.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+</head>
+<body>
+    <div id="headerWS">
+        <div id="topMenuWS">
+            <div id="customerLogin">
+                <a href="https://easitrack.net/login.html" class="customerLoginText">Customer Login</a>
+            </div>
+            <!--<a href="https://easitrack.net/login.html" class="loginDivClass">Login</a>-->
+            <div id="contactInfo" style="float:right;margin-top:15px;margin-right:20px;">
+
+                <div style="margin-top:5px;text-align:right;">
+                    <span class="tollFreeNumber">Call Now! ( 888 ) 744-6449</span>
+                </div>
+
+                <!--<span style="color:#ffffff;font-size:12px;font-weight:600;">Call Toll Free: (888) 744-6449</span>
+                <br />
+                <span style="color:#ffffff;font-size:11px;">email: sales@easiTrack.com</span>-->
+
+            </div>
+            <div class="logoPositionWS">
+                <img src="images/logo3_silverx60h.png" alt="EasiTrack Logo"/>
+            </div>
+            <!--<div style="color:#ffffff;font-size:17px;font-weight:600;text-align:center; padding-top:10px;">
+                <h1 style="font-size:14px;"><span style="font-style:italic;">Your satisfaction is very important for us.  We commit to a 30-day 100% Money Back Guarantee</span></h1>
+            </div>-->
+        </div>
+    </div>
+    <div id="middleMenu">
+        <ul id="mainMenu">
+            <li><a href="index.html" class="mainMenuOption">Home</a></li>
+            <li><a href="gps-tracker.html" class="mainMenuOption">Tracker Specs</a></li>
+            <li><a href="gps-service.html" class="mainMenuOption">Service Description</a></li>
+            <!--<li><a href="installation.html" class="mainMenuOption">Installation</a></li>-->
+            <li><a href="prices.html" class="mainMenuOption">Prices</a></li>
+            <li><a href="gps-demo.html" class="mainMenuOption">Watch Demo</a></li>
+            <li><a href="faq.html" class="mainMenuOption">F.A.Q.</a></li>
+            <li><a href="testimonials.html" class="mainMenuOption">Testimonials</a></li>                
+            <li><a href="contact-us.html" class="mainMenuOption">Contact Us</a></li>
+            <li><a href="get-quote.html" class="mainMenuOption mainMenuOptionSelected">Get a Quote</a></li>
+            <li><a href="https://easitrack.net/buy-now.html" class="mainMenuOption" style="background-image: none;">Buy Now</a></li>
+        </ul>
+    </div>
+    <div id="wsWrapper">
+        <div style="width:1024px; margin:auto;">
+            <div style="width:1024px;height:30px;margin:auto;text-align:center;background-color:#d7fcdd;background-image:url(../images/QuoteBanner.jpg); background-repeat:no-repeat; background-position:left;border-top:1px solid #a1a1a1;border-bottom:1px solid #a1a1a1;">
+                <p style="margin-left:20px;margin-top:0px;font-size:14px;font-weight:600;color:#ffffff;line-height:30px;">easiTrack Quote Form</p>
+            </div>
+            <fieldset style="padding: 10px;">
+                <div style="width:230px;float:right;">
+                    <div style="width:200px;height:80px;cursor:pointer; background-image:url(../images/CallMe.png);background-repeat:no-repeat;background-position:left; margin-bottom:10px;">
+                        <p style="margin-left:15px;padding-top:10px;font-size:10px;font-weight:500; color:#a1a1a1;">Enter your number and we will call</p>
+                        <p style="margin-left:15px;padding-top:0px;font-size:10px;font-weight:500; color:#a1a1a1;">you to answer any question.</p>
+                    <input type="text" id="txtAreaCode" style="margin-left:15px;margin-top:10px;width:30px;height:15px;border:1px solid #a1a1a1;" size="3" maxlength="3" onkeyup="autofocus(this, 3, 'txtPhone3', event)" />
+                    <input type="text" id="txtPhone3" style="margin-left:5px;margin-top:10px;width:30px;height:15px;border:1px solid #a1a1a1;" size="3" maxlength="3" onkeyup="autofocus(this, 3, 'txtPhone4', event)"/>
+                    <input type="text" id="txtPhone4" style="margin-left:5px;margin-top:10px;width:40px;height:15px;border:1px solid #a1a1a1;" size="4" maxlength="4" onkeyup="autofocus(this, 4, 'click2CallBtn', event)"/>
+                    <button type="button" id="click2CallBtn" style="margin-left:5px;margin-top:5px;border:0px;cursor:pointer;width:45px;height:18px;" onclick='click2call(60221)'><img src="../images/CallMeBtn.png" height="18" width="45" alt="Call Me button"/></button>
+                    </div>
+                </div>
+                <div style="float:left;width:750px;">
+                    <fieldset style="margin-left:100px;width:620px;padding:10px;">
+                        <input id="formId" name="formId" type="hidden" value="8C72B46A-D8F4-4C0F-BFF7-2E277C763011" />
+                        <div style="width:590px; margin:1px; background-color:#d5edf7; padding:5px;text-align:center;">
+                            <h1 style="margin-left:10px;">Get immediately an Official Quote via email</h1>
+                        </div>
+                        <table style="background-color:#f1f1f1;width:600px;">
+                            <tr>
+                                <td style="padding:5px;padding-left:30px;vertical-align:middle;font-weight:600;">
+                                    <label for="firstName">Quantity (Fleet Size)</label>
+                                </td>
+                                 <td style="padding:5px;">
+                                    <input type="text" id="qty" name="qty" size="5" class="formField mandatoryField rightAligned" onfocus="onEdit(this)" onblur="onEndEdit(this)" value="0" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:5px;padding-left:30px;vertical-align:middle;font-weight:600;">
+                                    <label for="firstName">First Name</label>
+                                </td>
+                                <td style="padding:5px;">
+                                    <input id="firstName" name="firstName" type="text" maxlength="20" size="30" class="formField mandatoryField"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:5px;padding-left:30px;vertical-align:middle;font-weight:600;">
+                                    <label for="lastName">Last Name</label>
+                                </td>
+                                <td style="padding:5px;">
+                                    <input id="lastName" name="lastName" type="text" maxlength="20" size="30" class="formField mandatoryField"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:5px;padding-left:30px;vertical-align:middle;font-weight:600;">
+                                    <label for="email">Email</label>
+                                </td>
+                                <td style="padding:5px;">
+                                    <input id="email" name="email" type="text" maxlength="100" size="30" class="formField mandatoryField"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:5px;padding-left:30px;vertical-align:middle;">
+                                    <label for="phone">Phone</label>
+                                </td>
+                                <td style="padding:5px;">
+                                    <input id="phone" name="phone" type="text" maxlength="20" size="30" class="formField"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:5px;padding-left:30px;vertical-align:middle;">
+                                    <label for="company">Company Name</label>
+                                </td>
+                                <td style="padding:5px;">
+                                    <input id="company" name="company" type="text" maxlength="20" size="30" class="formField"/>
+                                </td>
+                            </tr>
+                        </table>
+                        <table style="background-color:#f1f1f1;width:600px;">
+                            <tr style="text-align:center;">
+                                <td colspan="2" style="padding:10px;">
+                                    <input name="submit" type="button" value="Send My Quote Immediately!" style="width:180px;" onclick="getQuote()"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <br style="clear:both;" />
+    <div id="footer">
+        <div style="width:100%;text-align:center;margin-top:5px;">
+            <p>Do you have any question or need more information? <a href="contact-us.html" style="color:#0000ff;">Please Contact Us</a></p>
+        </div>
+        <br style="clear:both;" />
+        <div style="width:1024;margin:auto;padding:5px;text-align:center;">
+            <ul style="list-style-type:none;padding-top:20px;">
+                <li style="float:left;"><a href="gps-tracker.html" style="padding:0px 10px;font-size:11px;font-weight:600;color:#000000;text-decoration:none;background-image: url(../images/MenuBackDivider.png);background-repeat: no-repeat;background-position: right;">GPS Tracker Info</a></li>
+                <li style="float:left;"><a href="gps-service.html" style="padding:0px 10px;font-size:11px;font-weight:600;color:#000000;text-decoration:none;background-image: url(../images/MenuBackDivider.png);background-repeat: no-repeat;background-position: right;">Web Application Info</a></li>
+                <li style="float:left;"><a href="gps-demo.html" style="padding:0px 10px;font-size:11px;font-weight:600;color:#000000;text-decoration:none;background-image: url(../images/MenuBackDivider.png);background-repeat: no-repeat;background-position: right;">Live Demo</a></li>
+                <!--<li style="float:left;"><a href="installation.html" style="padding:0px 10px;font-size:11px;font-weight:600;color:#000000;text-decoration:none;background-image: url(../images/MenuBackDivider.png);background-repeat: no-repeat;background-position: right;">Installation</a></li>-->
+                <li style="float:left;"><a href="faq.html" style="padding:0px 10px;font-size:11px;font-weight:600;color:#000000;text-decoration:none;background-image: url(../images/MenuBackDivider.png);background-repeat: no-repeat;background-position: right;">F.A.Q.</a></li>
+                <li style="float:left;"><a href="testimonials.html" style="padding:0px 10px;font-size:11px;font-weight:600;color:#000000;text-decoration:none;background-image: url(../images/MenuBackDivider.png);background-repeat: no-repeat;background-position: right;">Testimonials</a></li>
+                <li style="float:left;"><a href="about-us.html" style="padding:0px 10px;font-size:11px;font-weight:600;color:#000000;text-decoration:none;">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

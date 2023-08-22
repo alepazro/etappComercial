@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+    <title>_EasiTrack - Contact Us - Ask a question</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!--    CSS includes -->
+    <link href="Styles/common.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/logo.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/ws.css" rel="stylesheet" type="text/css" />
+
+
+    <!--    Javascript includes -->
+    <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="https://easitrack.com/Scripts/db.js" type="text/javascript"></script>
+    <script src="Scripts/webForms.js" type="text/javascript"></script>
+    <script src="Scripts/ibp.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-25669991-1']);
+        _gaq.push(['_setDomainName', '.easitrack.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+</head>
+<body>
+    <div id="headerWS">
+        <div id="topMenuWS">
+            <div id="customerLogin">
+                <a href="https://easitrack.net/login.html" class="customerLoginText">Customer Login</a>
+            </div>
+            <!--<a href="https://easitrack.net/login.html" class="loginDivClass">Login</a>-->
+            <div id="contactInfo" style="float:right;margin-top:15px;margin-right:20px;">
+
+                <div style="margin-top:5px;text-align:right;">
+                    <span class="tollFreeNumber">Call Now! ( 888 ) 744-6449</span>
+                </div>
+
+                <!--<span style="color:#ffffff;font-size:12px;font-weight:600;">Call Toll Free: (888) 744-6449</span>
+                <br />
+                <span style="color:#ffffff;font-size:11px;">email: sales@easiTrack.com</span>-->
+
+            </div>
+            <div class="logoPositionWS">
+                <img src="images/logo3_silverx60h.png" alt="EasiTrack Logo"/>
+            </div>
+            <!--<div style="color:#ffffff;font-size:17px;font-weight:600;text-align:center; padding-top:10px;">
+                <h1 style="font-size:14px;"><span style="font-style:italic;">Your satisfaction is very important for us.  We commit to a 30-day 100% Money Back Guarantee</span></h1>
+            </div>-->
+        </div>
+    </div>
+
+    <div id="wsWrapper">
+        <div style="width:1024px; margin:auto;">
+            <div style="width:1024px;height:180px;margin:auto;text-align:center;background-color:#d7fcdd;background-image:url(../images/ContactUsBanner.jpg); background-repeat:no-repeat; background-position:left;border-top:1px solid #a1a1a1;border-bottom:1px solid #a1a1a1;">
+                <p style="margin-top:5px;font-size:36px;font-weight:800;color:#000000;line-height:60px;">Contact us</p>
+                <p style="margin-top:5px;font-size:32px;font-weight:800;color:#000000;line-height:60px;">We'd love to hear from you!</p>
+                <p style="font-size:14px;font-weight:500;color:#000000;line-height:60px;">You may have questions... we have answers.</p>
+            </div>
+            <fieldset style="padding: 10px;">
+                <div style="width:250px;float:right;margin-right:20px;">
+                    <div style="width:200px;height:80px;cursor:pointer; background-image:url(../images/CallMe.png);background-repeat:no-repeat;background-position:left; margin-bottom:10px;">
+                        <p style="margin-left:15px;padding-top:10px;font-size:10px;font-weight:500; color:#a1a1a1;">Enter your number and we will call</p>
+                        <p style="margin-left:15px;padding-top:0px;font-size:10px;font-weight:500; color:#a1a1a1;">you to answer any question.</p>
+                    <input type="text" id="txtAreaCode" style="margin-left:15px;margin-top:10px;width:30px;height:15px;border:1px solid #a1a1a1;" size="3" maxlength="3" onkeyup="autofocus(this, 3, 'txtPhone3', event)" />
+                    <input type="text" id="txtPhone3" style="margin-left:5px;margin-top:10px;width:30px;height:15px;border:1px solid #a1a1a1;" size="3" maxlength="3" onkeyup="autofocus(this, 3, 'txtPhone4', event)"/>
+                    <input type="text" id="txtPhone4" style="margin-left:5px;margin-top:10px;width:40px;height:15px;border:1px solid #a1a1a1;" size="4" maxlength="4" onkeyup="autofocus(this, 4, 'click2CallBtn', event)"/>
+                    <button type="button" id="click2CallBtn" style="margin-left:5px;margin-top:5px;border:0px;cursor:pointer;width:45px;height:18px;" onclick='click2call(60211)'><img src="../images/CallMeBtn.png" height="18" width="45" alt="Call Me button"/></button>
+                    </div>
+                    <div style="width:250px;height:200px;background-image:url(../images/ContactInfo.png);background-repeat:no-repeat;background-position:left; margin-bottom:10px;">
+                        <p style="margin-left:15px;padding-top:15px;font-size:14px;font-weight:800; color:#b1b0b0;">How to Contact Us</p>
+                        <table style="margin-left:15px;margin-top:5px;font-size:10px;width:250px;">
+                            <tr>
+                                <td style="font-weight:600;width:80px;vertical-align:top;padding:5px 0px;">Call Center:</td>
+                                <td style="width:150px;">(888) 744-6449</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:600;width:80px;vertical-align:top;padding:5px 0px;">Sales:</td>
+                                <td style="width:150px;">sales@easiTrack.com</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:600;width:80px;vertical-align:top;padding:5px 0px;">Accounting:</td>
+                                <td style="width:150px;">accounting@easiTrack.com</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:600;width:80px;vertical-align:top;padding:5px 0px;">Tech.Support:</td>
+                                <td style="width:150px;">support@easiTrack.com</td>
+                            </tr>
+
+<!--                            <tr>
+                                <td style="font-weight:600;width:80px;vertical-align:top;padding:5px 0px;">Headquarters:</td>
+                                <td style="width:150px;">
+                                    6625 Miami Lakes Drive
+                                    <br />
+                                    Suite# 403
+                                    <br />
+                                    Miami Lakes, FL 33014
+                                </td>
+                            </tr>
+-->
+                        </table>
+                    </div>
+                </div>
+                <div style="float:left;width:600px;margin-left:50px;border:1px solid #a1a1a1;">
+                        <input id="formId" name="formId" type="hidden" value="4A01C176-D43F-41AB-A12B-449B2F72196A" />
+                        <div style="width:588px; margin:1px; background-color:#d5edf7; padding:5px;">
+                            <h1 style="margin-left:10px;">Ask a Question or Enter a Comment</h1>
+                        </div>
+                        <table style="background-color:#f1f1f1;width:600px;">
+                            <tr>
+                                <td style="padding:5px;vertical-align:top;font-weight:600;">
+                                    <label for="message">Question or<br />Comment</label>
+                                </td>
+                                <td style="padding:5px;">
+                                    <textarea id="message" name="message" cols="50" rows="6" style="border:1px solid #a1a1a1;"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:3px;padding-left:30px;vertical-align:middle;width:150px;">
+                                    <label for="firstName">First Name</label>
+                                </td>
+                                <td style="padding:3px;">
+                                    <input id="firstName" name="firstName" type="text" maxlength="20" size="30" class="formField mandatoryField"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:3px;padding-left:30px;vertical-align:middle;">
+                                    <label for="lastName">Last Name</label>
+                                </td>
+                                <td style="padding:3px;">
+                                    <input id="lastName" name="lastName" type="text" maxlength="20" size="30" class="formField mandatoryField"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:3px;padding-left:30px;vertical-align:middle;">
+                                    <label for="email">Email</label>
+                                </td>
+                                <td style="padding:3px;">
+                                    <input id="email" name="email" type="text" maxlength="100" size="30" class="formField mandatoryField"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:5px;padding-left:30px;vertical-align:middle;">
+                                    <label for="phone">Phone</label>
+                                </td>
+                                <td style="padding:5px;">
+                                    <input id="phone" name="phone" type="text" maxlength="20" size="30" class="formField"/>
+                                </td>
+                            </tr>
+                        </table>
+                        <table style="background-color:#f1f1f1;width:600px;">
+                            <tr style="text-align:center;">
+                                <td colspan="2" style="padding:10px;">
+                                    <input name="submit" type="button" value="Contact Me" style="width:80px;" onclick="contactUs()"/>
+                                </td>
+                            </tr>
+                        </table>
+                </div>
+            </fieldset>
+        </div>
+        <div style="font-size:10px;">
+            <span style="color:#888888;">Rep.ID:</span><input type="text" id="repId" name="repId" size="5" value="" style="height:15px;width:40px;" />
+        </div>
+    </div>
+    <br style="clear:both;" />
+    <div id="footer">
+        <div style="width:100%;text-align:center;margin-top:5px;">
+            <p>Do you have any question or need more information? <a href="contact-us.html" style="color:#0000ff;">Please Contact Us</a></p>
+        </div>
+        <br style="clear:both;" />
+        <div style="float:left;width:180px;padding:5px;">
+            <button type="button" style="border:0px;cursor:pointer;" onclick="goTo('get-quote.html')"><img src="images/smlGetQuoteButton.jpg" alt="Get a Quote button"/></button>
+            <button type="button" style="border:0px;cursor:pointer;" onclick="goTo('gps-demo.html')"><img src="images/smlViewDemoButton.jpg" alt="View Demo button"/></button>
+        </div>
+        <div style="float:left;width:700px;padding:5px;">
+            <ul style="list-style-type:none;padding-top:20px;">
+                <li style="float:left;"><a href="gps-tracker.html" style="padding:0px 10px;font-size:11px;font-weight:600;color:#000000;text-decoration:none;background-image: url(../images/MenuBackDivider.png);background-repeat: no-repeat;background-position: right;">GPS Tracker Info</a></li>
+                <li style="float:left;"><a href="gps-service.html" style="padding:0px 10px;font-size:11px;font-weight:600;color:#000000;text-decoration:none;background-image: url(../images/MenuBackDivider.png);background-repeat: no-repeat;background-position: right;">Web Application Info</a></li>
+                <li style="float:left;"><a href="gps-demo.html" style="padding:0px 10px;font-size:11px;font-weight:600;color:#000000;text-decoration:none;background-image: url(../images/MenuBackDivider.png);background-repeat: no-repeat;background-position: right;">Live Demo</a></li>
+                <!--<li style="float:left;"><a href="installation.html" style="padding:0px 10px;font-size:11px;font-weight:600;color:#000000;text-decoration:none;background-image: url(../images/MenuBackDivider.png);background-repeat: no-repeat;background-position: right;">Installation</a></li>-->
+                <li style="float:left;"><a href="faq.html" style="padding:0px 10px;font-size:11px;font-weight:600;color:#000000;text-decoration:none;background-image: url(../images/MenuBackDivider.png);background-repeat: no-repeat;background-position: right;">F.A.Q.</a></li>
+                <li style="float:left;"><a href="testimonials.html" style="padding:0px 10px;font-size:11px;font-weight:600;color:#000000;text-decoration:none;background-image: url(../images/MenuBackDivider.png);background-repeat: no-repeat;background-position: right;">Testimonials</a></li>
+                <li style="float:left;"><a href="about-us.html" style="padding:0px 10px;font-size:11px;font-weight:600;color:#000000;text-decoration:none;">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+    
+
+<!-- BEGIN ProvideSupport.com Graphics Chat Button Code -->
+<div id="ciamp8" style="z-index:100;position:absolute"></div><div id="scamp8" style="display:inline;position:fixed;z-index:9999;top:120px;left:0px;"></div><div id="sdamp8" style="display:none"></div><script type="text/javascript">                                                                                                                                                                                                           var seamp8 = document.createElement("script"); seamp8.type = "text/javascript"; var seamp8s = (location.protocol.indexOf("https") == 0 ? "https" : "http") + "://image.providesupport.com/js/0325vm2g5aj6809q0cspkf44yw/safe-standard.js?ps_h=amp8&ps_t=" + new Date().getTime(); setTimeout("seamp8.src=seamp8s;document.getElementById('sdamp8').appendChild(seamp8)", 1)</script><noscript><div style="display:inline"><a href="https://www.providesupport.com?messenger=0325vm2g5aj6809q0cspkf44yw">Customer Support Chat</a></div></noscript>
+<!-- END ProvideSupport.com Graphics Chat Button Code -->
+
+<script type="text/javascript">
+    var releadTrackingId = '0bd351b65c000c494d7287409d262faa';
+
+    (function () {
+        var rl = document.createElement('script');
+        rl.type = 'text/javascript';
+        rl.async = true;
+        rl.src = (document.location.protocol == 'https:' ? 'https://' : 'https://') + 'relead.s3.amazonaws.com/tracking.relead.js';
+        var e = document.getElementsByTagName('script')[0];
+        e.parentNode.insertBefore(rl, e);
+    })();
+</script>
+
+</body>
+</html>

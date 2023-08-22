@@ -1,0 +1,2 @@
+C:\Users\dapr1\source\repos\PaginaComercialEtapp\PaginaComercialEtapp\Pagina 3\ETWebSite2020\obj\x86\Debug\EtappComercial.vbproj.AssemblyReference.cache
+C:\Users\dapr1\source\repos\PaginaComercialEtapp\PaginaComercialEtapp\Pagina 3\ETWebSite2020\obj\x86\Debug\EtappComercial.vbproj.CoreCompileInputs.cache

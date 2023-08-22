@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+    <title>EasiTrack eLog and Driver Log</title>
+    <meta name='description' content='Electronic Hours of Service - Driver Logs by EasiTrack' />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <link href="images/img//favicon.png" rel="icon">
+    <link href="themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/common_v2.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/ws_v2.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/InTrackGPS.css" rel="stylesheet" type="text/css" />
+    <link href="carouselSkins/tango/skin2.css" rel="stylesheet" type="text/css" />
+     <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Main Stylesheet File -->
+    <link href="Styles/style.css" rel="stylesheet">
+    <style type="text/css">
+        .mainMenu a{
+	        display:block;
+	        padding-left:115px;
+	        padding-top:35px;
+	        padding-right:10px;
+	        height:95px;
+        }
+    </style>
+
+    <!--    Javascript includes -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.jcarousel.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.jshowoff.min.js" type="text/javascript"></script>
+    <script src="Scripts/db.js" type="text/javascript"></script>
+    <script src="Scripts/InTrackGPS.js" type="text/javascript"></script>
+    <script src="Scripts/webForms.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            $("#ourSystemSubMenu").offset({ top: $('.ourSystemMenu').position().top + 25, left: $('.ourSystemMenu').position().left })
+            $('.ourSystemMenu').hover(ourSystemHoverIn, ourSystemHoverOut);
+            $('#ourSystemSubMenu').hover(ourSystemSubMenuHoverIn, ourSystemSubMenuHoverOut);
+            $('.featuresMenuItem').hover(menuItemHoverIn, menuItemHoverOut);
+            menuItemClicked(document.getElementById('mainMenuELogA'));
+        });
+    </script>
+
+</head>
+<body>
+      <!--==========================
+  Header
+  ============================-->
+    <header id="header" class="fixed-top navbar navbar-expand-lg navbar-light ">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="images/img/Home/EasiTracD04aR02bP01ZL-Jefferson2b_mdm.png" alt="" class="img-fluid"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav main-nav float-right">
+                    <li class="nav-item active"><a href="index.html">Home</a> </li>
+                    <li class="nav-item " id="feature"><a href="GTD-GPS-System.html">Features</a></li>
+                    <li class="nav-item "><a href="GTD-GPS-Installation.html" class="mainMenuOptionText">Installation</a></li>
+                    <li class="nav-item "><a href="about-us.html">About Us</a></li>
+                    <li class="nav-item "><a href="buy-now.html">Order Now</a></li>
+                    <li class="nav-item "><a href="contact-us.html">Contact Us</a></li> <a href="login.html" class="btn-get-started ">Login</a> </ul>
+            </div>
+        </div>
+    </header>
+    <br style="clear:both" />
+    <div id="mainContent" style="width:100%;background-color:#ffffff;border-top:1px solid #15476e;border-bottom:1px solid #000000;">
+        <div class="mainWrapper">
+            <div style="width:100%;overflow:hidden;">
+        	    <div class="featuresContent">
+                    <div style="width:620px;text-align:center; padding:10px;">
+                        <a href="javascript:void(null);" style="text-decoration:none;" onclick="loadOtherContent('RequestADemo')"><img src="ITImages/RequestADemo.png" alt="Live Demo" width="200" height="40" style="border:none;padding:0px 10px;" /></a>
+                        <a href="javascript:void(null);" style="text-decoration:none;" onclick="loadOtherContent('GetAQuote')"><img src="ITImages/GetAQuote.png" alt="Get A Quote" width="140" height="40" style="border:none;padding:0px 10px;" /></a>
+                    </div>
+
+                    <div style="width:620px; margin:10px auto;">
+                        <div><img src="ITImages/RoundCornersTop620.png" width="620" height="20" alt="" /></div>
+            	        <div id="featureContent" style="background-color:#ffffff;padding:10px;">
+                            <div style="width:100%;">
+                                <div style="width:100%;text-align:center;">
+                                    <h1 class="featureTitle">DOT Compliant Eectronic Hours of Service Driver Logs</h1>
+                                    <h2 class="featureSubTitle">H.O.S. eLog</h2>
+                                    <h2 class="featureSubTitle">Electronic Hours of Service - Driver Logs</h2>
+                                </div>
+
+                                <div style="padding:20px 10px 10px;">
+                                    <div style="padding:15px 5px;">
+                                        <h3 style="color:#0a3e85;padding:5px 0px;">Full DOT Compliant eLog Hours of Service</h3>
+                                        <p class="featureParagraph"><strong>eTrack eLog</strong> provides the most affordable, State of the Art, Automated Electronic Hours of Service Driver Log Application in the Industry that meets all of the new and existing DOT Regulatory Mandates.</p>
+                                        <h4 style="text-align:center;">eTrack eLog HARDWARE add-on is just $99 including special cable - ONE TIME ONLY PER VEHICLE</h4>
+                                        <h4 style="text-align:center;">eTrack eLog SOFTWARE add-on is just $7.50 per user/month - Volume discounts available</h4>
+                                    </div>
+
+                                    <div style="padding:15px 5px;">
+                                        <h3 style="color:#0a3e85;padding:5px 0px;">Key Features</h3>
+                                        <ul style="margin-left:50px;padding:10px;font-size:14px;list-style-image: url(../ITImages/small_blue_dot.jpg);">
+                                            <li style="padding:3px;">
+                                                <p>Seamless integration with our eTrack GPS Tracking System</p>
+                                            </li>
+                                            <li style="padding:3px;">
+                                                <p>Advanced Alerting feature lets Dispatch and Driver know of compliance issues before they become a problem</p>
+                                            </li>
+                                            <li style="padding:3px;">
+                                                <p>HOS Reporting is available on most devices with an internet connection, including mobile smart phones, tablets, laptops, and desktop computers</p>
+                                            </li>
+                                            <li style="padding:3px;">
+                                                <p>Drivers can easily perform daily inspections</p>
+                                            </li>
+                                            <li style="padding:3px;">
+                                                <p>Current Last 7 Days Drivers logs can be easily viewed, emailed or faxed upon demand</p>
+                                            </li>
+                                            <li style="padding:3px;">
+                                                <p>Emergency Alerting</p>
+                                            </li>
+                                            <li style="padding:3px;">
+                                                <p>Accident Reporting Module HOS Recap Reporting</p>
+                                            </li>
+                                            <li style="padding:3px;">
+                                                <p>Internal HOS Audit</p>
+                                            </li>
+                                            <li style="padding:3px;">
+                                                <p>Advanced Administrative and reporting features</p>
+                                            </li>
+                                        </ul>
+
+                                        <h3 style="color:#0a3e85;padding:5px 0px;">Full compliance of DOT rules, and more...</h3>
+                                        <p class="featureParagraph">eTrack eLog not only produces electronic hour of service logs.  It also monitors new and existing compliance rules, including the following:</p>
+                                        <ul style="margin-left:50px;padding:10px;font-size:14px;list-style-image: url(../ITImages/small_blue_dot.jpg);">
+                                            <li style="padding:3px;">
+                                                <p>All DOT Compliance Rule Sets</p>
+                                            </li>
+                                            <li style="padding:3px;">
+                                                <p>7 day / 60 hour and 8 day / 70 hour rules</p>
+                                            </li>
+                                            <li style="padding:3px;">
+                                                <p>11 hour driving / 14 hour rules</p>
+                                            </li>
+                                            <li style="padding:3px;">
+                                                <p>State Variance Rule Sets / Exceptions</p>
+                                            </li>
+                                            <li style="padding:3px;">
+                                                <p>Restart rules</p>
+                                            </li>
+                                            <li style="padding:3px;">
+                                                <p>New Sleeper Berth provisions</p>
+                                            </li>
+                                            <li style="padding:3px;">
+                                                <p>Rest break rules</p>
+                                            </li>
+                                            <li style="padding:3px;">
+                                                <p>Country specific rule sets (USA and Canada)</p>
+                                            </li>
+                                            <li style="padding:3px;">
+                                                <p>And much more...</p>
+                                            </li>
+                                        </ul>
+
+                                        <div style="text-align:center;">
+                                            <img src="Images/hos.png" alt="Hours of Service" width="450" />
+                                        </div>
+
+                                    </div>
+
+
+                                    <div style="padding:15px 5px;">
+                                        <h3 style="color:#0a3e85;padding:5px 0px;">Electronic Driver Logs - Integrated Vehicle Inspections and much more</h3>
+                                        <p class="featureParagraph">eTrack eLog provides our customers a value added offering that enables the Motor Carrier and Drivers alike with total DOT Compliance!</p>
+
+                                        <h3 style="color:#0a3e85;padding:5px 0px;">No Costly Equipment To Purchase - Device Independent Electronic Hours of Service</h3>
+                                        <p class="featureParagraph">Our Electronic Hours of Service Software is available in several versions.  
+                                            This means that drivers can use the eTrack eLog software regardless of what devices they currently use in their vehicles, eliminating the need for costly equipment purchases:</p>
+                                        <ul style="margin-left:50px;padding:10px;font-size:14px;list-style-image: url(../ITImages/small_blue_dot.jpg);">
+                                            <li style="padding:3px;">
+                                                <p>Web-based version</p>
+                                            </li>
+                                            <li style="padding:3px;">
+                                                <p>Native Android version</p>
+                                            </li>
+                                            <li style="padding:3px;">
+                                                <p>Native iOS version</p>
+                                            </li>
+                                        </ul>
+
+                                        <h3 style="color:#0a3e85;padding:5px 0px;">Increased Productivity Means Increased Profitability</h3>
+                                        <p class="featureParagraph">eTrack eLog has been designed for ease of use with the Driver in mind.  An extremely user friendly application that automates many of the time consuming tasks required to track available hours and  complete Driver logs.</p>
+                                        <div style="text-align:center;">
+                                            <img src="Images/elogIOS.png" alt="Electronic Log DOT Compliant" width="450" />
+                                        </div>
+                                        <br />
+                                        <p>The use of Electronic On Board Recording Devices (EOBR's) is going to be a requirement mandated by D.O.T. along with the use of Automated Hours of Service Logs (HOS).  This new requirement will completely eliminate hand written HOS Logs and will require a driver to produce Electronic Driver Logs at all Weigh Stations and upon request.</p>
+                                        <div style="text-align:center;">
+                                            <img src="Images/eLog.jpg" alt="DOT Compliant eLog" width="450" />
+                                        </div>
+                                        <p>Electronic Driver Logs will permanently replace the manual driver logs shortly.  This change is anticipated to be implemented in late 2015.</p>
+                                        <p>Many Motor Carriers are already implementing these EOBR and Electronic Driver Logs systems to get a jump on the mandates and be ahead of the curve.</p>
+
+                                        <h3 style="color:#0a3e85;padding:5px 0px;">Very low cost Add-On</h3>
+                                        <p class="featureParagraph">eTrack eLog fee is $7.50 per month/driver - Volume Discounts Available</p>
+
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
+                        <div><img src="ITImages/RoundCornersx620Bottom.png" width="620" height="20" alt="" /></div>
+                    </div>
+                </div>
+        	    <div class="mainMenuPanel">
+                    <div style="width:230px; margin:20px auto;">
+                	    <div><img src="ITImages/RoundCornersTop.png" width="231" height="18" alt="Top Corners" /></div>
+                        <ul class="mainMenu">
+                            <li id="mainMenuTracking" class="featuresMenuItem" data-imgTag="Tracking" data-content="Tracking"><a id="mainMenuTrackingA" href="GTD-Fleet-Tracking.html"><span>Fleet Tracking</span></a></li>
+                            <li id="mainMenuOBD" class="featuresMenuItem" data-imgTag="OBD" data-content="OBD"><a id="mainMenuOBDA" href="GTD-OBD.html"><span>Easy OBD Installation</span></a></li>
+                            <li id="mainMenuTrail" class="featuresMenuItem" data-imgTag="Trail" data-content="Trail"><a id="mainMenuTrailA" href="GTD-BreadcrumbTrail.html">Breadcrumb Trail</a></li>
+                            <li id="mainMenuSpeedLimit" class="featuresMenuItem" data-imgTag="SpeedLimit" data-content="SpeedLimit"><a id="mainMenuSpeedLimitA" href="GTD-PostedSpeedLimit.html">True Speed Control</a></li>
+                            <li id="mainMenuGeofences" class="featuresMenuItem" data-imgTag="Geofence" data-content="Geofences"><a id="mainMenuGeofencesA" href="GTD-Geofences.html">Geofences</a></li>
+                            <li id="mainMenuIgnition" class="featuresMenuItem" data-imgTag="Ignition" data-content="Ignition"><a id="mainMenuIgnitionA" href="GTD-Ignition.html">Starter Disable</a></li>
+                            <li id="mainMenuTelemetry" class="featuresMenuItem" data-imgTag="Telemetry" data-content="Telemetry"><a id="mainMenuTelemetryA" href="GTD-Telemetry.html">Telemetry</a></li>
+                            <li id="mainMenuAlerts" class="featuresMenuItem" data-imgTag="Alerts" data-content="Alerts"><a id="mainMenuAlertsA" href="GTD-Real-Time-Alerts.html">Real Time Alerts</a></li>
+                            <li id="mainMenuDispatch" class="featuresMenuItem" data-imgTag="Dispatch" data-content="Dispatch"><a id="mainMenuDispatchA" href="GTD-Dispatching.html">Dispatching</a></li>
+                            <li id="mainMenuELog" class="featuresMenuItem" data-imgTag="ELog" data-content="ELog"><a id="mainMenuELogA" href="GTD-eLog.html">eLog HOS</a></li>
+                            <li id="mainMenuHotSpots" class="featuresMenuItem" data-imgTag="HotSpot" data-content="HotSpot"><a id="mainMenuHotSpotA" href="GTD-HotSpots.html">Hot Spots</a></li>
+                            <li id="mainMenuMobile" class="featuresMenuItem" data-imgTag="Mobile" data-content="Mobile"><a id="mainMenuMobileA" href="GTD-Mobile-Application.html">Mobile Application</a></li>
+                            <li id="mainMenuTools" class="featuresMenuItem" data-imgTag="Tools" data-content="Maintenance"><a id="mainMenuToolsA" href="GTD-Maintenance-Module.html">Maintenance Module</a></li>
+                            <li id="mainMenuFuelLog" class="featuresMenuItem" data-imgTag="FuelLog" data-content="FuelLog"><a id="mainMenuFuelLogA" href="GTD-FuelLog-Module.html">Fuel Log Module</a></li>
+                            <li id="mainMenuReports" class="featuresMenuItem" data-imgTag="Reports" data-content="Reports"><a id="mainMenuReportsA" href="GTD-Reports.html">Over 30+ Reports</a></li>
+                            <li id="mainMenuTemperature" class="featuresMenuItem" data-imgTag="Temperature" data-content="Temperature"><a id="mainMenuTemperatureA" href="GTD-Temperature.html">Temperature Monitor</a></li>
+                            <li id="mainMenuIButton" class="featuresMenuItem" data-imgTag="IButton" data-content="IButton"><a id="mainMenuIButtonA" href="GTD-IButton.html" >Driver Identification</a></li>
+                            <li id="mainMenuMultiMap" class="featuresMenuItem" data-imgTag="MultiMap" data-content="MultiMap"><a id="mainMenuMultiMapA" href="GTD-MultiMaps.html">Multi-Map Tracking</a></li>
+                        </ul>
+                        <div><img src="ITImages/RoundCornersBottom.png" width="230" height="18" alt="Bottom Corners" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact">
+      <div class="container">
+        <div class="row ">
+          <div class="col-lg-12">
+            <nav class="main-nav">
+              <ul>
+                <li><a href="gps-tracker.html">GPS Tracker Info</a></li>
+                <li><a href="gps-service.html">Web Application Info</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="faq.html">F.A.Q.</a></li>
+                <li><a target="_blank" href="https://www.privacypolicies.com/privacy/view/ed7c28d730bef2361658a1b6d5a20e80">Privacy Policy</a></li>
+              </ul>
+            </nav>
+            <!-- .main-nav -->
+          </div>
+          <!--  <h5 class="col-lg-4 pull-right"> <img class="padding-top" src="images/img/Home/telephone1.png" class="img-fluid" alt="">   (888) 744-6449</h5> -->
+        </div>
+      </div>
+    </section>
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-64561832-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+<!-- BEGIN ProvideSupport.com Graphics Chat Button Code -->
+<div id="ciamp8" style="z-index:100;position:absolute"></div><div id="scamp8" style="display:inline;position:fixed;z-index:9999;top:0px;left:0px;"></div><div id="sdamp8" style="display:none"></div><script type="text/javascript">                                                                                                                                                                                                         var seamp8 = document.createElement("script"); seamp8.type = "text/javascript"; var seamp8s = (location.protocol.indexOf("https") == 0 ? "https" : "http") + "://image.providesupport.com/js/0325vm2g5aj6809q0cspkf44yw/safe-standard.js?ps_h=amp8&ps_t=" + new Date().getTime(); setTimeout("seamp8.src=seamp8s;document.getElementById('sdamp8').appendChild(seamp8)", 1)</script><noscript><div style="display:inline"><a href="https://www.providesupport.com?messenger=0325vm2g5aj6809q0cspkf44yw">Customer Support Chat</a></div></noscript>
+<!-- END ProvideSupport.com Graphics Chat Button Code -->
+
+
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script type="text/javascript">
+    var __lc = {};
+    __lc.license = 6649801;
+    (function () {
+        var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+        lc.src = ('https:' == document.location.protocol ? 'https://' : 'https://') + 'cdn.livechatinc.com/tracking.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+    })();
+</script>
+<!-- End of LiveChat code -->
+
+
+</body>
+</html>

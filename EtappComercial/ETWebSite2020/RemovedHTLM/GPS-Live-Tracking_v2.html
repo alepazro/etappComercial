@@ -1,0 +1,734 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+
+
+    <title>EasiTrack - GPS Live Tracking</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="images/img//favicon.png" rel="icon">
+<!--	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />	
+	<meta name="keywords" content="real time gps tracking, fleet monitoring, vehicle tracking, fleet management, truck tracking" />
+	<meta name="description" content="With EasiTrack, managing your fleet 24/7 is very easy and affordable." />
+	<meta name="author" content="EasiTrack, Corp."/> 
+    <meta name="dcterms.rightsHolder" content="Copyright (c) 2011 www.easitrack.com"/>
+-->
+    <!--    CSS includes -->
+    <link href="themes/flick/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/common_v2.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="Styles/ws_v2.css" />
+    <link href="carouselSkins/tango/skin.css" rel="stylesheet" type="text/css" />
+    <link href="carouselSkins/tango/skin2.css" rel="stylesheet" type="text/css" />
+    <link href="carouselSkins/tango/skin3.css" rel="stylesheet" type="text/css" />
+
+   <!--    Javascript includes -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.jcarousel.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.infinitecarousel3.min.js" type="text/javascript"></script>
+    <script src="Scripts/db.js" type="text/javascript"></script>
+    <script src="Scripts/webForms.js" type="text/javascript"></script>
+    <script src="Scripts/imagesDB.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+    function openTestimonialsDlg() {
+        try {
+            $("#testimonialsDlg").dialog('open')
+        }
+        catch (err) {
+        }
+    }
+
+    function setupTestimonialsDlg() {
+        try {
+            $("#testimonialsDlg").dialog({
+                height: 600,
+                width: 600,
+                autoOpen: false,
+                modal: true,
+                buttons: {
+                    Close: function () {
+                        $(this).dialog("close");
+                    }
+                },
+                open: function () {
+                    //Actions to perform upon open
+                },
+                close: function () {
+                    //Actions to perform upon close
+                }
+            });
+        }
+        catch (err) {
+            alert('setupTestimonialsDlg: ' + err.description);
+        }
+    }
+
+    jQuery(document).ready(function () {
+//        $('#videosCarousel').infiniteCarousel({
+//            imagePath: 'images/',
+//            thumbnailType: 'count'
+//        });
+        jQuery('#mycarousel').jcarousel({
+            vertical: true,
+            start: 5,
+            scroll: 1,
+            auto: 0,
+            wrap: 'circular'
+        });
+        jQuery('#mycarousel2').jcarousel({
+            scroll: 1,
+            auto: 2,
+            wrap: 'circular'
+        });
+        jQuery('#geoCarousel').jcarousel({
+            scroll: 1,
+            auto: 2,
+            wrap: 'circular'
+        });
+        setupTestimonialsDlg();
+    });
+
+</script>
+
+</head>
+<body>
+    <div class="topBar">
+        <div class="topBarInternal">
+            <div id="customerLogin">
+                <a href="https://easitrack.net/login.html" class="customerLoginText">Customer Login</a>
+            </div>
+            <ul id="auxMenu">
+                <li class="auxMenuOption auxMenuOptionDivider"><a href="faq.html" class="auxMenuOptionText">F.A.Q.</a></li>
+                <li class="auxMenuOption auxMenuOptionDivider"><a href="GTD-Testimonials.html" class="auxMenuOptionText">Testimonials</a></li>
+                <li class="auxMenuOption auxMenuOptionDivider"><a href="about-us.html" class="auxMenuOptionText">About Us</a></li>
+                <li class="auxMenuOption"><a href="contact-us.html" class="auxMenuOptionText">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="topBanner">
+        <div class="topBannerInternal">
+            <div style="float:right;">
+                <div style="margin-top:25px;text-align:right;">
+                    <span class="tollFreeNumber">Call Now! ( 888 ) 744-6449</span>
+                </div>
+                <div style="margin-top:15px;text-align:right;">
+                    <a href="get-quote.html" style="text-decoration:none;"><img src="images/GetQuoteRedx200.png" alt="Get Quote" height="50" width="200" style="border:0px;" /></a>
+                </div>
+            </div>
+            <div style="padding-top:30px;">
+                <a href="index.html" style="text-decoration:none;"><img src="images/logo3.png" alt="EasiTrack" width="350" height="80" style="border:0px;" /></a>
+            </div>
+        </div>
+    </div>
+    <div class="middleBar">
+        <div class="middleBarInternal mainMenuOptionDivider1st">
+            <ul id="mainMenu">
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="gps-tracker.html" class="mainMenuOptionText">GPS Tracker Device</a></li>
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="gps-service.html" class="mainMenuOptionText">GPS Service Description</a></li>
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="prices.html" class="mainMenuOptionText">Prices</a></li>
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="gps-demo.html" class="mainMenuOptionText">Demo Video</a></li>
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="https://easitrack.net/buy-now.html" class="mainMenuOptionText">Buy Now</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="middleBanner" >
+        <div class="middleBannerInternal">
+            <div style="height:370px;width:470px;float:right;overflow:hidden;">
+                <!--<div style="width:100%;padding:10px 0px 10px;">
+                    <h1 style="color:#ffffff;font-size:36px;">Real Time GPS Tracking</h1>
+                </div>-->
+                <!--<h2 style="color:#ffffff;padding-top:20px;">Locate any vehicle of your fleet, in real time</h2>-->
+                <!--<h2 style="color:#ffffff;padding-top:20px;">EasiTrack's Unique Core Values:</h2>-->
+
+                <h1 style="color:#ffa500;padding-top:10px;font-size:30px;">GPS Fleet Tracking System</h1>
+                <h2 style="color:#ffffff;padding-top:10px;">Very reasonable price</h2>
+                <div style="color:#ffff00;font-size:14px;font-weight:600;padding-top:5px;">
+                    <ul class="ulFeatures">
+                        <!--<li style="font-size:20px;">GPS Tracker: $119 <span style="font-size:11px;">(Incl. limited lifetime warranty)</span></li>-->
+                        <li>
+                            Super Sensitive GPS Tracker: $119
+                            <br />
+                            <span style="color:#ffffff;">Hardwired and Concealable device</span>
+                            <br />
+                            <span style="color:#ffffff;font-size:15px;">Optional OBD Plug-n-Play</span>
+                        </li>
+                        <li>Monthly Service: $17.99/month <!--<a href="https://www.easitrack.com/prices.html" style="color:#ffffff;font-size:11px;text-decoration:none;">(See EasiTrack Editions)</a>--></li>
+                    </ul>
+                </div>
+
+                <h2 style="color:#ffffff;padding-top:10px;">Absolute flexibility and dependability</h2>
+                <div style="color:#ffff00;font-size:14px;font-weight:600;padding-top:5px;">
+                    <ul class="ulFeatures">
+                        <li>Professional-grade web application</li>
+                        <li>No-Contracts / Pay month-to-month</li>
+                        <li>Suspend / Resume or Flat Cancel whenever you want</li>
+                        <li>Mobile App included, to track wherever you are</li>
+                        <!--<li>Monitor arrivals/departures from job sites in real time.</li>-->
+                        <!--<li>Keep track of vehicle maintenance automatically.</li>-->
+                        <!--<li>Locate any vehicle from your smartphone in real time.</li>-->
+                        <!--<li>Receive Speeding alerts in real time.</li>-->
+                        <!--<li>Replay the route of your vehicle and optimize your visits.</li>-->
+                    </ul>
+                </div>
+                <!--<h1 style="color:#ffffff;padding-top:15px;">Our customers are above all our priorities</h1>                
+                <div style="color:#ffff00;font-size:14px;font-weight:600;padding-top:5px;">
+                    <ul class="ulFeatures">
+                        <li><p style="cursor:pointer;" onclick="openTestimonialsDlg()"><span style="color:Red;">CLICK HERE</span><span> to read what our customers say</span></p></li>
+                        <li>Life Time Warranty on GPS Tracker Hardware</li>
+                        <li>Highly customer-focused Customer and Technical Support staff</li>
+                    </ul>
+                </div>-->
+                <!--<div style="color:#ffff00;font-size:14px;font-weight:600;padding-top:5px;">
+                    <ul class="ulFeatures">
+                        <li>Unlimited access, from any computer with internet</li>
+                        <li>Concealable GPS Tracker reports every 1 minute</li>
+                        <li><span style="text-decoration:underline;">LIFETIME WARRANTY</span> on GPS Tracker</li>
+                        <li>No Contract / No Activation Fee / <span style="text-decoration:underline;">Free</span> Shipping</li>
+                        <li>30-Day 100% Money-Back <span style="text-decoration:underline;">SATISFACTION GUARANTEE</span></li>
+                    </ul>
+                </div>-->
+                <div>
+                    <div style="float:right;">
+                        <!--<img src="images/GPSTracker200x144.png" alt="GPS Tracker" width="200" height="144" />-->
+                    </div>
+                    <div style="float:left;font-size:28px;font-weight:600;color:#ffffff;padding-top:20px;">
+                        <!--<p style="padding-top:0px;">GPS Tracker: $119</p>
+                        <p style="padding-top:10px;padding-bottom:5px;">Service: $17.99</p>-->
+                        <!--<a href="gps-demo.html" style="text-decoration:none;"><img src="images/ViewDemoYellowx200.png" alt="View Demo" height="50" width="200" style="border:0px;" /></a>-->
+                    </div>
+                </div>
+            </div>
+
+            <div style="height:370px;width:470px;float:left;padding-top:20px;">
+                <h1 style="color:#ffffff;font-size:34px;">Real Time GPS Tracking</h1>
+
+                <!--<img src="images/DriverOnMap.png" alt="EasiTrack Driver in Van" />-->
+                <ul id="mycarousel2" class="jcarousel jcarousel-skin-tango2">
+                    <li><img src="images/DriverOnMap.png" width="426" height="316" alt="Driver on map" /></li>
+                    <li><img src="images/NoContracts.jpg" width="426" height="316" alt="EasiTrack  has No Contracts" /></li>
+                    <li><img src="images/FullAccessOnMap.png" width="426" height="316" alt="Online Web Application" /></li>
+                    <li><img src="images/ManyVehiclesOnMap.png" width="426" height="316" alt="See your entire fleet in the map" /></li>
+                    <li><img src="images/TrafficInfoOnMap.png" width="426" height="316" alt="Up to the minute traffic information" /></li>
+                    <li><img src="images/DeviceOnMap.png" width="426" height="316" alt="See any vehicle in the map" /></li>
+                    <li><img src="images/LifetimeWarranty.jpg" width="426" height="316" alt="Lifetime Warranty on the hardware" /></li>
+                    <li><img src="images/InstallationOnMap.png" width="426" height="316" alt="Installation is easy" /></li>
+                    <li><img src="images/CrumbOnMap.png" width="426" height="316" alt="EasiTrack Crumb on map" /></li>
+                    <!--<li><img src="images/LowCostHighROI.jpg" width="426" height="316" alt="Low Cost - High ROI" /></li>-->
+                    <li><img src="images/ElectronicTimeCardOnMap.png" width="426" height="316" alt="Electronic time card" /></li>
+                    <li><img src="images/FleetProductivityOnMap.png" width="426" height="316" alt="Monitor fleet productivity" /></li>
+                    <li><img src="images/StateMilesOnMap.png" width="426" height="316" alt="Keep State Miles automatically" /></li>
+                    <li><img src="images/IdlesOnMap.png" width="426" height="316" alt="Control idle times" /></li>
+                    <li><img src="images/StopsOnMap.png" width="426" height="316" alt="Control stops" /></li>
+                    <li><img src="images/StateMiles.jpg" width="426" height="316" alt="State Miles" /></li>
+                    <li><img src="images/MultimapsOnMap.png" width="426" height="316" alt="View multiple maps at the same time" /></li>
+                    <li><img src="images/DriverBehavior.jpg" width="426" height="316" alt="Driver Behavior Events" /></li>
+                </ul>
+
+                <!--<iframe width="420" height="315" src="https://www.youtube.com/embed/VoSN_VuC2xc?rel=0&autoplay=0&border=1&modestbranding=1&showinfo=0&loop=1" frameborder="0"></iframe>-->
+            </div>
+        </div>
+    </div>
+
+    <div style="width:100%;background-color:#ededed;border-top:1px solid #15476e;border-bottom:1px solid #000000;">
+        <div style="width:950px;margin:0px auto;padding:5px;overflow:hidden;">
+            <div style="float:right;width:330px;height:1850px;padding:5px;background-color:#e0e0e0;">
+<!--                <div style="text-align:center;padding:10px 0px;">
+                    <ul id="videosCarousel">
+                        <li><iframe width="280" height="210" src="https://www.youtube.com/embed/KI3QXHT-n1U?rel=0" frameborder="0"></iframe></li>
+                        <li><iframe width="280" height="210" src="https://www.youtube.com/embed/Wss9HlJY--I?rel=0" frameborder="0"></iframe></li>
+                        <li><iframe width="280" height="210" src="https://www.youtube.com/embed/ngiJGwQhFAI?rel=0" frameborder="0"></iframe></li>
+                        <li><iframe width="280" height="210" src="https://www.youtube.com/embed/3-Wuk2nxOos?rel=0" frameborder="0"></iframe></li>
+                    </ul>
+                    
+                </div>-->
+                <div style="width:100%;text-align:center;">
+                    <h1><img src="images/animated_new.gif" alt="New Mobile App" /> Mobile Application <img src="images/animated_new.gif" alt="New Mobile App" /></h1>
+                    <h3>Built for most mobile devices</h3>
+                    <ul id="mycarousel" class="jcarousel jcarousel-skin-tango">
+                        <li><img src="images/iPhone.png" width="280" height="287" alt="EasiTrack Mobile App" /></li>
+                        <!--<li><img src="images/iPhone00.png" width="280" height="287" alt="EasiTrack Mobile App 0" /></li>-->
+                        <li><img src="images/iPhone01.png" width="280" height="287" alt="EasiTrack Mobile App 1" /></li>
+                        <li><img src="images/iPhone02.png" width="280" height="287" alt="EasiTrack Mobile App 2" /></li>
+                        <li><img src="images/iPhone03.png" width="280" height="287" alt="EasiTrack Mobile App 3" /></li>
+                        <li><img src="images/iPhone04.png" width="280" height="287" alt="EasiTrack Mobile App 4" /></li>
+                    </ul>
+                    <h3>iPhone, iPad, Android, BlackBerry, Samsung</h3>
+                </div>
+                <div style="width:100%;text-align:center;">
+                    <h1 class="featuresHeader" style="color:Red;">Test-Drive our GPS System</h1>
+                    <h3 style="padding:5px 0px;">See our system in action with a real fleet</h3>
+                </div>
+                <ul class="ulFeatures">
+                    <li>Just fill the form below and you will receive an email with a link that grants immediate access</li>
+                    <li>Navigate around and do as much as you want in our live demo account</li>
+                </ul>
+                <fieldset style="width:320px;">
+                    <input id="formId" name="formId" type="hidden" value="7B8D67B5-E36A-4C3A-B1A4-B07D6F5B6342" />
+                    <div style="width:308px; margin:1px; background-color:#d5edf7; padding:5px;">
+                        <h3 style="margin-left:10px;">Get now a live demo access via email!</h3>
+                    </div>
+                    <table style="background-color:#f1f1f1;width:318px;">
+                        <tr>
+                            <td style="padding:5px;padding-left:30px;vertical-align:middle;font-weight:600;">
+                                <label for="firstName">First Name</label>
+                            </td>
+                            <td style="padding:5px;">
+                                <input id="firstName" name="firstName" type="text" maxlength="20" size="30" class="formField"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding:5px;padding-left:30px;vertical-align:middle;font-weight:600;">
+                                <label for="lastName">Last Name</label>
+                            </td>
+                            <td style="padding:5px;">
+                                <input id="lastName" name="lastName" type="text" maxlength="20" size="30" class="formField"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding:5px;padding-left:30px;vertical-align:middle;font-weight:600;">
+                                <label for="email">Email</label>
+                            </td>
+                            <td style="padding:5px;">
+                                <input id="email" name="email" type="text" maxlength="100" size="30" class="formField mandatoryField"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding:5px;padding-left:30px;vertical-align:middle;font-weight:600;">
+                                <label for="phone">Phone</label>
+                            </td>
+                            <td style="padding:5px;">
+                                <input id="phone" name="phone" type="text" maxlength="20" size="30" class="formField"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="background-color:#f1f1f1;width:318px;">
+                        <tr style="text-align:center;">
+                            <td colspan="2" style="padding:10px;">
+                                <input name="submit" type="button" value="Send My Access Link" style="width:200px;" onclick="getAccessLink()"/>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <div style="text-align:right;padding-right:10px;font-size:10px;">
+                    <span style="color:#888888;">Rep.ID:</span><input type="text" id="repId" name="repId" size="5" value="" style="height:15px;width:40px;" />
+                </div>
+
+                <h2 class="featuresHeader">Happy customers everywhere:</h2>
+                <div class="testimonialWidget">
+                    <p class="testimonial">“Imagine having to track 15 to 20 limos all once. I practically had to stay on three or four phone lines throughout my working hours. EasiTrack GPS Tracking has given me full control over the location of our vehicles. Even so, we have increased our customer base as we are able to serve them in a very efficient manner. It is an investment that will pay for itself in no time.” - <span class="testimonialSource">Megan Rogers, CA</span></p>
+                </div>
+                <div class="testimonialWidget">
+                    <p class="testimonial">“Prior to EasiTrack we had to rely on the old fashioned back and forth radio method to track our Taxi Cabs. Back then, we could only track our drivers one at a time. Now, we can track every vehicle in our fleet. EasiTrack definitely came through for us.”  - <span class="testimonialSource">Mathew Patterson, VA</span></p>
+                </div>
+                <div class="testimonialWidget">
+                    <p class="testimonial">“This system has been useful in many ways. It allows us to track idle time, it has been helpful in reducing avoidable overtime as drivers no longer have to waste valuable time trying to figure out directions. Most important of all, our combined gas usage has declined drastically; very little a correction made a huge difference.”  - <span class="testimonialSource">Mark O'Neill, TX</span></p>
+                </div>
+                <div class="testimonialWidget">
+                    <p class="testimonial">“We were able to recover our stolen vehicle by helping the police with the GPS location. Also, we have reduced our gas per mileage by a lot. Since EasiTrack installed the device, it’s been impossible to see our vehicles without it; it is a business necessity.”  - <span class="testimonialSource">Ann Western, TX</span></p>
+                </div>
+                <div class="testimonialWidget">
+                    <p class="testimonial">“Besides reducing idle time and knowing where each and every one of our driver is, we use it document and track pay time. You know precisely how many hours a driver has worked. You are able to know whether the car is moving or still, will definitely recommend it.” - <span class="testimonialSource">Don White, FL</span></p>
+                </div>
+                <div class="testimonialWidget">
+                    <p class="testimonial">“As parents of 2, EasiTrack has been very helpful in tracking our teenagers’ whereabouts. No longer do we have to worry about where they are. It has given us peace of mind. A couple of clicks, and we know exactly where they are. My worries have been greatly reduced. ” - <span class="testimonialSource">Michelle Reed, GA</span></p>
+                </div>
+                <div class="testimonialWidget">
+                    <p class="testimonial">“Since installing the tracking system, we have sky rocketed in productivity. We have real time information on the vehicles in our fleet. We are able to estimate times of arrival. We have reduced fuel costs and consumption. We have improved how we serve our customers, overall, we have being able to take on new business. ” - <span class="testimonialSource">Isaac Hunter, AZ</span></p>
+                </div>
+                <div class="testimonialWidget">
+                    <p class="testimonial">“EasiTrack Tracking has given us the ability to account for our employees while out on patrol. It has made possible outstanding customer service and support. We are able to respond to our clients in a swift and efficient manner. Also, we have shaved thousands of dollars in unnecessary fuel related costs. In three words, ‘Simple Yet Effective’” - <span class="testimonialSource">Tyler Novinich, CA</span></p>
+                </div>
+                <div class="testimonialWidget">
+                    <p class="testimonial">“I was sort of skeptical at first, however, I immediately realize how useful it is and how useful it could be. It has helped in improving our landscaping business in many respects. We know precisely where our guys and trucks are.  It tells us exactly whether they are on the work-site or somewhere else. Since installing, we’ve increased the number of sites that we visit. Exceptional piece of software.” - <span class="testimonialSource">David Thomas, CA</span></p>
+                </div>
+                <div class="testimonialWidget">
+                    <p class="testimonial">“The function of it is countless. Among its many uses, we use it in place of a time card. EasiTrack has given us the ability to track how many hours our drivers work, especially, while they are out on the job.  Our labor costs have gone down and productivity has gone up.” - <span class="testimonialSource">Ivan Martin, TX</span></p>
+                </div>
+                <div class="testimonialWidget">
+                    <p class="testimonial">“Above and beyond, this is the best invention since the invention of the car itself. We have reduced our overall gas consumption by eliminating needless idling; must have for any towing company.” - <span class="testimonialSource">JJ Luo, AL</span></p>
+                </div>
+                <div class="testimonialWidget">
+                    <p class="testimonial">“EasiTrack has enabled us to significantly reduce unauthorized usage and fuel costs. We know exactly what our drivers are up to en route. As a result, customers receive their deliveries on time and more customers get served.” - <span class="testimonialSource">Alberto Carneiro, VA</span></p>
+                </div>
+                <div class="testimonialWidget">
+                    <p class="testimonial">“EasiTrack's GPS Tracking has allowed us control over both of our businesses. It has as also helped us improve the way we serve our clients.” - <span class="testimonialSource">Boris Martinez, NY</span></p>
+                </div>
+                <div class="testimonialWidget">
+                    <p class="testimonial">“Our delivery trucks have been able to take on more routes with EasiTrack's tracking system. What's more, it has served us well during those winter months when major routes are closed. It has helped us to improve how we serve our clients across the states. As an end result, we have lowered costs while increasing our customer base at the same time.” - <span class="testimonialSource">Paul Blake, NY</span></p>
+                </div>
+                <div class="testimonialWidget">
+                    <p class="testimonial">"Very good hardware price. Other systems had a much higher hardware price which is a deterrent especially because we do not know how well they work. Getting your system was low risk even if it could have turned out not to be working well. But as a matter of fact it does work very well! The separate antenna was also a key item as it simplifies the installation. (Gives more flexibility to find power and good antenna location). The monthly cost is also excellent and the reporting rate was exactly what I need. I did not want to pay more for a higher reporting rate that I do not need." - <span class="testimonialSource">Terry Gill , GA</span></p>
+                </div>
+                <div style="padding-top:30px;">
+                    <button type="button" style="border:0px;cursor:pointer;width:160px;height:40px;" onclick="goTo('get-quote.html')"><img src="../images/smlGetQuoteButton.jpg" height="40" width="160" alt="Get a Quote button"/></button>
+                    <button type="button" style="border:0px;cursor:pointer;width:160px;height:40px;" onclick="goTo('gps-demo.html')"><img src="../images/smlViewDemoButton.jpg" height="40" width="160" alt="View Demo button"/></button>
+                </div>
+
+            </div>
+            <div style="float:left;width:500px;">
+                <h1 class="featuresHeader">EasiTrack's GPS Tracking offers:</h1>
+                <h2 class="featuresHeader">Immediate access in real time to your vehicles location</h2>
+                <ul class="ulFeatures">
+                    <li>Locate your vehicles at any given time, in real time</li>
+                    <li>Find closest vehicle to any location in seconds</li>
+                    <li>Shorten responses times with Points of Interest</li>
+                    <li style="background:url(images/animated_new.gif) no-repeat 0 7px; padding-left:35px;">View Traffic conditions where your vehicles are!</li>
+                </ul>
+
+                <h2 class="featuresHeader">Robust GPS Tracker</h2>
+                <ul class="ulFeatures">
+                    <li>
+                        <p>Built with robust case and high sensitivity GPS chipset - will last for years.</p>
+                        <img src="images/TrackerViews.png" alt="Easitrack GPS Tracker"/>
+                    </li>
+                    <li>Easy to install</li>
+                    <li>Concealable installation</li>
+                    <li>Reports every 1 minute while vehicle is moving</li>
+                    <li style="background:url(images/animated_new.gif) no-repeat 0 7px; padding-left:35px;">Internal Backup Battery</li>
+                    <li style="background:url(images/animated_new.gif) no-repeat 0 7px; padding-left:35px;">Power Cut Alert: In the event main power is cut from the device, you will receive an immediate alert via email!</li>
+                    <!--<li>Customer Lifetime Warranty</li>-->
+                </ul>
+
+                <h2 class="featuresHeader">Real Time Location on every event of your vehicle:</h2>
+                <p>Monitor all the events and movements of each one of your vehicles, minute by minute.</p>
+                <img src="images/Breadcrumbtrail.jpg" alt="Easitrack GPS Tracker"/>
+                <ul class="ulFeatures">
+                    <li>Ignition ON</li>
+                    <li>Ignition OFF</li>
+                    <li>In Transit</li>
+                    <li>Idle</li>
+                    <li>Stopped</li>
+                    <li>Speeding Alert</li>
+                    <li>Excessive Idle Alert</li>
+                </ul>
+
+                <h2 class="featuresHeader">With our Mobile App, access your fleet's information from your smartphone</h2>
+                <ul class="ulFeatures">
+                    <li>
+                        <p>View the status of each vehicle of your fleet in your phone</p>
+                        <img src="images/iPhone04.png" alt="Easitrack Mobile App"/>
+                    </li>
+                    <li>Get immediate access to the exact address, speed, and heading</li>
+                    <li>View each vehicle in a map in your phone</li>
+                    <li>Simply access the system with the same login and password of your main web application!</li>
+                    <li>All major mobile devices are compatible: iPhone, iPad, Android, BlackBerry, Samsung, and more...</li>
+                </ul>
+
+                <h2 class="featuresHeader" style="text-decoration:underline;">Google Street View lets you see a real image of the whereabout of your vehicle(s)</h2>
+                <ul class="ulFeatures">
+                    <li>
+                        <p>With Street View, you can understand the environment where your service vehicle will perform.</p>
+                        <img src="images/streetView.png" width="500" height="302" alt="Street View"/>
+                    </li>
+                    <li>Google Street View is a technology that provides panoramic views from positions along many streets in the world.</li>
+                </ul>
+
+                <h2 class="featuresHeader">Fleet Maintenance Module</h2>
+                <ul class="ulFeatures">
+                    <li>
+                        <p>Create as many tasks as you need: Oil Change, Tire Rotation, Air filter change, Break pads change, etc.</p>
+                        <img src="images/Maint_Tasks.png" alt="Easitrack Maintenance Schedules"/>
+                    </li>
+                    <li>Easily create maintenance schedules for each vehicle and each task.</li>
+                    <li>
+                        <p>EasiTrack will automatically monitor each task and will notify you via email when a task is due</p>
+                        <img src="images/Maint_Schedules90x450.png" alt="Easitrack Maintenance Schedules"/>
+                    </li>
+                    <li>Email Notifications: Receive automatic emails when tasks are about to be due.</li>
+                    <li>Register all Preventive Maintenances and Repairs, including costs, for a centralized log of all fleet expenses</li>
+                    <li>
+                        <p>View all Maintenance and Repairs history of your fleet, online, and control your costs!</p>
+                        <img src="images/Maint_ServiceHistory100x400.png" alt="Easitrack Maintenance Schedules"/>
+                    </li>
+                </ul>
+
+                <h2 class="featuresHeader">Fuel Log</h2>
+                <ul class="ulFeatures">
+                    <li>Register every fueling event of your vehicles</li>
+                    <li>Each fueling register includes: Date, Odometer, Gallons, Cost, and State!</li>
+                    <li>
+                        <p>View all Fueling history of your fleet, online, and control your fuel costs!</p>
+                        <img src="images/Maint_FuelHistory80x400.png" alt="Easitrack Fuel History"/>
+                    </li>
+                </ul>
+
+                <h2 class="featuresHeader">Track the miles driven per day/week/month, per job, per state</h2>
+                <ul class="ulFeatures">
+                    <li>EasiTrack GPS Tracker send information of the miles driven minute by minute</li>
+                    <li>The State Miles Report agregates the miles driven per state on a day-by-day basis or as a total for any period</li>
+                    <li>The Performance Report shows the miles driven every day</li>
+                    <li>The Short Trips Report shows the miles driven between stops</li>
+                </ul>
+
+                <h2 class="featuresHeader">Robust Geofences Features</h2>
+                <ul class="ulFeatures">
+                    <li>Define as many geofences as you want (customers, vendors, job sites, etc.)</li>
+                    <li>Circular and Polygonal Geofences</li>
+                    <li>Receive Real Time notifications of every arrival and departure from each geofence</li>
+                </ul>
+                    <ul id="geoCarousel" class="jcarousel jcarousel-skin-tango3">
+                        <li><img src="images/geoShapes.png" width="350" height="320" alt="Geofences Shapes" /></li>
+                        <li><img src="images/geoCircleShape.png" width="350" height="320" alt="Circle Geofence" /></li>
+                        <li><img src="images/geoPolyShape.png" width="350" height="320" alt="Polygon Geofence" /></li>
+                        <li><img src="images/geoTypes.png" width="350" height="320" alt="Geofence Types" /></li>
+                        <li><img src="images/geoAlerts.png" width="350" height="320" alt="Geofence Alerts" /></li>
+                    </ul>
+
+                <ul class="ulFeatures">
+                    <li>Automatic log of visits to job sites</li>
+                    <li>Electronic log of time spent in each site</li>
+                    <li>Proof of visit to sites</li>
+                </ul>
+
+                <h2 class="featuresHeader" style="text-decoration:underline;">Unauthorized Use Alert</h2>
+                <ul class="ulFeatures">
+                    <li style="background:url(images/animated_new.gif) no-repeat 0 7px; padding-left:35px;">Now you can be notified if your vehicles are used out of authorized hours, like weekends or nights!</li>
+                    <li>Set up any unauthorized days/hours, and be notified, in real time, if any vehicle is used in those hours.</li>
+                    <li>Alerts are sent via Email AND SMS, to make sure you receive the alert, in time.</li>
+                    <li>No more illegal / unauthorized use of your vehicles!</li>
+                </ul>
+
+                <h2 class="featuresHeader">Customize your Fleet's icons!</h2>
+                <ul class="ulFeatures">
+                    <li>Match your vehicles with different icons</li>
+                    <li>Give the names you want to each device in the system</li>
+                    <li>
+                        <p>Customize the label of each icon with valuable information:</p>
+                        <table>
+                            <tr>
+                                <td style="width:100px;">
+                                    <img src="images/iconLabel_NoLabel.png" alt="Easitrack icon without label"/>
+                                </td>
+                                <td style="width:100px;">
+                                    <img src="images/iconLabel_SimpleLabel.png" alt="Easitrack icon with simple label"/>
+                                </td>
+                                <td style="width:100px;">
+                                    <img src="images/iconLabel_DoubleLabel.png" alt="Easitrack icon with double label"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align:top;">
+                                    <p style="font-size:10px;padding:0px;margin:0px;font-weight:600;">No label</p>
+                                </td>
+                                <td style="vertical-align:top;">
+                                    <p style="font-size:10px;padding:0px;margin:0px;font-weight:600;">Simple label</p>
+                                    <p style="font-size:10px;padding:0px;margin:0px; line-height:0px;">Ex. Vehicle Name</p>
+                                </td>
+                                <td style="vertical-align:top;">
+                                    <p style="font-size:10px;padding:0px;margin:0px;font-weight:600;">Double label</p>
+                                    <p style="font-size:10px;padding:0px;margin:0px; line-height:0px;">Ex. Vehicle Name</p>
+                                    <p style="font-size:10px;padding:0px;margin:0px;">and Driver Name</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+
+                <h2 class="featuresHeader">Monitor each driver</h2>
+                <ul class="ulFeatures">
+                    <li>Create as many drivers as you want</li>
+                    <li>Assign drivers to vehicles</li>
+                    <li>Monitor each driver's behavior in real time</li>
+                    <li>Keep an electronic log of your drivers' detailed activities</li>
+                </ul>
+
+                <h2 class="featuresHeader">Monitor unusual event and undesired behaviors</h2>
+                <ul class="ulFeatures">
+                    <li>Receive real time alerts in your phone or email</li>
+                    <li>Real Time Speeding Alerts</li>
+                    <li>Real Time Excessive Idle Alerts</li>
+                </ul>
+
+                <h2 class="featuresHeader">Immediate access to any of your vehicles' location</h2>
+                <ul class="ulFeatures">
+                    <li>See your vehicles in a map, in real time</li>
+                    <li>Select one, some, or all your vehicles to show in the map</li>
+                    <li>Click a vehicle and view immediatelly the latest information: Location, Speed, Heading, date/time <!--<img src="images/magnifierx18.png" alt="Magnify" height="16" width="18" style="border:0px;" onclick="showImage(20);" />--></li>
+                </ul>
+
+                <h2 class="featuresHeader">Dispatch vehicles more efficiently</h2>
+                <ul class="ulFeatures">
+                    <li>Find the closest vehicle to any location</li>
+                    <li>View the Driving Directions from one point to another</li>
+                    <li>Send Driving Directions to driver's smartphones</li>
+                </ul>
+
+                <h2 class="featuresHeader">Breadcrumb Trail</h2>
+                <ul class="ulFeatures">
+                    <li>
+                        <p>Review the detailed route of each one of your vehicles at any given time.</p>
+                        <img src="images/Breadcrumbtrail.jpg" alt="Easitrack GPS Tracker"/>
+                    </li>
+                </ul>
+
+                <h2 class="featuresHeader">Multi-Tracking mapping</h2>
+                <ul class="ulFeatures">
+                    <li>
+                        <p>View your flee in up to 4 maps in a single screen</p>
+                        <img src="images/MultiTrackingModule.jpg" alt="MultiTracking Module"/>
+                    </li>
+                    <li>Segment your fleet and have a close look-out to each one of your vehicles</li>
+                </ul>
+
+                <h2 class="featuresHeader">Accurate and Immediate Fleet Reports</h2>
+                <ul class="ulFeatures">
+                    <li>Run reports on the fly</li>
+                    <li style="background:url(images/animated_new.gif) no-repeat 0 7px; padding-left:35px;"><span style="font-weight:600;">Scheduled Reports:</span> Receive your reports automatically AND via email as you need them: daily, weekly, or monthly! Or have the system send them to any one in your company to make sure everyone has the information they need, at hand and on time.</li>
+                    <li>Export reports to excel</li>
+                    <li style="background:url(images/animated_new.gif) no-repeat 0 7px; padding-left:35px;">Process large reports in batch and receive them via email</li>
+                    <li>Multiple activities reports:
+                        <ul class="ulFeatures">
+                            <li>Speeding Report</li>
+                            <li>Idles Report</li>
+                            <li>Stops Report</li>
+                            <li>Fleet Productivity Report</li>
+                            <li>State Miles Report (Daily and Summarized)</li>
+                            <li style="background:url(images/animated_new.gif) no-repeat 0 7px; padding-left:35px;"><span style="font-weight:600;">Fleet Detailed Activity Report:</span> A comprehensive summary of: total miles per day, total travel time, total idle time, total stopped time, speeds by threshold, driver behavior's triggered alerts.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h2 class="featuresHeader" style="text-decoration:underline;">* Fleet and Field Workers Performance Reports *</h2>
+                <p style="margin-left:30px;padding:5px;font-size:12px;font-weight:600;">The perfect reports to monitor your field work force every day of the week!</p>
+                <ul class="ulFeatures">
+                    <li style="background:url(images/animated_new.gif) no-repeat 0 7px; padding-left:35px;"><span style="font-weight:600;">Short Trips Report:</span> The perfect activity monitor, tells you each where and when each trip started and ended, along with time and distance.  Perfect tool to monitor the detail of your fleet each day.</li>
+                    <li style="background:url(images/animated_new.gif) no-repeat 0 7px; padding-left:35px;"><span style="font-weight:600;">Electronic Time Card:</span> Automatically creates a time card from first ignition ON until Last Ignition OFF each day, and calculates the hours worked.</li>
+                    <li style="background:url(images/animated_new.gif) no-repeat 0 7px; padding-left:35px;"><span style="font-weight:600;">Proof of Visit Report:</span> Where your vehicles went to provide a service, and how long they were there.</li>
+                </ul>
+
+                <h2 class="featuresHeader">Multiple Users Roles</h2>
+                <p style="margin-left:30px;padding:5px;font-size:12px;font-weight:600;">Create unlimited users and assign a appropriate access levels to each one!</p>
+                <ul class="ulFeatures">
+                    <li>Super Users: With access to 100% of the features</li>
+                    <li>Power Users: With access to most operational features</li>
+                    <li>Basic Users: With access to the maps and the reports, and ability to create geofences</li>
+                    <li>Read-Only Users: With very limited access, just to view information</li>
+                </ul>
+                <hr />
+                <h2 class="featuresHeader">EasiTrack is... Unlimited Everywhere</h2>
+                <hr />
+                <h2>You get...</h2>
+                <ul class="ulFeatures">
+                    <li>Unlimited Access</li>
+                    <li>Unlimited Users</li>
+                    <li>Unlimited Vehicles</li>
+                    <li>Unlimited Geofences</li>
+                    <li>Unlimited Historical Information</li>
+                    <li>Unlimited Trainings</li>
+                    <li>Unlimited Customer and Technical Support</li>
+                    <li>unlimited access to all new software features</li>
+                </ul>
+
+                <h2 class="featuresHeader">And much more...</h2>
+                <ul class="ulFeatures">
+                    <li>One flat monthly fee</li>
+                    <!--<li>No activation fee</li>-->
+                    <!--<li>Free shipping</li>-->
+                    <li>No contracts</li>
+                    <li>Month-to-Month commitment</li>
+                    <li>Suspend / Reactivate your service whenever you want</li>
+                    <!--<li>Lifetime warranty on the GPS Tracker for parts and labor</li>-->
+                    <li>Online Access - you only need a computer with internet access</li>
+                    <li>No need to install any software</li>
+                </ul>
+                <br />
+                <div style="float:left;width:500px;margin-left:50px;border:1px solid #a1a1a1;display:none;">
+                        <input id="formId2" name="formId2" type="hidden" value="F4CF75CD-FC76-4C2C-9472-129BB44E886C" />
+                        <div style="width:488px; margin:1px; background-color:#d5edf7; padding:5px;">
+                            <h1 style="margin-left:10px;">Would you share your specific need?</h1>
+                        </div>
+                        <table style="background-color:#f1f1f1;width:500px;">
+                            <tr>
+                                <td style="padding:5px;vertical-align:top;font-weight:600;">
+                                    <p>Please enter your anonymous comment:</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:5px;">
+                                    <textarea id="message2" name="message2" cols="50" rows="6" style="border:1px solid #a1a1a1;"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>For a non-anonymous comment please <a href="contact-us.html">Contact Us</a>.</p>
+                                    <p>May be we have or we can do what you need!</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table style="background-color:#f1f1f1;width:500px;">
+                            <tr style="text-align:center;">
+                                <td colspan="2" style="padding:10px;">
+                                    <input name="submit2" type="button" value="Send my comment" style="width:150px;" onclick="anonFeedback()"/>
+                                </td>
+                            </tr>
+                        </table>
+                </div>
+
+                <div style="margin-top:25px;text-align:right;">
+                    <span class="tollFreeNumber">Call Now! ( 888 ) 744-6449</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div style="width:100%;background-color:#000000;border-top:1px solid #ededed;">
+        <div style="height:150px;width:950px;margin:0px auto;">
+            <div style="width:100%;text-align:center;margin-top:5px;color:#ffffff;">
+                <p>Do you have any question or need more information? <a href="contact-us.html" style="color:#ffffff;">Please Contact Us</a></p>
+            </div>
+            <br style="clear:both;" />
+            <!--<div style="float:left;width:180px;padding:5px;">
+                <button type="button" style="border:0px;cursor:pointer;width:160px;height:40px;" onclick="goTo('get-quote.html')"><img src="../images/smlGetQuoteButton.jpg" height="40" width="160" alt="Get a Quote button"/></button>
+                <button type="button" style="border:0px;cursor:pointer;width:160px;height:40px;" onclick="goTo('gps-demo.html')"><img src="../images/smlViewDemoButton.jpg" height="40" width="160" alt="View Demo button"/></button>
+            </div>-->
+            <div style="float:left;padding:5px 250px;">
+                <ul style="list-style-type:none;padding-top:20px;">
+                    <li style="float:left;"><a href="gps-tracker.html" style="padding:0px 10px;font-size:11px;font-weight:600;color:#ffffff;text-decoration:none;background-image: url(../images/MenuBackDivider.png);background-repeat: no-repeat;background-position: right;">GPS Tracker Info</a></li>
+                    <li style="float:left;"><a href="gps-service.html" style="padding:0px 10px;font-size:11px;font-weight:600;color:#ffffff;text-decoration:none;background-image: url(../images/MenuBackDivider.png);background-repeat: no-repeat;background-position: right;">Web Application Info</a></li>
+                    <li style="float:left;"><a href="gps-demo.html" style="padding:0px 10px;font-size:11px;font-weight:600;color:#ffffff;text-decoration:none;background-image: url(../images/MenuBackDivider.png);background-repeat: no-repeat;background-position: right;">Live Demo</a></li>
+                    <!--<li style="float:left;"><a href="installation.html" style="padding:0px 10px;font-size:11px;font-weight:600;color:#000000;text-decoration:none;background-image: url(../images/MenuBackDivider.png);background-repeat: no-repeat;background-position: right;">Installation</a></li>-->
+                    <li style="float:left;"><a href="faq.html" style="padding:0px 10px;font-size:11px;font-weight:600;color:#ffffff;text-decoration:none;background-image: url(../images/MenuBackDivider.png);background-repeat: no-repeat;background-position: right;">F.A.Q.</a></li>
+                    <!--<li style="float:left;"><a href="testimonials.html" style="padding:0px 10px;font-size:11px;font-weight:600;color:#ffffff;text-decoration:none;background-image: url(../images/MenuBackDivider.png);background-repeat: no-repeat;background-position: right;">Testimonials</a></li>-->
+                    <li style="float:left;"><a href="about-us.html" style="padding:0px 10px;font-size:11px;font-weight:600;color:#ffffff;text-decoration:none;">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="testimonialsDlg" title="Some emails from our customers" style="display:none;">
+        <p style="color:Red;font-size:12px;padding:5px;">All our testimonials can be verified with the customers who spontaneously gave them to us.</p>
+        <p class="testimonial">“...Before I retired I was in customer service and I have to say this again your are the best. And so is the product you represent. If you ever need a recommendation from any of your customers please do not hesitate to have them contact me. . I hope you show this e mail to your top management.. You do everything right. Always enjoy hearing from you. You are a great asset to your company...” - <span class="testimonialSource">Tony G.</span></p> 
+        <p class="testimonial">“...I am trying to put in customer addresses and I have the actual longitude and Lattitude numbers instead of the physical address ... Love the system by the way....” - <span class="testimonialSource">K.Besel</span></p> 
+        <p class="testimonial">“...Thank you for your quick response. Looks great and YES it will be a very valuable tool.  If you ever need a recommendation on your product I will be more that helpful to give you and Easitrack a glowing report...” - <span class="testimonialSource">Rob</span></p> 
+        <p class="testimonial">“...I must say that I am still very impressed with the easitrack system. It's been great being able to see every truck in our fleet that I have tagged so far. I'm also impressed with how accurate each location is, down to 5 feet in most cases....” - <span class="testimonialSource">Jerry F.</span></p> 
+        <p class="testimonial">“...we have been happy with the performance of the system and it's features....” - <span class="testimonialSource">Joe L.</span></p> 
+        <p class="testimonial">“...Thanks to you and all at Easitrack for being there for us.  Your system is awesome.  At times we have 9 trucks out delivering LIVE crawfish and, having your system, has been incredible in allowing us to keep accurate track of the deliveries.  Before EASITRACK we were having to "cell phone" communicate with our drivers in order to let our customers know where our trucks were and WHEN they would arrive.  Hey, no more of that.  My boss can't wait for the next addition to the system so what we can keep accurate track of oil changes, etc. ...” - <span class="testimonialSource">Clay</span></p> 
+        <p class="testimonial">“...Again thanks for all the support you and your team gave us....” - <span class="testimonialSource">Kathy</span></p> 
+        <p class="testimonial">“...Having installed your system in all of our vehicles, we have found it to be a tremendous asset to our company. The new version is SO MUCH faster and clearer. Head and heels better than before. Keep up the great work. ...” - <span class="testimonialSource">Dan H.</span></p> 
+        <p class="testimonial">“...You impressed me by your support level (I wish to talk to  your boss about it) For sure, if I think of wired GPS, your device is the first I think of even it’s few buck more expensive in monthly service than other...” - <span class="testimonialSource">Calvin</span></p> 
+        <p class="testimonial">“...We are a seasonal business and are "down" for 3 months. Dec, Jan and Feb. I definitely like the fact that we can suspend service while we're not using it.  With $4.00 + gas, we'll be using your service to monitor our vehicles very closely this year.  Thanks for the great service...” - <span class="testimonialSource">J. Frick</span></p> 
+        <p class="testimonial">“...Thanks again for all your help. Much Appreciated.. your customer support is great...” - <span class="testimonialSource">Bill P.</span></p> 
+    </div>
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-64561832-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+<!-- BEGIN ProvideSupport.com Graphics Chat Button Code -->
+<div id="ciamp8" style="z-index:100;position:absolute"></div><div id="scamp8" style="display:inline;position:fixed;z-index:9999;top:40px;left:0px;"></div><div id="sdamp8" style="display:none"></div><script type="text/javascript">                                                                                                                                                                                                           var seamp8 = document.createElement("script"); seamp8.type = "text/javascript"; var seamp8s = (location.protocol.indexOf("https") == 0 ? "https" : "http") + "://image.providesupport.com/js/0325vm2g5aj6809q0cspkf44yw/safe-standard.js?ps_h=amp8&ps_t=" + new Date().getTime(); setTimeout("seamp8.src=seamp8s;document.getElementById('sdamp8').appendChild(seamp8)", 1)</script><noscript><div style="display:inline"><a href="https://www.providesupport.com?messenger=0325vm2g5aj6809q0cspkf44yw">Customer Support Chat</a></div></noscript>
+<!-- END ProvideSupport.com Graphics Chat Button Code -->
+
+
+</body>
+</html>

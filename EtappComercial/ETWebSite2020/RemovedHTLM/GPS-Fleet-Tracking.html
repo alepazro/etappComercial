@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>EasiTrack - GPS Real Time Fleet Tracking</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />	
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="images/img//favicon.png" rel="icon">
+	<meta name="keywords" content="fleet monitoring, vehicle tracking, real time gps tracking, fleet management, truck tracking" />
+	<meta name="description" content="EasiTrack is an easy to use GPS Fleet Tracking tool for small businesses" />
+	<meta name="author" content="EasiTrack, Corp."/> 
+    <meta name="dcterms.rightsHolder" content="Copyright (c) 2011 www.easitrack.com"/>
+
+    <!--    CSS includes -->
+    <link href="themes/flick/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/common_v2.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="Styles/ws_v2.css" />
+      <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Main Stylesheet File -->
+    <link href="Styles/style.css" rel="stylesheet"> 
+
+    <!--    Javascript includes -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="Scripts/easySlider1.7.js" type="text/javascript"></script>
+    <script src="Scripts/db.js" type="text/javascript"></script>
+    <script src="Scripts/webForms.js" type="text/javascript"></script>
+    <script src="Scripts/imagesDB.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        function showYouTubeVideo(id) {
+            try {
+                $('#videoTestimonials').attr('src', 'http://www.youtube.com/embed/' + id + '?rel=0');
+            }
+            catch (err) {
+                alert('showVideo: ' + err.description);
+            }
+        }
+
+        jQuery(document).ready(function () {
+
+        });
+
+    </script>
+
+
+</head>
+<body>
+      <!--==========================
+  Header
+  ============================-->
+    <header id="header" class="fixed-top navbar navbar-expand-lg navbar-light ">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="images/img/Home/EasiTracD04aR02bP01ZL-Jefferson2b_mdm.png" alt="" class="img-fluid"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav main-nav float-right">
+                    <li class="nav-item active"><a href="index.html">Home</a> </li>
+                    <li class="nav-item " id="feature"><a href="GTD-GPS-System.html">Features</a></li>
+                    <li class="nav-item "><a href="GTD-GPS-Installation.html" class="mainMenuOptionText">Installation</a></li>
+                    <li class="nav-item "><a href="about-us.html">About Us</a></li>
+                    <li class="nav-item "><a href="buy-now.html">Order Now</a></li>
+                    <li class="nav-item "><a href="contact-us.html">Contact Us</a></li> <a href="login.html" class="btn-get-started ">Login</a> </ul>
+            </div>
+        </div>
+    </header>
+    <div class="middleBanner">
+        <div class="middleBannerInternal">
+            <div style="width:470px;float:right;padding-top:20px;">
+                <div>
+                    <iframe id="videoTestimonials" width="360" height="270" src="http://www.youtube.com/embed/Wss9HlJY--I?rel=0" frameborder="0"></iframe>
+                </div>
+                <div style="padding:5px 5px 0px 0px;">
+                    <a href="#" onclick="showYouTubeVideo('Wss9HlJY--I')"><img src="images/Sumercamp-Electric.jpg" width="75" height="56" alt="" /></a>
+                    <a href="#" onclick="showYouTubeVideo('ngiJGwQhFAI')"><img src="images/industrial-landscaping.jpg" width="75" height="56" alt="" /></a>
+                    <a href="#" onclick="showYouTubeVideo('3-Wuk2nxOos')"><img src="images/Portman-Bros.jpg" width="75" height="56" alt="" /></a>
+                    <a href="#" onclick="showYouTubeVideo('KI3QXHT-n1U')"><img src="images/Scott-Johns.jpg" width="75" height="56" alt="" /></a>
+                </div>
+            </div>
+            <div style="height:370px;width:470px;float:left;overflow:hidden;">
+                <h1 style="color:#ffa500;padding-top:10px;font-size:30px;">GPS Fleet Tracking System</h1>
+                <h2 style="color:#ffffff;padding-top:10px;">Very reasonable price</h2>
+                <div style="color:#ffff00;font-size:14px;font-weight:600;padding-top:5px;">
+                    <ul class="ulFeatures">
+                        <!--<li style="font-size:20px;">GPS Tracker: $119 <span style="font-size:11px;">(Incl. limited lifetime warranty)</span></li>-->
+                        <li>
+                            Super Sensitive GPS Tracker: $119
+                            <br />
+                            <span style="color:#ffffff;">Hardwired and Concealable device</span>
+                            <br />
+                            <span style="color:#ffffff;font-size:15px;">Optional OBD Plug-n-Play</span>
+                        </li>
+                        <li>Monthly Service: $17.99/month <!--<a href="http://www.easitrack.com/prices.html" style="color:#ffffff;font-size:11px;text-decoration:none;">(See EasiTrack Editions)</a>--></li>
+                    </ul>
+                </div>
+
+                <h2 style="color:#ffffff;padding-top:10px;">Absolute flexibility and dependability</h2>
+                <div style="color:#ffff00;font-size:14px;font-weight:600;padding-top:5px;">
+                    <ul class="ulFeatures">
+                        <li>Professional-grade web application</li>
+                        <li>No-Contracts / Pay month-to-month</li>
+                        <li>Suspend / Resume or Flat Cancel whenever you want</li>
+                        <li>Mobile App included, to track wherever you are</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="width:100%;background-color:#ededed;border-top:1px solid #15476e;border-bottom:1px solid #000000;">
+        <div style="width:950px;margin:0px auto;padding:5px;overflow:hidden;">
+            <table>
+                <tr>
+                    <td>
+                        <div style="background-image:url(../images/WatchDemo.jpg); background-repeat:no-repeat; background-position:center;">
+                            <h2>Benefits Video - Full Version</h2>
+                            <iframe width="420" height="315" src="http://www.youtube.com/embed/8x5GweZBJVg?rel=0&autoplay=0&border=1&modestbranding=1&showinfo=0" frameborder="0"></iframe>
+                            <br />
+                        </div>
+                    </td>
+                    <td>
+                        <div style="background-image:url(../images/WatchDemo.jpg); background-repeat:no-repeat; background-position:center;">
+                            <h2>Features Video</h2>
+                            <iframe width="560" height="315" src="http://www.youtube.com/embed/GAeDlmbLL94?rel=0" frameborder="0" allowfullscreen></iframe>
+                            <br />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <div style="text-align:center;width:600px;margin:0 auto;padding-top:20px;">
+                <h2>TEST OUR SYSTEM! - GET ACCESS TO A LIVE ACCOUNT!</h2>
+                <h3>Please fill the form below to receive the access via email</h3>
+                <div style="width:420px;text-align:left;margin:0 auto;">
+                    <fieldset style="width:410px;">
+                        <input id="formId" name="formId" type="hidden" value="7B8D67B5-E36A-4C3A-B1A4-B07D6F5B6342" />
+                        <div style="width:400px; margin:1px; background-color:#d5edf7; padding:5px;">
+                            <h3 style="margin-left:10px;">Get now a live demo access via email.  See first hand!</h3>
+                        </div>
+                        <table style="background-color:#f1f1f1;width:410px;">
+                            <tr>
+                                <td style="padding:5px;padding-left:30px;vertical-align:middle;font-weight:600;">
+                                    <label for="firstName">First Name</label>
+                                </td>
+                                <td style="padding:5px;">
+                                    <input id="firstName" name="firstName" type="text" maxlength="20" size="30" class="formField"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:5px;padding-left:30px;vertical-align:middle;font-weight:600;">
+                                    <label for="lastName">Last Name</label>
+                                </td>
+                                <td style="padding:5px;">
+                                    <input id="lastName" name="lastName" type="text" maxlength="20" size="30" class="formField"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:5px;padding-left:30px;vertical-align:middle;font-weight:600;">
+                                    <label for="email">Email</label>
+                                </td>
+                                <td style="padding:5px;">
+                                    <input id="email" name="email" type="text" maxlength="100" size="30" class="formField mandatoryField"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:5px;padding-left:30px;vertical-align:middle;font-weight:600;">
+                                    <label for="phone">Phone</label>
+                                </td>
+                                <td style="padding:5px;">
+                                    <input id="phone" name="phone" type="text" maxlength="20" size="30" class="formField"/>
+                                </td>
+                            </tr>
+                        </table>
+                        <table style="background-color:#f1f1f1;width:410px;">
+                            <tr style="text-align:center;">
+                                <td colspan="2" style="padding:10px;">
+                                    <input name="submit" type="button" value="Send My Access Link" style="width:200px;" onclick="getAccessLink()"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <div style="text-align:right;padding-right:10px;font-size:10px;">
+                        <span style="color:#888888;">Rep.ID:</span><input type="text" id="repId" name="repId" size="5" value="" style="height:15px;width:40px;" />
+                    </div>
+                </div>
+                <div style="padding-top:15px;">
+                    <button type="button" style="border:0px;cursor:pointer;" onclick="goTo('get-quote.html')"><img src="../images/smlGetQuoteButton.jpg" alt="Get a Quote button"/></button>
+                </div>
+            </div>
+            <br style="clear:both;" />
+           
+        </div>
+    </div>
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact">
+      <div class="container">
+        <div class="row ">
+          <div class="col-lg-12">
+            <nav class="main-nav">
+              <ul>
+                <li><a href="gps-tracker.html">GPS Tracker Info</a></li>
+                <li><a href="gps-service.html">Web Application Info</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="faq.html">F.A.Q.</a></li>
+                <li><a target="_blank" href="https://www.privacypolicies.com/privacy/view/ed7c28d730bef2361658a1b6d5a20e80">Privacy Policy</a></li>
+              </ul>
+            </nav>
+            <!-- .main-nav -->
+          </div>
+          <!--  <h5 class="col-lg-4 pull-right"> <img class="padding-top" src="images/img/Home/telephone1.png" class="img-fluid" alt="">   (888) 744-6449</h5> -->
+        </div>
+      </div>
+    </section>
+
+<script type="text/javascript">
+    var releadTrackingId = '0bd351b65c000c494d7287409d262faa';
+
+    (function () {
+        var rl = document.createElement('script');
+        rl.type = 'text/javascript';
+        rl.async = true;
+        rl.src = (document.location.protocol == 'https:' ? 'https://' : 'http://') + 'relead.s3.amazonaws.com/tracking.relead.js';
+        var e = document.getElementsByTagName('script')[0];
+        e.parentNode.insertBefore(rl, e);
+    })();
+</script>
+
+
+</body>
+</html>

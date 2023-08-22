@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+
+<head>
+    <title>EasiTrack GPS Tracking System</title>
+    <meta name='description' content='EasiTrack GPS Tracking System has been developed with the user in mind: easy to learn and with all the features needed by a service company.' />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Styles/common_v2.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/ws_v2.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/InTrackGPS.css" rel="stylesheet" type="text/css" />
+    <link href="carouselSkins/tango/skin2.css" rel="stylesheet" type="text/css" />
+    <!-- Main Stylesheet File -->
+    <link href="Styles/style.css" rel="stylesheet">
+    <style type="text/css">
+    .mainMenu a {
+        display: block;
+        padding-left: 115px;
+        padding-top: 35px;
+        padding-right: 10px;
+        height: 95px;
+    }
+    </style>
+</head>
+
+<body>
+    <!--==========================
+  Header
+  ============================-->
+    <header id="header" class="fixed-top navbar navbar-expand-lg navbar-light ">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="images/img/Home/EasiTracD04aR02bP01ZL-Jefferson2b_mdm.png" alt="" class="img-fluid"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav main-nav float-right">
+                    <li class="nav-item active"><a href="index.html">Home</a> </li>
+                    <li class="nav-item " id="feature"><a href="GTD-GPS-System.html">Features</a></li>
+                    <li class="nav-item "><a href="GTD-GPS-Installation.html" class="mainMenuOptionText">Installation</a></li>
+                    <li class="nav-item "><a href="about-us.html">About Us</a></li>
+                    <li class="nav-item "><a href="buy-now.html">Order Now</a></li>
+                    <li class="nav-item "><a href="contact-us.html">Contact Us</a></li> <a href="login.html" class="btn-get-started ">Login</a> </ul>
+            </div>
+        </div>
+    </header>
+    <!-- #header -->
+    <!--  <div class="topBar">
+        <div class="topBarInternal">
+            <ul id="auxMenu" style="float:right;">
+                <li class="auxMenuOption auxMenuOptionDivider"><a href="faq.html" class="auxMenuOptionText">F.A.Q.</a></li>
+                <li class="auxMenuOption auxMenuOptionDivider"><a href="GTD-Testimonials.html" class="auxMenuOptionText">Testimonials</a></li>
+                <li class="auxMenuOption auxMenuOptionDivider"><a href="about-us.html" class="auxMenuOptionText">About Us</a></li>
+                <li class="auxMenuOption"><a href="contact-us.html" class="auxMenuOptionText">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="topBanner">
+        <div class="topBannerInternal">
+            <div style="float:right;">
+                <div style="margin-top:60px;text-align:right;">
+                    <span class="tollFreeNumber" style="font-size:28px;">Call Now! ( 888 ) 744-6449</span>
+                </div>
+            </div>
+            <div style="padding-top:30px;">
+                <a href="index.html" style="text-decoration:none;"><img src="images/logo3.png" alt="EasiTrack" width="350" height="80" style="border:0px;" /></a>
+            </div>
+        </div>
+    </div> -->
+    <div class="middleBar">
+        <div class="middleBarInternal mainMenuOptionDivider1st">
+            <ul id="mainMenu">
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="GTD-GPS-System.html" class="mainMenuOptionText ourSystemMenu">How it works</a></li>
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="GTD-GPS-Tracker.html" class="mainMenuOptionText">GPS Tracker</a></li>
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="GTD-GPS-installation.html" class="mainMenuOptionText">Installation</a></li>
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="GTD-Prices.html" class="mainMenuOptionText">Prices</a></li>
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="GTD-Demo.html" class="mainMenuOptionText">Demo Video</a></li>
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="https://easitrack.net/buy-now.html" class="mainMenuOptionText">Buy Now</a></li>
+            </ul>
+        </div>
+        <div id="ourSystemSubMenu" style="z-index:9999;position:absolute;display:none;width:400px;background-color:#bdd4ee;border:1px solid #000000;padding:5px;">
+            <div style="width:100%;text-align:right;"> <span style="font-size:12px; cursor:pointer;" onclick="closeSubMenu();">[Close]</span> </div>
+            <div style="width:100%;overflow:hidden;padding:5px;">
+                <div style="float:right;padding-right:10px;">
+                    <ul class="subMenu">
+                        <li class="subMenuOption"><a href="GTD-Dispatching.html" class="subMenuOptionText">Dispatching</a></li>
+                        <li class="subMenuOption"><a href="GTD-HotSpots.html" class="subMenuOptionText">Hot Spots</a></li>
+                        <li class="subMenuOption"><a href="GTD-Temperature.html" class="subMenuOptionText">Temperature Monitor</a></li>
+                        <li class="subMenuOption"><a href="GTD-IButton.html" class="subMenuOptionText">Driver Identification</a></li>
+                        <li class="subMenuOption"><a href="GTD-Mobile-Application.html" class="subMenuOptionText">Mobile Application</a></li>
+                        <li class="subMenuOption"><a href="GTD-Maintenance-Module.html" class="subMenuOptionText">Maintenance Module</a></li>
+                        <li class="subMenuOption"><a href="GTD-FuelLog-Module.html" class="subMenuOptionText">Fuel Log Module</a></li>
+                        <li class="subMenuOption"><a href="GTD-Reports.html" class="subMenuOptionText">Analytical Reports</a></li>
+                        <li class="subMenuOption"><a href="GTD-MultiMaps.html" class="subMenuOptionText">Multi-Map Tracking</a></li>
+                    </ul>
+                </div>
+                <div style="float:left; padding-left:10px;">
+                    <ul class="subMenu">
+                        <li class="subMenuOption"><a href="GTD-Fleet-Tracking.html" class="subMenuOptionText">Fleet Tracking</a></li>
+                        <li class="subMenuOption"><a href="GTD-OBD.html" class="subMenuOptionText">OBD Power Connector</a></li>
+                        <li class="subMenuOption"><a href="GTD-BreadcrumbTrail.html" class="subMenuOptionText">Breadcrumb Trail</a></li>
+                        <li class="subMenuOption"><a href="GTD-PostedSpeedLimit.html" class="subMenuOptionText">True Speed Control</a></li>
+                        <li class="subMenuOption"><a href="GTD-Geofences.html" class="subMenuOptionText">Geofences</a></li>
+                        <li class="subMenuOption"><a href="GTD-Ignition.html" class="subMenuOptionText">Starter Disable</a></li>
+                        <li class="subMenuOption"><a href="GTD-Telemetry.html" class="subMenuOptionText">Telemetry</a></li>
+                        <li class="subMenuOption"><a href="GTD-Real-Time-Alerts.html" class="subMenuOptionText">Real Time Alerts</a></li>
+                        <li class="subMenuOption"><a href="GTD-eLog.html" class="subMenuOptionText">eLog Hours of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="middleBanner2" style="min-height:600px;">
+        <div style="width:100%;text-align:center;color:#ffffff;padding:5px;">
+            <h1>The best tracking map to monitor the location of your vehicles in real time</h1>
+            <h3>More than 1,500 companies in the USA use EasiTrack every day</h3> </div>
+        <div style="width:900px;margin:10px auto; padding:10px;background-color:#ffffff;border:1px solid #bdd4ee;border-right:2px solid #bdd4ee;border-bottom:2px solid #bdd4ee;min-height:500px;">
+            <div style="width:100%;text-align:center;">
+                <h1 class="featureTitle">Cut idles, Cut miles driven, Cut side-jobs</h1>
+                <h2 class="featureSubTitle">EasiTrack: experience tangible benefits</h2> </div>
+            <div style="width:100%; overflow:hidden;">
+                <div style="width:610px; float:right;">
+                    <div style="padding:20px 10px 10px;">
+                        <p class="featureParagraph" style="padding-bottom:30px;"> EasiTrack enables fleet owners to know to know the precise location of every vehicle in their entire fleet. EasiTrack's GPS tracking goes far beyond being a simple location device. Our system has been used by businesses to significantly decrease costs, reduce fuel consumption, improve employee productivity, increase asset security and much more: </p>
+                        <table cellspacing="0">
+                            <tr>
+                                <td class="bigBullet">1</td>
+                                <td class="bigBulletLabel"><span style="padding-left:10px;">Visualize your entire fleet in a map</span></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <p style="padding:0px 10px 10px;">With EasiTrack's high technology Google Maps you will be able to actually see your entire fleet or part of it at any given time. Learn more about <a href="GTD-Fleet-Tracking.html">How To Visualize My Fleet In A Map.</a></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bigBullet">2</td>
+                                <td class="bigBulletLabel"><span style="padding-left:10px;">Lower fuel consumption</span></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <p style="padding:0px 10px 10px;">Organizing the routes of your vehicles, you can lower the driven miles, hence lowering fuel consumption. With the breadcrumb trail feature, you can actually replay the route driven by your vehicles and identify opportunities of route improvement. See how to <a href="GTD-BreadcrumbTrail.html">Review The Routes Of My Vehicles.</a></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bigBullet">3</td>
+                                <td class="bigBulletLabel"><span style="padding-left:10px;">Track mileage</span></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <p style="padding:0px 10px 10px;">Find out how many miles are driven per vehicle on any timeframe: per day, per week, per month, you define it. Find out about the Miles Driven Report and many other <a href="GTD-Reports.html">Analytical Reports.</a></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bigBullet">4</td>
+                                <td class="bigBulletLabel"><span style="padding-left:10px;">Create more efficient delivery routes</span></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <p style="padding:0px 10px 10px;">Using the breadcrumb trail you can actually visualize what your drivers are doing through the day. The breadcrumb trail will show you the entire route taken by each one of your vehicles. With this information you can find out how to make more efficient your fleet routes. See more about <a href="GTD-BreadcrumbTrail.html">Breadcrumb Trail.</a></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bigBullet">5</td>
+                                <td class="bigBulletLabel"><span style="padding-left:10px;">Track safety</span></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <p style="padding:0px 10px 10px;">Our GPS Trackers report events related to driver behavior such as: Accelerations, Decelerations, Harsh turns, Speeding. These events will alert you of improper behavior and you can act upon it immediately. This will improve immediately the security of your fleet, and lower your insurance premiums by lowering the claims.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bigBullet">6</td>
+                                <td class="bigBulletLabel"><span style="padding-left:10px;">Manage vehicle maintenance</span></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <p style="padding:0px 10px 10px;">EasiTrack's Maintenance module helps you keep all the preventive maintenance task up to date. Oil change, tire rotation, insurance renewal, or any other task you need, can be programmed to be monitored automatically, based on time, miles, or engine hours. When a task is due to expire, alerts and reports are generated automatically and sent to you. You will have actionable information in time, every time. Learn more about <a href="GTD-Maintenance-Module.html">Preventive Vehicle Maintenace.</a></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bigBullet">7</td>
+                                <td class="bigBulletLabel"><span style="padding-left:10px;">Receive alerts when a vehicle crosses a perimeter</span></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <p style="padding:0px 10px 10px;">One of the most important alerts that EasiTrack provides is the Geofence Crossing alert. Be notified everytime any of your vehicles arrives to or departures from sites that you need to keep track of. Our Geofences module will keep automatic log of all such visits to any place you pre-define, so you will have the full detail of every vehicle that went to a site, the date and time, and the length of the stay. This is the best Proof Of Visit / Proof Of Service tool your company will ever have. Learn more about <a href="GTD-Geofences.html">Geofences.</a></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bigBullet">8</td>
+                                <td class="bigBulletLabel"><span style="padding-left:10px;">Track vehicle speed</span></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <p style="padding:0px 10px 10px;">EasiTrack's GPS Tracker is designed to monitor the vehicle's speed second by second. When the speed goes beyond a threshold you have preset, an alert is sent in real time via SMS and/or Email to any number of receipients. With this alerts you can curb speeding and increase your fleet safety. Read more about <a href="GTD-Real-Time-Alerts.html">Real Time Alerts.</a></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bigBullet">9</td>
+                                <td class="bigBulletLabel"><span style="padding-left:10px;">Improve customer service and estimated delivery time</span></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <p style="padding:0px 10px 10px;">Our Quick Dispatch Module permits identifying the closest vehicle to a service call, and dispatch such vehicle immediately with a click of a button. This module will empower your dispatcher with the necessary visibility to maximize customer service and provide very acquarate times of arrival. Learn more about <a href="GTD-Dispatching.html">Dispatching.</a></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bigBullet">10</td>
+                                <td class="bigBulletLabel"><span style="padding-left:10px;">Monitor temperature level in trucks</span></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <p style="padding:0px 10px 10px;">Ideal for refrigerated trucks and vans, EasiTrack's module can be connected to up to 4 temperature probes to monitor cargo temperature. If temperature goes above or below predefined thresholds, alerts are triggered immediately, and cargo can be kept safe.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bigBullet">11</td>
+                                <td class="bigBulletLabel"><span style="padding-left:10px;">Audit fuel purchases</span></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <p style="padding:0px 10px 10px;">EasiTrack's Maintenance module has an option to enter or upload your fueling events. This information is actually crossed with the actual historical data of the location of your vehicles. If a fueling event is identified in a date and place where the vehicle has not been, then an exception is triggered and a potential unauthorized fuel purchase took place. Save money by curving these unauthorized fueling events!</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div style="width:250px; float:left; background-color:#ccc;">
+                    <div style="width:230px; margin:20px auto;">
+                        <div><img src="ITImages/RoundCornersTop.png" width="231" height="18" alt="Top Corners" /></div>
+                        <ul class="mainMenu">
+                            <li id="mainMenuTracking" class="featuresMenuItem" data-imgTag="Tracking" data-content="Tracking"><a id="mainMenuTrackingA" href="GTD-Fleet-Tracking.html"><span>Fleet Tracking</span></a></li>
+                            <li id="mainMenuOBD" class="featuresMenuItem" data-imgTag="OBD" data-content="OBD"><a id="mainMenuOBDA" href="GTD-OBD.html"><span>Easy OBD Installation</span></a></li>
+                            <li id="mainMenuTrail" class="featuresMenuItem" data-imgTag="Trail" data-content="Trail"><a id="mainMenuTrailA" href="GTD-BreadcrumbTrail.html">Breadcrumb Trail</a></li>
+                            <li id="mainMenuSpeedLimit" class="featuresMenuItem" data-imgTag="SpeedLimit" data-content="SpeedLimit"><a id="mainMenuSpeedLimitA" href="GTD-PostedSpeedLimit.html">True Speed Control</a></li>
+                            <li id="mainMenuGeofences" class="featuresMenuItem" data-imgTag="Geofence" data-content="Geofences"><a id="mainMenuGeofencesA" href="GTD-Geofences.html">Geofences</a></li>
+                            <li id="mainMenuIgnition" class="featuresMenuItem" data-imgTag="Ignition" data-content="Ignition"><a id="mainMenuIgnitionA" href="GTD-Ignition.html">Starter Disable</a></li>
+                            <li id="mainMenuTelemetry" class="featuresMenuItem" data-imgTag="Telemetry" data-content="Telemetry"><a id="mainMenuTelemetryA" href="GTD-Telemetry.html">Telemetry</a></li>
+                            <li id="mainMenuAlerts" class="featuresMenuItem" data-imgTag="Alerts" data-content="Alerts"><a id="mainMenuAlertsA" href="GTD-Real-Time-Alerts.html">Real Time Alerts</a></li>
+                            <li id="mainMenuDispatch" class="featuresMenuItem" data-imgTag="Dispatch" data-content="Dispatch"><a id="mainMenuDispatchA" href="GTD-Dispatching.html">Dispatching</a></li>
+                            <li id="mainMenuELog" class="featuresMenuItem" data-imgTag="eLog" data-content="eLog"><a id="mainMenuELogA" href="GTD-eLog.html">eLog HOS</a></li>
+                            <li id="mainMenuHotSpots" class="featuresMenuItem" data-imgTag="HotSpot" data-content="HotSpot"><a id="mainMenuHotSpotA" href="GTD-HotSpots.html">Hot Spots</a></li>
+                            <li id="mainMenuMobile" class="featuresMenuItem" data-imgTag="Mobile" data-content="Mobile"><a id="mainMenuMobileA" href="GTD-Mobile-Application.html">Mobile Application</a></li>
+                            <li id="mainMenuTools" class="featuresMenuItem" data-imgTag="Tools" data-content="Maintenance"><a id="mainMenuToolsA" href="GTD-Maintenance-Module.html">Maintenance Module</a></li>
+                            <li id="mainMenuFuelLog" class="featuresMenuItem" data-imgTag="FuelLog" data-content="FuelLog"><a id="mainMenuFuelLogA" href="GTD-FuelLog-Module.html">Fuel Log Module</a></li>
+                            <li id="mainMenuReports" class="featuresMenuItem" data-imgTag="Reports" data-content="Reports"><a id="mainMenuReportsA" href="GTD-Reports.html">Over 30+ Reports</a></li>
+                            <li id="mainMenuMultiMap" class="featuresMenuItem" data-imgTag="MultiMap" data-content="MultiMap"><a id="mainMenuMultiMapA" href="GTD-MultiMaps.html">Multi-Map Tracking</a></li>
+                        </ul>
+                        <div><img src="ITImages/RoundCornersBottom.png" width="230" height="18" alt="Bottom Corners" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="contact">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-12">
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="gps-tracker.html">GPS Tracker Info</a></li>
+                            <li><a href="gps-service.html">Web Application Info</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="testimonials.html">Testimonials</a></li>
+                            <li><a href="faq.html">F.A.Q.</a></li>
+                            <li><a target="_blank" href="https://www.privacypolicies.com/privacy/view/ed7c28d730bef2361658a1b6d5a20e80">Privacy Policy</a></li>
+                        </ul>
+                    </nav>
+                    <!-- .main-nav -->
+                </div>
+                <!--  <h5 class="col-lg-4 pull-right"> <img class="padding-top" src="images/img/Home/telephone1.png" class="img-fluid" alt="">   (888) 744-6449</h5> --></div>
+        </div>
+    </section>
+    <!--    Javascript includes -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.jcarousel.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.jshowoff.min.js" type="text/javascript"></script>
+    <script src="Scripts/db.js" type="text/javascript"></script>
+    <script src="Scripts/InTrackGPS.js" type="text/javascript"></script>
+    <script src="Scripts/webForms.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    jQuery(document).ready(function() {
+        $("#ourSystemSubMenu").offset({
+            top: $('.ourSystemMenu').position().top + 25,
+            left: $('.ourSystemMenu').position().left
+        })
+        $('.ourSystemMenu').hover(ourSystemHoverIn, ourSystemHoverOut);
+        $('#ourSystemSubMenu').hover(ourSystemSubMenuHoverIn, ourSystemSubMenuHoverOut);
+        $('.featuresMenuItem').hover(menuItemHoverIn, menuItemHoverOut);
+    });
+    </script>
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-64561832-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <!-- BEGIN ProvideSupport.com Graphics Chat Button Code -->
+    <div id="ciamp8" style="z-index:100;position:absolute"></div>
+    <div id="scamp8" style="display:inline;position:fixed;z-index:9999;top:0px;left:0px;"></div>
+    <div id="sdamp8" style="display:none"></div>
+    <script type="text/javascript">
+    var seamp8 = document.createElement("script");
+    seamp8.type = "text/javascript";
+    var seamp8s = (location.protocol.indexOf("https") == 0 ? "https" : "http") + "://image.providesupport.com/js/0325vm2g5aj6809q0cspkf44yw/safe-standard.js?ps_h=amp8&ps_t=" + new Date().getTime();
+    setTimeout("seamp8.src=seamp8s;document.getElementById('sdamp8').appendChild(seamp8)", 1)
+    </script>
+    <noscript>
+        <div style="display:inline"><a href="https://www.providesupport.com?messenger=0325vm2g5aj6809q0cspkf44yw">Customer Support Chat</a></div>
+    </noscript>
+    <!-- END ProvideSupport.com Graphics Chat Button Code -->
+    <!-- Start of LiveChat (www.livechatinc.com) code -->
+    <script type="text/javascript">
+    var __lc = {};
+    __lc.license = 6649801;
+    (function() {
+        var lc = document.createElement('script');
+        lc.type = 'text/javascript';
+        lc.async = true;
+        lc.src = ('https:' == document.location.protocol ? 'https://' : 'https://') + 'cdn.livechatinc.com/tracking.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(lc, s);
+    })();
+    </script>
+    <!-- End of LiveChat code -->
+</body>
+
+</html>

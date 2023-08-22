@@ -1,0 +1,405 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+
+<head>
+    <title>EasiTrack Installation</title>
+    <meta name='description' content='EasiTrack GPS Tracker device is an ultra-sensitive tracker covered' />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <link href="images/img//favicon.png" rel="icon">
+    <link href="themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  -->
+    <link href="Styles/common_v2.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/ws_v2.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/InTrackGPS.css" rel="stylesheet" type="text/css" />
+    <link href="carouselSkins/tango/skin2.css" rel="stylesheet" type="text/css" />
+    <!-- Main Stylesheet File -->
+    <link href="Styles/style.css" rel="stylesheet"> </head>
+
+<body>
+    <!--     <div class="topBar">
+        <div class="topBarInternal">
+            <ul id="auxMenu" style="float:right;">
+                <li class="auxMenuOption auxMenuOptionDivider"><a href="faq.html" class="auxMenuOptionText">F.A.Q.</a></li>
+                <li class="auxMenuOption auxMenuOptionDivider"><a href="GTD-Testimonials.html" class="auxMenuOptionText">Testimonials</a></li>
+                <li class="auxMenuOption auxMenuOptionDivider"><a href="about-us.html" class="auxMenuOptionText">About Us</a></li>
+                <li class="auxMenuOption"><a href="contact-us.html" class="auxMenuOptionText">Contact Us</a></li>
+            </ul>
+        </div>
+    </div> -->
+    <header id="header" class="fixed-top navbar navbar-expand-lg navbar-light ">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="images/img/Home/EasiTracD04aR02bP01ZL-Jefferson2b_mdm.png" alt="" class="img-fluid"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav main-nav float-right">
+                    <li class="nav-item active"> <a href="index.html" style="text-decoration:none;">Home</a> </li>
+                    <li class="nav-item " id="feature"><a href="GTD-GPS-System.html">Features</a></li>
+                    <li class="nav-item "><a href="GTD-GPS-Installation.html" class="mainMenuOptionText">Installation</a></li>
+                    <li class="nav-item "><a href="about-us.html">About Us</a></li>
+                    <li class="nav-item "><a href="buy-now.html">Order Now</a></li>
+                    <li class="nav-item "><a href="contact-us.html">Contact Us</a></li> <a href="login.html" class="btn-get-started ">Login</a> </ul>
+            </div>
+        </div>
+    </header>
+    <!-- #header -->
+    <!--  <div class="topBanner">
+        <div class="topBannerInternal">
+            <div style="float:right;">
+                <div style="margin-top:60px;text-align:right;">
+                    <span class="tollFreeNumber" style="font-size:28px;">Call Now! ( 888 ) 744-6449</span>
+                </div>
+            </div>
+            <div style="padding-top:30px;">
+                <a href="index.html" style="text-decoration:none;"><img src="images/logo3.png" alt="EasiTrack" width="350" height="80" style="border:0px;" /></a>
+            </div>
+        </div>
+    </div> -->
+    <div class="middleBar">
+        <div class="middleBarInternal mainMenuOptionDivider1st">
+            <ul id="mainMenu">
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="GTD-GPS-System.html" class="mainMenuOptionText ourSystemMenu">How it works</a></li>
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="GTD-GPS-Tracker.html" class="mainMenuOptionText">GPS Tracker</a></li>
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="GTD-GPS-installation.html" class="mainMenuOptionText">Installation</a></li>
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="GTD-Prices.html" class="mainMenuOptionText">Prices</a></li>
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="GTD-Demo.html" class="mainMenuOptionText">Demo Video</a></li>
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="https://easitrack.net/buy-now.html" class="mainMenuOptionText">Buy Now</a></li>
+            </ul>
+        </div>
+        <div id="ourSystemSubMenu" style="z-index:9999;position:absolute;display:none;width:400px;background-color:#bdd4ee;border:1px solid #000000;padding:5px;">
+            <div style="width:100%;text-align:right;"> <span style="font-size:12px; cursor:pointer;" onclick="closeSubMenu();">[Close]</span> </div>
+            <div style="width:100%;overflow:hidden;padding:5px;">
+                <div style="float:right;padding-right:10px;">
+                    <ul class="subMenu">
+                        <li class="subMenuOption"><a href="GTD-Dispatching.html" class="subMenuOptionText">Dispatching</a></li>
+                        <li class="subMenuOption"><a href="GTD-HotSpots.html" class="subMenuOptionText">Hot Spots</a></li>
+                        <li class="subMenuOption"><a href="GTD-Temperature.html" class="subMenuOptionText">Temperature Monitor</a></li>
+                        <li class="subMenuOption"><a href="GTD-IButton.html" class="subMenuOptionText">Driver Identification</a></li>
+                        <li class="subMenuOption"><a href="GTD-Mobile-Application.html" class="subMenuOptionText">Mobile Application</a></li>
+                        <li class="subMenuOption"><a href="GTD-Maintenance-Module.html" class="subMenuOptionText">Maintenance Module</a></li>
+                        <li class="subMenuOption"><a href="GTD-FuelLog-Module.html" class="subMenuOptionText">Fuel Log Module</a></li>
+                        <li class="subMenuOption"><a href="GTD-Reports.html" class="subMenuOptionText">Analytical Reports</a></li>
+                        <li class="subMenuOption"><a href="GTD-MultiMaps.html" class="subMenuOptionText">Multi-Map Tracking</a></li>
+                    </ul>
+                </div>
+                <div style="float:left; padding-left:10px;">
+                    <ul class="subMenu">
+                        <li class="subMenuOption"><a href="GTD-Fleet-Tracking.html" class="subMenuOptionText">Fleet Tracking</a></li>
+                        <li class="subMenuOption"><a href="GTD-OBD.html" class="subMenuOptionText">OBD Power Connector</a></li>
+                        <li class="subMenuOption"><a href="GTD-BreadcrumbTrail.html" class="subMenuOptionText">Breadcrumb Trail</a></li>
+                        <li class="subMenuOption"><a href="GTD-PostedSpeedLimit.html" class="subMenuOptionText">True Speed Control</a></li>
+                        <li class="subMenuOption"><a href="GTD-Geofences.html" class="subMenuOptionText">Geofences</a></li>
+                        <li class="subMenuOption"><a href="GTD-Ignition.html" class="subMenuOptionText">Starter Disable</a></li>
+                        <li class="subMenuOption"><a href="GTD-Telemetry.html" class="subMenuOptionText">Telemetry</a></li>
+                        <li class="subMenuOption"><a href="GTD-Real-Time-Alerts.html" class="subMenuOptionText">Real Time Alerts</a></li>
+                        <li class="subMenuOption"><a href="GTD-eLog.html" class="subMenuOptionText">eLog Hours of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="middleBanner2" style="min-height:600px;">
+        <div style="width:100%;text-align:center;color:#ffffff;padding:5px;">
+            <h1>EasiTrack's Installation of our GPS Tracker</h1> </div>
+        <div style="width:900px;margin:10px auto; padding:10px;background-color:#ffffff;border:1px solid #bdd4ee;border-right:2px solid #bdd4ee;border-bottom:2px solid #bdd4ee;min-height:500px;">
+            <div style="width:900px;">
+                <h2>Please find below our installation manuals</h2>
+                <table style="font-size:16px; padding:5px;margin:5px;">
+                    <tbody>
+                        <tr>
+                            <td><a id="dwnld1" href="docs/et_install_guide_IntAnt_device_v3.pdf" target="_blank" type="application/octet-stream" download="et_install_guide_IntAnt_device_v3.pdf">1. <span style="color:#ff0000;font-weight:600;">MOST POPULAR:</span> Internal Antenna GPS Tracker Installation Guide.</a></td>
+                        </tr>
+                        <tr>
+                            <td><a id="dwnld2" href="docs/et_install_guide_ExtAnt_device_v3.pdf" target="_blank" type="application/octet-stream" download="et_install_guide_ExtAnt_device_v3.pdf">2. External Antenna GPS Tracker Installation Guide.</a></td>
+                        </tr>
+                        <tr>
+                            <td><a id="dwnld3" href="docs/iButton_DriverID_installation_red_LED_ver2.pdf" target="_blank" type="application/octet-stream" download="iButton_DriverID_installation_red_LED_ver2.pdf">3. iButton / Driver ID Installation Guide.</a></td>
+                        </tr>
+                        <tr>
+                            <td><a id="dwnld4" href="docs/obd2_install.pdf" target="_blank" type="application/octet-stream" download="obd2_install.pdf">4. OBD connection add-on Installation Guide.</a></td>
+                        </tr>
+                        <tr>
+                            <td><a id="dwnld5" href="docs/starter_interrupt_Supplement.pdf" target="_blank" type="application/octet-stream" download="starter_interrupt_Supplement.pdf">5. Starter Interrupt Supplement Installation Guide.</a></td>
+                        </tr>
+                        <tr>
+                            <td><a id="dwnld6" href="docs/Temperature_sensor_wire_diagram.pdf" target="_blank" type="application/octet-stream" download="Temperature_sensor_wire_diagram.pdf">6. Temperature Sensor Wire Diagram and Installation Guide.</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4><span style="color:#ff0000;">ALSO: </span>In addition to the above documentation, you will also have direct access to our Technical Engineers who will be more than happy to guide you through the installation process, step by step.</h4>
+                <h2 style="line-height:50px;">Overview of the installation process</h2>
+                <p style="padding:0px 0px 10px 0px;font-weight:600;">The installation is a 3 step process:</p>
+                <div style="margin-left:20px;padding:5px;">
+                    <p>1. Find a secure location where to locate the GPS Tracker <a href="#step1">(more)</a></p>
+                    <p>2. Connect the 3 wires of the GPS Tracker to the vehicle's electrical system <a href="#step2">(more)</a></p>
+                    <p>3. (OPTIONAL) Find a good location to locate the antennas, and connect them to the transponder <a href="#step3">(more)</a></p>
+                </div>
+                <h3 style="padding:5px 0px;"><a name="step1">1.</a> Find a secure location where to locate the GPS Tracker</h3>
+                <table style="margin-left:20px;">
+                    <tr>
+                        <td style="vertical-align:top;"> <img src="images/dashboardInstall.jpg" alt="Dashboard Installation" width="100" height="129" /> </td>
+                        <td style="vertical-align:top;width:700px;padding:10px;">
+                            <p style="padding:5px;"><img src="images/CheckmarkX20.png" alt="" width="20" height="17" />Choose a convenient location in the vehicle – either in the trunk or interior of a vehicle. Avoid locations that might expose the device to excessive heat or moisture.</p>
+                            <p style="padding:5px;"><img src="images/CheckmarkX20.png" alt="" width="20" height="17" />The most common location for the GPS Tracker is under the dashboard. Some vehicles also offer a panel in front of the dashboard that can be open to expose a space where to install the GPS Tracker.</p>
+                            <p style="color:#ff0000;padding:5px;">Warning: The GPS Tracker is NOT a waterproof or sealed device. Care must be taken to ensure the device is kept away from water or any other liquids.</p>
+                        </td>
+                    </tr>
+                </table>
+                <h3 style="padding:5px 0px;"><a name="step2">2.</a> Connect the 3 wires of the GPS Tracker to the vehicle's electrical system</h3>
+                <table style="margin-left:20px;">
+                    <tr>
+                        <td style="vertical-align:top;"> <img src="images/3wires.jpg" alt="Dashboard Installation" width="100" height="113" /> </td>
+                        <td style="vertical-align:top;width:700px;padding:10px;">
+                            <p style="padding:5px;"><img src="images/CheckmarkX20.png" alt="" width="20" height="17" />The basic installation involves 3 cables: POWER, GROUND, and IGNITION SENSE.</p>
+                            <ul style="margin-left:40px;">
+                                <li>
+                                    <p style="padding:5px;">POWER LINE (RED WIRE): This has to be connected to a source where there is constant power, even when the Ignition is OFF.</p>
+                                </li>
+                                <li>
+                                    <p style="padding:5px;">GROUND LINE (BLACK WIRE): This line has to be connected to a good ground of the vehicle.</p>
+                                </li>
+                                <li>
+                                    <p style="padding:5px;">IGNITION SENSE LINE (WHITE WIRE): It is highly recommended that the white wire (ignition sense line) be run to an ignition switched line that is high in both Start and On positions. High is measured as at greater than 1 volt. If the ignition sense line of the modem is wired to a source where the voltage goes low (drops below 1.0 Volts, even momentarily), when in the start position, then ignition debounce may be required, and ignition on event trigger could be missed on occasion.</p>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top;"> <img src="images/FuseBoxX100.jpg" alt="Fuse Box" width="100" height="66" /> </td>
+                        <td style="vertical-align:top;width:700px;padding:10px;">
+                            <p style="padding:5px;"><img src="images/CheckmarkX20.png" alt="" width="20" height="17" />Most users and installers try to connect these cables to the fuse box of the vehicle.</p>
+                        </td>
+                    </tr>
+                </table>
+                <h3 style="padding:5px 0px;"><a name="step3">3.</a> (OPTIONAL) Find a good location to locate the antennas, and connect them to the transponder</h3>
+                <h4 style="color:Red;">Most devices come with an INTERNAL ANTENNA.  For those with an EXTERNAL ANTENNA follow this step:</h4>
+                <table style="margin-left:20px;">
+                    <tr>
+                        <td style="vertical-align:top;"> <img src="images/GPSAntennax100.jpg" alt="GPS Antenna" width="100" height="74" /> </td>
+                        <td style="vertical-align:top;width:700px;padding:10px;">
+                            <p style="padding:5px;"><img src="images/CheckmarkX20.png" alt="" width="20" height="17" />The GPS Antenna has to be mounted with the flat surface facing the sky, and with no metal above it. A proper location of the GPS Antenna is critical to the proper operation of the tracker.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top;"> <img src="images/GSMAntennax100.jpg" alt="GSM Antenna" width="100" height="48" /> </td>
+                        <td style="vertical-align:top;width:700px;padding:10px;">
+                            <p style="padding:5px;"><img src="images/CheckmarkX20.png" alt="" width="20" height="17" />The GSM Antenna can be installed in any place.</p>
+                        </td>
+                    </tr>
+                </table>
+                <!--<div style="text-align:center;">
+                    <h3><a id="download2" href="docs/EasiTrack_Installation_Guide.pdf" target="_blank" type="application/octet-stream" download="EasiTrack_InstallationGuide.pdf">Cick here to download our Installation Guide.</a></h3>
+                </div>-->
+                <hr />
+                <h2 style="line-height:50px;">Recomendations about installation</h2>
+                <p style="padding:0px 0px 10px 0px;">The following table depicts our recommendations about sourcing the installation:</p>
+                <table cellpadding="2" cellspacing="2" style="width:850px;border:1px solid #a1a1a1;">
+                    <tr style="padding:2px; background-color:#d9d9d9;">
+                        <td style="width:300px;">
+                            <p class="howCome">Source</p>
+                        </td>
+                        <td style="width:450px;">
+                            <p class="howCome">Our analysis</p>
+                        </td>
+                    </tr>
+                    <tr style="padding:3px;background-color:#fafafa;">
+                        <td style="padding:4px; vertical-align:top;">
+                            <p class="featureTitle">Best Buy stores</p>
+                            <p class="featureDetails">Many Best Buy stores across the country offer the service of car-radio installations. They will be able to also install your GPS Tracker. Given that our trackers are widely known across the USA, chances are your Best Buy store has experience with this particular device.</p>
+                            <p>Find a <a href="https://www.bestbuy.com" target="_blank">Best Buy store here.</a></p>
+                        </td>
+                        <td class="featureBenefit">
+                            <p style="font-weight:600;padding:5px 0px;">Advantages</p>
+                            <ul style="margin-left:20px;">
+                                <li>Everybody knows Best Buy and most people have one store close to them.</li>
+                                <li>Best Buy has technicians with the tools and the experience to perform a perfect job.</li>
+                                <li>The fee is usually between $50 and $75, which is very reasonable.</li>
+                                <!--<li>Best Buy offers a lifetime warranty on the installation.</li>-->
+                            </ul>
+                            <p style="font-weight:600;padding:5px 0px;">Disadvantages</p>
+                            <ul style="margin-left:20px;">
+                                <li>Probably the only disadvantage of Best Buy is that you will have to take your vehicle(s) to the store, which sometimes is difficult, specially on big trucks.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr style="padding:3px;">
+                        <td style="padding:4px; vertical-align:top;border-top:1px dotted #a1a1a1;">
+                            <p class="featureTitle">Car Radio Shops</p>
+                            <p class="featureDetails">As indicated above, any technician with car radio installation experience will be able to perform a great job. They can easily be found on the Yellow Pages of your city or town.</p>
+                        </td>
+                        <td class="featureBenefit" style="border-top:1px dotted #a1a1a1;">
+                            <p style="font-weight:600;padding:5px 0px;">Advantages</p>
+                            <ul style="margin-left:20px;">
+                                <li>Most, if not all cities have one or more car radio shops.</li>
+                                <li>In most cases the technicians can go to the vehicle(s) location to perform the installations</li>
+                            </ul>
+                            <p style="font-weight:600;padding:5px 0px;">Disadvantages</p>
+                            <ul style="margin-left:20px;">
+                                <li>One drawback when compared to Best Buy is the fee. An installation performed by this source may range between $75 and $119 per install.</li>
+                                <!--<li>Not all shops or individuals provide a lifetime warranty in the installation.</li>-->
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr style="padding:3px;background-color:#fafafa;">
+                        <td style="padding:4px; vertical-align:top;border-top:1px dotted #a1a1a1;">
+                            <p class="featureTitle">Professional GPS Installers</p>
+                            <p class="featureDetails">We usually recommend a web site called <a href="https://www.vehicleinstallers.com" target="_blank">Vehicle Installers</a>. This is a network of professional installers across the USA. You will be able to find certified technicians or companies with hands-on experience in this type of job.</p>
+                        </td>
+                        <td class="featureBenefit" style="border-top:1px dotted #a1a1a1;">
+                            <p style="font-weight:600;padding:5px 0px;">Advantages</p>
+                            <ul style="margin-left:20px;">
+                                <li>Professional Installers with previous experience installing GPS Trackers</li>
+                                <li>They will usually go to your place</li>
+                                <li>They will know for certain where to properly locate the GPS antenna</li>
+                            </ul>
+                            <p style="font-weight:600;padding:5px 0px;">Disadvantages</p>
+                            <ul style="margin-left:20px;">
+                                <li>The fee per installation can go from $75 all the way up to $120</li>
+                                <li>If the installer is not located close enough, any troubleshooting may cost extra.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr style="padding:3px;">
+                        <td style="padding:4px; vertical-align:top;border-top:1px dotted #a1a1a1;">
+                            <p class="featureTitle">Internal Employees or Company Mechanics</p>
+                            <p class="featureDetails">This is a great, if not the best alternative. Why? Because you would have the resources in place, and at a cost that you are already paying. Also, any maintenance would be done at the most convenient time, and again at a marginal cost.</p>
+                        </td>
+                        <td class="featureBenefit" style="border-top:1px dotted #a1a1a1;">
+                            <p style="font-weight:600;padding:5px 0px;">Advantages</p>
+                            <ul style="margin-left:20px;">
+                                <li>In-Situ service</li>
+                                <li>Most probably you are already paying these employees, so no extra costs for the installation</li>
+                                <li>Totally flexible scheduling for installations</li>
+                                <li>In-Site troubleshootings, if needed.</li>
+                            </ul>
+                            <p style="font-weight:600;padding:5px 0px;">Disadvantages</p>
+                            <ul style="margin-left:20px;">
+                                <li>We don't really see any disadvantage here as long as the individuals in the tasks are really knowleadgable or willing to learn.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <h2 style="line-height:40px;">Some facts about installing a GPS Tracker</h2>
+                <p style="font-weight:600;padding:0px 0px 5px 0px;"><img src="images/CheckmarkX20.png" alt="" width="20" height="17" /> FACT: The installation of the GPS Tracker is the most important step in the entire process</p>
+                <ul style="margin-left:40px;">
+                    <li style="padding:2px;">This holds true for every GPS Tracker in the world that goes hard-wired to the vehicle</li>
+                    <li style="padding:2px;">99% of the technical support cases we receive are originated on a poor installation.</li>
+                    <li style="padding:2px;">
+                        <p>The 2 most important factors on a proper installation are:</p>
+                        <ul style="margin-left:40px; padding:5px;">
+                            <li>The electrical installation, and</li>
+                            <li>the location of the GPS antenna</li>
+                        </ul>
+                    </li>
+                    <li style="padding:2px;">
+                        <p>The 2 most common causes of poor installation are:</p>
+                        <ul style="margin-left:40px; padding:5px;">
+                            <li>An improperly Ignition Cable wiring: Prevents the unit from doing periodical resets that keep the system clean and working</li>
+                            <li>An improperly located GPS Antenna: Causes inaccurate locations or Drifting effects (jumps from one place to another)</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p style="font-weight:600;padding:0px 0px 5px 0px;"><img src="images/CheckmarkX20.png" alt="" width="20" height="17" /> FACT: Installing a GPS Tracker is very much like installing a car radio</p>
+                <ul style="margin-left:40px;">
+                    <li style="padding:2px;">The electrical wiring on a basic installation of a GPS Tracker is exactly the same of that of a car radio.</li>
+                    <li style="padding:2px;">The only difference is in the location of the GPS Antenna (In the next section we discuss about this part of the installation).</li>
+                </ul>
+                <p style="font-weight:600;padding:0px 0px 5px 0px;"><img src="images/CheckmarkX20.png" alt="" width="20" height="17" /> FACT: If you have the tools and the knowledge, you can do the installation yourself</p>
+                <ul style="margin-left:40px;">
+                    <li style="padding:2px;">Many of our customers do the installation themselves.</li>
+                    <li style="padding:2px;">If you don't have the tools or the experience, we highly recommend that you get some help with the installation of your GPS Tracker.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section id="contact">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-12">
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="gps-tracker.html">GPS Tracker Info</a></li>
+                            <li><a href="gps-service.html">Web Application Info</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="testimonials.html">Testimonials</a></li>
+                            <li><a href="faq.html">F.A.Q.</a></li>
+                            <li><a target="_blank" href="https://www.privacypolicies.com/privacy/view/ed7c28d730bef2361658a1b6d5a20e80">Privacy Policy</a></li>
+                        </ul>
+                    </nav>
+                    <!-- .main-nav -->
+                </div>
+                <!--  <h5 class="col-lg-4 pull-right"> <img class="padding-top" src="images/img/Home/telephone1.png" class="img-fluid" alt="">   (888) 744-6449</h5> --></div>
+        </div>
+    </section>
+    <!--    Javascript includes -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.jcarousel.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.jshowoff.min.js" type="text/javascript"></script>
+    <script src="Scripts/db.js" type="text/javascript"></script>
+    <script src="Scripts/InTrackGPS.js" type="text/javascript"></script>
+    <script src="Scripts/webForms.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    jQuery(document).ready(function() {
+        $("#ourSystemSubMenu").offset({
+            top: $('.ourSystemMenu').position().top + 25,
+            left: $('.ourSystemMenu').position().left
+        })
+        $('.ourSystemMenu').hover(ourSystemHoverIn, ourSystemHoverOut);
+        $('#ourSystemSubMenu').hover(ourSystemSubMenuHoverIn, ourSystemSubMenuHoverOut);
+        $('.featuresMenuItem').hover(menuItemHoverIn, menuItemHoverOut);
+        menuItemClicked(document.getElementById('mainMenuTrailA'));
+    });
+    </script>
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-64561832-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <!-- BEGIN ProvideSupport.com Graphics Chat Button Code -->
+    <div id="ciamp8" style="z-index:100;position:absolute"></div>
+    <div id="scamp8" style="display:inline;position:fixed;z-index:9999;top:0px;left:0px;"></div>
+    <div id="sdamp8" style="display:none"></div>
+    <script type="text/javascript">
+    var seamp8 = document.createElement("script");
+    seamp8.type = "text/javascript";
+    var seamp8s = (location.protocol.indexOf("https") == 0 ? "https" : "http") + "://image.providesupport.com/js/0325vm2g5aj6809q0cspkf44yw/safe-standard.js?ps_h=amp8&ps_t=" + new Date().getTime();
+    setTimeout("seamp8.src=seamp8s;document.getElementById('sdamp8').appendChild(seamp8)", 1)
+    </script>
+    <noscript>
+        <div style="display:inline"><a href="https://www.providesupport.com?messenger=0325vm2g5aj6809q0cspkf44yw">Customer Support Chat</a></div>
+    </noscript>
+    <!-- END ProvideSupport.com Graphics Chat Button Code -->
+    <!-- Start of LiveChat (www.livechatinc.com) code -->
+    <script type="text/javascript">
+    var __lc = {};
+    __lc.license = 6649801;
+    (function() {
+        var lc = document.createElement('script');
+        lc.type = 'text/javascript';
+        lc.async = true;
+        lc.src = ('https:' == document.location.protocol ? 'https://' : 'https://') + 'cdn.livechatinc.com/tracking.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(lc, s);
+    })();
+    </script>
+    <!-- End of LiveChat code -->
+</body>
+
+</html>

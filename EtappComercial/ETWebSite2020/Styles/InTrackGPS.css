@@ -1,0 +1,193 @@
+﻿/* CSS Document */
+.auxMenu{
+    padding:0px;
+	list-style:none;
+    list-style-type:none;
+}
+.auxMenu li
+{
+    float:left;
+	list-style:none;
+    list-style-type:none;
+}
+#auxMenu li
+{
+    float:left;
+	list-style:none;
+    list-style-type:none;
+}
+#auxMenu a:hover 
+{
+    text-decoration:underline;
+}
+.auxMenu a:hover 
+{
+    text-decoration:underline;
+}
+.auxMenuOption{
+    padding:10px;
+}
+.auxMenuOptionDivider{
+    background-image: url(../ITImages/MenuBackDivider.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.auxMenuOptionText{
+    color:#ffffff;
+    font-size:14px;
+    font-weight:600;
+    text-decoration:none;
+}
+/* Top Banner */
+.mainWrapper{
+	 width:960px; 
+	 margin:0px auto; 
+	 background-color:#e1e1e1;
+}
+.mainContent{
+	 width:100%;
+     /*border-bottom:1px solid #b5b5b5;*/
+}
+.featuresContent{
+	width:688px; 
+	float:right;
+}
+
+/* Main Features Menu */
+.mainMenuPanel{
+	width:269px; 
+	float:left;
+	background-color:#efefef;
+    border-right:1px solid #b5b5b5;
+}
+.mainMenu{
+	margin:0px;
+	padding:0px;
+	display:inline-block;
+	background-color:#FFF;
+	background-repeat:no-repeat;
+	cursor:pointer;
+	font-size:16px;
+	font-weight:600;
+	color:#666;
+}
+
+.mainMenu li{
+	list-style:none;
+	padding:0px;
+}
+.mainMenu a{
+	display:block;
+	padding-left:115px;
+	padding-top:35px;
+	padding-right:10px;
+	height:95px;
+}
+
+.featuresMenuItem a
+{
+    text-decoration:none;
+    color:#666;
+}
+#mainMenuTracking a{
+	background-image:url(../ITImages/FeatureTrackingUnselected.png);
+}
+#mainMenuTrail a{
+	background-image:url(../ITImages/FeatureTrailUnselected.png);
+}
+#mainMenuDispatch a{
+	background-image:url(../ITImages/FeatureDispatchUnselected.png);
+}
+#mainMenuELog a{
+	background-image:url(../ITImages/FeatureeLogUnselected.png);
+}
+#mainMenuHotSpots a{
+	background-image:url(../ITImages/FeatureHotSpotUnselected.png);
+}
+#mainMenuMobile a{
+	background-image:url(../ITImages/FeatureMobileUnselected.png);
+}
+#mainMenuTools a{
+	background-image:url(../ITImages/FeatureToolsUnselected.png);
+}
+#mainMenuFuelLog a{
+	background-image:url(../ITImages/FeatureFuelLogUnselected.png);
+}
+#mainMenuReports a{
+	background-image:url(../ITImages/FeatureReportsUnselected.png);
+}
+#mainMenuTemperature a{
+	background-image:url(../ITImages/FeatureTemperatureUnselected.png);
+}
+#mainMenuIButton a{
+	background-image:url(../ITImages/FeatureIButtonUnselected.png);
+}
+#mainMenuGeofences a{
+	background-image:url(../ITImages/FeatureGeofenceUnselected.png);
+}
+#mainMenuIgnition a{
+	background-image:url(../ITImages/FeatureIgnitionUnselected.png);
+}
+#mainMenuTelemetry a{
+	background-image:url(../ITImages/FeatureTelemetryUnselected.png);
+}
+#mainMenuAlerts a{
+	background-image:url(../ITImages/FeatureAlertsUnselected.png);
+}
+#mainMenuMultiMap a{
+	background-image:url(../ITImages/FeatureMultiMapUnselected.png);
+}
+#mainMenuSpeedLimit a{
+	background-image:url(../ITImages/FeatureSpeedLimitUnselected.png);
+}
+#mainMenuOBD a{
+	background-image:url(../ITImages/FeatureOBDUnselected.png);
+}
+.formField
+{
+    height:20px;
+    font-size:16px;
+}
+.mandatoryField
+{
+    border:1px solid #a1a1a1;
+    border-left:3px solid #ff0000;
+}
+.leftAligned
+{
+    text-align:left;
+}
+.rightAligned
+{
+    text-align:right;
+}
+.featureTitle
+{
+    color:#888888;
+}
+.featureSubTitle
+{
+    color:#888888;
+}
+.featureParagraph
+{
+    font-size:15px;
+    color:#666666;
+}
+.bigBullet
+{
+    width:50px;
+    height:50px;
+    background-image: url(../ITImages/CircleBulletx50.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    text-align:center;
+    font-size:24px;
+    font-weight:800;
+}
+.bigBulletLabel
+{
+    font-size:20px;
+    font-weight:600;
+    color:#0a3e85;
+}

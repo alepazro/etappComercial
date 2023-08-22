@@ -1,0 +1,399 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+    <title>EasiTrack AWS Real Time GPS Tracking</title>
+    <meta name='description' content='EasiTrack enables real time fleet tracking with robust GenX-5P GPS Tracking devices.' />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link href="themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/common_v2.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/ws_v2.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/InTrackGPS.css" rel="stylesheet" type="text/css" />
+    <link href="carouselSkins/tango/skin2.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        .mainMenu a{
+	        display:block;
+	        padding-left:115px;
+	        padding-top:35px;
+	        padding-right:10px;
+	        height:95px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="topBar">
+        <div class="topBarInternal">
+            <div id="customerLogin">
+                <a href="https://easitrack.net/login.html" class="customerLoginText">Customer Login</a>
+            </div>
+            <ul id="auxMenu">
+                <li class="auxMenuOption auxMenuOptionDivider"><a href="faq.html" class="auxMenuOptionText">F.A.Q.</a></li>
+                <li class="auxMenuOption auxMenuOptionDivider"><a href="GTD-Testimonials.html" class="auxMenuOptionText">Testimonials</a></li>
+                <li class="auxMenuOption auxMenuOptionDivider"><a href="about-us.html" class="auxMenuOptionText">About Us</a></li>
+                <li class="auxMenuOption"><a href="contact-us.html" class="auxMenuOptionText">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="topBanner">
+        <div class="topBannerInternal">
+            <div style="float:right;width:300px;">
+                <div style="margin-top:25px;text-align:right;">
+                    <span class="tollFreeNumber">Call Now! ( 888 ) 744-6449</span>
+                </div>
+                <div style="margin-top:15px;text-align:right;">
+                    <a href="get-quote.html" style="text-decoration:none;"><img src="images/GetQuoteRedx200.png" alt="Get Quote" height="50" width="200" style="border:0px;" /></a>
+                </div>
+            </div>
+            <div style="float:left;width:360px;padding-top:30px;">
+                <a href="index.html" style="text-decoration:none;"><img src="images/logo3.png" alt="EasiTrack" width="350" height="80" style="border:0px;" /></a>
+            </div>
+            <div class="pull-left">
+                <div style="width:280px;height:100px;text-align:center;">
+                    <h3 style="padding-top:20px;"><span class="label label-warning">No Contracts - Month-to-Month</span></h3>
+                    <h3 style="padding-top:20px;"><span class="label label-warning">Lifetime Warranty GPS Tracker</span></h3>
+                </div>          
+            </div>
+        </div>
+    </div>
+    <div class="middleBar">
+        <div class="middleBarInternal mainMenuOptionDivider1st">
+            <ul id="mainMenu">
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="GTD-GPS-System.html" class="mainMenuOptionText ourSystemMenu">How it works</a></li>
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="GTD-GPS-Tracker.html" class="mainMenuOptionText">GPS Tracker</a></li>
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="GTD-GPS-installation.html" class="mainMenuOptionText">Installation</a></li>
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="GTD-Prices.html" class="mainMenuOptionText">Prices</a></li>
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="GTD-Demo.html" class="mainMenuOptionText">Demo Video</a></li>
+                <li class="mainMenuOption mainMenuOptionDivider"><a href="https://easitrack.net/buy-now.html" class="mainMenuOptionText">Buy Now</a></li>
+            </ul>
+        </div>
+        <div id="ourSystemSubMenu" style="z-index:9999;position:absolute;display:none;width:400px;background-color:#bdd4ee;border:1px solid #000000;padding:5px;">
+            <div style="width:100%;text-align:right;">
+                <span style="font-size:12px; cursor:pointer;" onclick="closeSubMenu();">[Close]</span>
+            </div>
+            <div style="width:100%;overflow:hidden;padding:5px;">
+                <div style="float:right;padding-right:10px;">
+                    <ul class="subMenu">
+                        <li class="subMenuOption"><a href="GTD-Dispatching.html" class="subMenuOptionText">Dispatching</a></li>
+                        <li class="subMenuOption"><a href="GTD-HotSpots.html" class="subMenuOptionText">Hot Spots</a></li>
+                        <li class="subMenuOption"><a href="GTD-Temperature.html" class="subMenuOptionText">Temperature Monitor</a></li>
+                        <li class="subMenuOption"><a href="GTD-IButton.html" class="subMenuOptionText">Driver Identification</a></li>
+                        <li class="subMenuOption"><a href="GTD-Mobile-Application.html" class="subMenuOptionText">Mobile Application</a></li>
+                        <li class="subMenuOption"><a href="GTD-Maintenance-Module.html" class="subMenuOptionText">Maintenance Module</a></li>
+                        <li class="subMenuOption"><a href="GTD-FuelLog-Module.html" class="subMenuOptionText">Fuel Log Module</a></li>
+                        <li class="subMenuOption"><a href="GTD-Reports.html" class="subMenuOptionText">Analytical Reports</a></li>
+                        <li class="subMenuOption"><a href="GTD-MultiMaps.html" class="subMenuOptionText">Multi-Map Tracking</a></li>
+                    </ul>
+                </div>
+                <div style="float:left; padding-left:10px;">
+                    <ul class="subMenu">
+                        <li class="subMenuOption"><a href="GTD-Fleet-Tracking.html" class="subMenuOptionText">Fleet Tracking</a></li>
+                        <li class="subMenuOption"><a href="GTD-OBD.html" class="subMenuOptionText">OBD Power Connector</a></li>
+                        <li class="subMenuOption"><a href="GTD-BreadcrumbTrail.html" class="subMenuOptionText">Breadcrumb Trail</a></li>
+                        <li class="subMenuOption"><a href="GTD-PostedSpeedLimit.html" class="subMenuOptionText">True Speed Control</a></li>
+                        <li class="subMenuOption"><a href="GTD-Geofences.html" class="subMenuOptionText">Geofences</a></li>
+                        <li class="subMenuOption"><a href="GTD-Ignition.html" class="subMenuOptionText">Starter Disable</a></li>
+                        <li class="subMenuOption"><a href="GTD-Telemetry.html" class="subMenuOptionText">Telemetry</a></li>
+                        <li class="subMenuOption"><a href="GTD-Real-Time-Alerts.html" class="subMenuOptionText">Real Time Alerts</a></li>
+                        <li class="subMenuOption"><a href="GTD-eLog.html" class="subMenuOptionText">eLog Hours of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="middleBanner clearfix" >
+        <div class="middleBannerInternal">
+            <!--<div style="width:100%;text-align:center;padding:10px;">
+                <span style="color:#ffffff;font-size:14px;font-weight:600;">
+                    EasiTrack provides Real Time GPS Tracking to more than 1,500 small and medium-size businesses
+                </span>
+            </div>-->
+            <div style="width:100%;text-align:center;padding:1px;">
+                <h2 style="color:#fff;font-weight:800;">September Special! <span style="font-size:20px;"> - Offer expires 9/30/2015</span></h2>
+            </div>
+            <div style="height:370px;width:470px;float:right;overflow:hidden;">
+                <h1 style="color:#ffff00;padding:0px 0px;font-size:30px;">Real Time GPS Tracking System</h1>
+                <div style="width:100%;margin-left:25px;">
+                    <p style="font-size:28px;font-weight:600;color:#fff;padding:3px 0px;margin-top:5px;"><!--<img src="images/CheckmarkX20.png" width="20" height="20" />&nbsp;-->GPS Tracker: $119 <span style="font-size:18px;">(Reg.$119)</span><!--<span style="padding-left:10px;font-size:12px;"><a href="GTD-GPS-Tracker.html" style="color:#ffffff;">(Learn more)</a></span>--></p>
+                    <ul class="ulFeatures" style="color:#eee;">
+                        <!--<li>Hardwired and 100% concealable</li>-->
+                        <!--<li>Easy Plug-n-Play installation (optional)</li>-->
+                        <li>Lifetime Device Warranty (<a href="GTD-GPS-Tracker.html#lifetimeWarranty"><span style="font-weight:bold;color:#fff;">Read more</span></a>)</li>
+                        <li>No Contract / 30-day 100% Money Back Guarantee</li>
+                    </ul>
+                    <p style="font-size:28px;font-weight:600;color:#fff;padding:3px 0px;margin-top:5px;"><!--<img src="images/CheckmarkX20.png" width="20" height="20" />&nbsp;-->Monthly Service: $17.99<!--<span style="padding-left:10px;font-size:12px;"><a href="GTD-Prices.html" style="color:#ffffff;">(more)</a></span>--></p>
+                    <ul class="ulFeatures" style="color:#eee;">
+                        <!--<li>No Contracts / No hidden fees</li>-->
+                        <li>No-Contracts / Pay month-by-month / Seasons Welcome</li>
+                        <li>1 minute updates / Unlimited historical data</li>
+                        <!--<li>Google Maps, Dispatching, 60-seconds updates</li>-->
+                        <!--<li>Vehicle Maintenance Module, Unlimited historical data</li>-->
+                        <!--<li>Suspend and Resume or Flat Cancel anytime</li>-->
+                    </ul>
+                    <p style="font-size:28px;font-weight:600;color:#fff;padding:3px 0px;margin:5px 0px 0px; text-align:center;">
+                        <!--<a href="https://easitrack.net/demo-login.html?t=417180C5-B1CF-40DD-BDE8-53070B9A63F9" target="_blank" class="btn btn-danger btn-block btn-lg">Want to see how it works? Click here</a>-->
+                        <!--<button type="button" class="btn btn-danger btn-block btn-lg" data-toggle="modal" data-target="#myModal">Want to see how it works? Click here</button>-->
+
+                        <!--<img src="images/CheckmarkX20.png" width="20" height="20" />&nbsp;Any fleet size <span style="padding-left:10px;font-size:13px;color:#ffffff;">From 1 and above</span>-->
+                    </p>
+                </div>
+            </div>
+            <div style="width:470px;height:370px;float:left;padding-top:10px;text-align:center;">
+                <!--<h4 style="color:#ffffff;">EasiTrack: The best GPS Tracking System for Small Business</h4>-->
+                <!--<iframe width="420" height="315" src="https://www.youtube.com/embed/VoSN_VuC2xc?rel=0&autoplay=0&border=1&modestbranding=1&showinfo=0" frameborder="0"></iframe>-->
+                <!--<iframe width="420" height="315" src="https://www.youtube.com/embed/VoSN_VuC2xc?rel=0" frameborder="0" allowfullscreen></iframe>-->
+                <ul id="mycarousel2" class="jcarousel jcarousel-skin-tango2">
+                    <!--<li><img src="images/DeviceOnMap.png" width="426" height="316" alt="See any vehicle in the map" /></li>-->
+                    <li><img src="images/ManyVehiclesOnMap.png" width="426" height="316" alt="See your entire fleet in the map" /></li>
+                    <li><img src="images/CrumbOnMap.png" width="426" height="316" alt="EasiTrack Crumb on map" /></li>
+                    <li><img src="images/FullAccessOnMap.png" width="426" height="316" alt="Online Web Application" /></li>
+                    <li><img src="images/TemperatureMonitoringOnMap.png" width="426" height="316" alt="Real Time Temeprature Monitoring" /></li>
+                    <li><img src="images/IButtonOnMap.png" width="426" height="316" alt="Automatic Driver Identification" /></li>
+                    <li><img src="images/NoContracts.jpg" width="426" height="316" alt="EasiTrack  has No Contracts" /></li>
+                    <li><img src="images/TrafficInfoOnMap.png" width="426" height="316" alt="Up to the minute traffic information" /></li>
+                    <li><img src="images/LifetimeWarranty.jpg" width="426" height="316" alt="Lifetime Warranty on the hardware" /></li>
+                    <li><img src="images/ElectronicTimeCardOnMap.png" width="426" height="316" alt="Electronic time card" /></li>
+                    <li><img src="images/FleetProductivityOnMap.png" width="426" height="316" alt="Monitor fleet productivity" /></li>
+                    <li><img src="images/StateMilesOnMap.png" width="426" height="316" alt="Keep State Miles automatically" /></li>
+                    <li><img src="images/IdlesOnMap.png" width="426" height="316" alt="Control idle times" /></li>
+                    <li><img src="images/StopsOnMap.png" width="426" height="316" alt="Control stops" /></li>
+                    <li><img src="images/StateMiles.jpg" width="426" height="316" alt="State Miles" /></li>
+                    <li><img src="images/MultimapsOnMap.png" width="426" height="316" alt="View multiple maps at the same time" /></li>
+                    <li><img src="images/DriverBehavior.jpg" width="426" height="316" alt="Driver Behavior Events" /></li>
+                    <li><img src="images/InstallationOnMap.png" width="426" height="316" alt="Installation is easy" /></li>
+                    <li><img src="images/DriverOnMap.png" width="426" height="316" alt="Driver on map" /></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="width:100%;background-color:#ffffff;border-top:1px solid #15476e;border-bottom:1px solid #000000;">
+	    <div class="mainWrapper">
+            <div style="width:100%;height:30px;background-color:#000000;">
+                    <ul id="centerMenu" class="auxMenu">
+                        <li class="auxMenuOption auxMenuOptionDivider"><a href="javascript:void(null);" onclick="altMenuItemClicked(this)" class="auxMenuOptionText" data-menuItem="mainMenuTracking">Fleet Tracking</a></li>
+                        <li class="auxMenuOption auxMenuOptionDivider"><a href="javascript:void(null);" onclick="altMenuItemClicked(this)" class="auxMenuOptionText" data-menuItem="mainMenuTrail">Breadcrumb Trail</a></li>
+                        <li class="auxMenuOption auxMenuOptionDivider"><a href="javascript:void(null);" onclick="altMenuItemClicked(this)" class="auxMenuOptionText" data-menuItem="mainMenuGeofences">Geofences</a></li>
+                        <li class="auxMenuOption auxMenuOptionDivider"><a href="javascript:void(null);" onclick="altMenuItemClicked(this)" class="auxMenuOptionText" data-menuItem="mainMenuAlerts">Real Time Alerts</a></li>
+                        <li class="auxMenuOption auxMenuOptionDivider"><a href="javascript:void(null);" onclick="altMenuItemClicked(this)" class="auxMenuOptionText" data-menuItem="mainMenuDispatch">Dispatching</a></li>
+                        <li class="auxMenuOption auxMenuOptionDivider"><a href="javascript:void(null);" onclick="altMenuItemClicked(this)" class="auxMenuOptionText" data-menuItem="mainMenuMobile">Mobile App</a></li>
+                        <li class="auxMenuOption auxMenuOptionDivider"><a href="javascript:void(null);" onclick="altMenuItemClicked2(this,'HowItWorks')" class="auxMenuOptionText">How it works</a></li>
+                        <li class="auxMenuOption auxMenuOptionDivider"><a href="javascript:void(null);" onclick="altMenuItemClicked2(this,'HowItHelps')" class="auxMenuOptionText">How it helps</a></li>
+                        <!--<li class="auxMenuOption auxMenuOptionDivider"><a href="javascript:void(null);" onclick="loadOtherContent('GettingStarted')" class="auxMenuOptionText">Getting started</a></li>-->
+                        <!--<li class="auxMenuOption"><a href="javascript:void(null);" onclick="loadOtherContent('OurCustomers')" class="auxMenuOptionText">Our customers</a></li>-->
+                    </ul>
+            </div>
+            <div style="width:100%;overflow:hidden;">
+        	    <div class="featuresContent">
+                        <div style="width:620px;text-align:center; padding:10px;">
+                        <a href="javascript:void(null);" style="text-decoration:none;" onclick="loadOtherContent('RequestADemo', true)"><img src="ITImages/RequestADemo.png" alt="Live Demo" width="200" height="40" style="border:none;padding:0px 10px;" /></a>
+                        <a href="javascript:void(null);" style="text-decoration:none;" onclick="loadOtherContent('GetAQuote', true)"><img src="ITImages/GetAQuote.png" alt="Get A Quote" width="140" height="40" style="border:none;padding:0px 10px;" /></a>
+                        <a href="https://easitrack.net/buy-now.html" style="text-decoration:none;"><img src="ITImages/BuyNow.png" alt="Buy Now" width="140" height="40" style="border:none;padding:0px 10px;" /></a>
+                    </div>
+
+                    <div style="width:620px; margin:10px auto;">
+                        <div><img src="ITImages/RoundCornersTop620.png" width="620" height="20" alt="" /></div>
+            	        <div id="featureContent" style="background-color:#ffffff;padding:10px;">
+                        </div>
+                        <div><img src="ITImages/RoundCornersx620Bottom.png" width="620" height="20" alt="" /></div>
+                    </div>
+                </div>
+        	    <div class="mainMenuPanel">
+                    <div style="width:230px; margin:20px auto;">
+                	    <div><img src="ITImages/RoundCornersTop.png" width="231" height="18" alt="Top Corners" /></div>
+                        <ul class="mainMenu">
+                            <li id="mainMenuTracking" class="featuresMenuItem" data-imgTag="Tracking" data-content="Tracking"><a onclick="menuItemClicked(this)"><span>Fleet Tracking</span></a></li>
+                            <li id="mainMenuOBD" class="featuresMenuItem" data-imgTag="OBD" data-content="OBD"><a onclick="menuItemClicked(this)"><span>Easy OBD Installation</span></a></li>
+                            <li id="mainMenuTrail" class="featuresMenuItem" data-imgTag="Trail" data-content="Trail"><a onclick="menuItemClicked(this)">Breadcrumb Trail</a></li>
+
+                            <li id="mainMenuSpeedLimit" class="featuresMenuItem" data-imgTag="SpeedLimit" data-content="SpeedLimit"><a onclick="menuItemClicked(this)">True Speed Control</a></li>
+
+                            <li id="mainMenuGeofences" class="featuresMenuItem" data-imgTag="Geofence" data-content="Geofences"><a onclick="menuItemClicked(this)">Geofences</a></li>
+
+                            <li id="mainMenuIgnition" class="featuresMenuItem" data-imgTag="Ignition" data-content="Ignition"><a onclick="menuItemClicked(this)">Starter Disable</a></li>
+                            <li id="mainMenuTelemetry" class="featuresMenuItem" data-imgTag="Telemetry" data-content="Telemetry"><a onclick="menuItemClicked(this)">Telemetry</a></li>
+
+                            <li id="mainMenuAlerts" class="featuresMenuItem" data-imgTag="Alerts" data-content="Alerts"><a onclick="menuItemClicked(this)">Real Time Alerts</a></li>
+                            <li id="mainMenuDispatch" class="featuresMenuItem" data-imgTag="Dispatch" data-content="Dispatch"><a onclick="menuItemClicked(this)">Dispatching</a></li>
+                            <li id="mainMenuELog" class="featuresMenuItem" data-imgTag="eLog" data-content="eLog"><a onclick="menuItemClicked(this)">eLog HOS</a></li>
+                            <li id="mainMenuHotSpots" class="featuresMenuItem" data-imgTag="HotSpot" data-content="HotSpot"><a onclick="menuItemClicked(this)">Hot Spots</a></li>
+                            <li id="mainMenuMobile" class="featuresMenuItem" data-imgTag="Mobile" data-content="Mobile"><a onclick="menuItemClicked(this)">Mobile Application</a></li>
+                            <li id="mainMenuTools" class="featuresMenuItem" data-imgTag="Tools" data-content="Maintenance"><a onclick="menuItemClicked(this)">Maintenance Module</a></li>
+                            <li id="mainMenuFuelLog" class="featuresMenuItem" data-imgTag="FuelLog" data-content="FuelLog"><a onclick="menuItemClicked(this)">Fuel Log Module</a></li>
+                            <li id="mainMenuReports" class="featuresMenuItem" data-imgTag="Reports" data-content="Reports"><a onclick="menuItemClicked(this)">Over 30+ Reports</a></li>
+
+                            <li id="mainMenuTemperature" class="featuresMenuItem" data-imgTag="Temperature" data-content="Temperature"><a onclick="menuItemClicked(this)">Temperature Monitor</a></li>
+                            <li id="mainMenuIButton" class="featuresMenuItem" data-imgTag="IButton" data-content="IButton"><a onclick="menuItemClicked(this)">Driver Identification</a></li>
+
+                            <li id="mainMenuMultiMap" class="featuresMenuItem" data-imgTag="MultiMap" data-content="MultiMap"><a onclick="menuItemClicked(this)">Multi-Map Tracking</a></li>
+                        </ul>
+                        <div><img src="ITImages/RoundCornersBottom.png" width="230" height="18" alt="Bottom Corners" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" style="width:100%;background-color:#000000;border-top:1px solid #ededed;">
+        <div style="width:950px;margin:0px auto;">
+            <div style="width:100%;text-align:center;margin:10px 0px;color:#ffffff;">
+                <p>Do you have any question or need more information? <a href="contact-us.html" style="color:#ffffff;">Please Contact Us</a></p>
+            </div>
+            <div style="width:800px;margin:10px auto;">
+                <table style="width:100%;">
+                    <tr>
+                        <td style="width:35%;color:#d4e3f7;font-size:13px;font-weight:600;padding:5px 0px;">EasiTrack Features</td>
+                        <td style="width:30%;color:#d4e3f7;font-size:13px;font-weight:600;padding:5px 0px;">EasiTrack Benefits</td>
+                        <td style="width:35%;color:#d4e3f7;font-size:13px;font-weight:600;padding:5px 0px;">About EasiTrack</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top;">
+                            <table>
+                                <tr><td><a href="GTD-Fleet-Tracking.html" style="color:#d4e3f7;text-decoration:none;cursor:pointer;">Fleet Tracking in a map</a></td></tr>
+                                <tr><td><a href="GTD-BreadcrumbTrail.html" style="color:#d4e3f7;text-decoration:none;cursor:pointer;">Breadcrumb Trail</a></td></tr>
+                                <tr><td><a href="GTD-Geofences.html" style="color:#d4e3f7;text-decoration:none;cursor:pointer;">Geofences and Landmarks</a></td></tr>
+                                <tr><td><a href="GTD-Real-Time-Alerts.html" style="color:#d4e3f7;text-decoration:none;cursor:pointer;">Real Time Alerts</a></td></tr>
+                                <tr><td><a href="GTD-Dispatching.html" style="color:#d4e3f7;text-decoration:none;cursor:pointer;">Dispatching</a></td></tr>
+                                <tr><td><a href="GTD-Mobile-Application.html" style="color:#d4e3f7;text-decoration:none;cursor:pointer;">Mobile Application</a></td></tr>
+                                <tr><td><a href="GTD-Reports.html" style="color:#d4e3f7;text-decoration:none;cursor:pointer;">Analytical Reports</a></td></tr>
+                                <tr><td><a href="GTD-MultiMaps.html" style="color:#d4e3f7;text-decoration:none;cursor:pointer;">Multi-Map Module</a></td></tr>
+                            </table>
+                        </td>
+                        <td style="vertical-align:top;">
+                            <table>
+                                <tr><td><a href="" style="color:#d4e3f7;text-decoration:none;cursor:pointer;">Lower fuel consumption</a></td></tr>
+                                <tr><td><a href="" style="color:#d4e3f7;text-decoration:none;cursor:pointer;">Track mileage</a></td></tr>
+                                <tr><td><a href="" style="color:#d4e3f7;text-decoration:none;cursor:pointer;">Create more efficient delivery routes</a></td></tr>
+                                <tr><td><a href="" style="color:#d4e3f7;text-decoration:none;cursor:pointer;">Track safety</a></td></tr>
+                                <tr><td><a href="" style="color:#d4e3f7;text-decoration:none;cursor:pointer;">Manage vehicle maintenance</a></td></tr>
+                                <tr><td><a href="" style="color:#d4e3f7;text-decoration:none;cursor:pointer;">Receive alerts of unwanted behaviors</a></td></tr>
+                                <tr><td><a href="" style="color:#d4e3f7;text-decoration:none;cursor:pointer;">Track vehicle speed</a></td></tr>
+                                <tr><td><a href="" style="color:#d4e3f7;text-decoration:none;cursor:pointer;">Improve customer service and estimated delivery time</a></td></tr>
+                                <tr><td><a href="" style="color:#d4e3f7;text-decoration:none;cursor:pointer;">Monitor temperature level in trucks</a></td></tr>
+                                <tr><td><a href="" style="color:#d4e3f7;text-decoration:none;cursor:pointer;">Audit fuel purchases</a></td></tr>
+                            </table>
+                        </td>
+                        <td style="vertical-align:top;">
+                            <table>
+                                <tr><td><a href="about-us.html" style="color:#d4e3f7;text-decoration:none;cursor:pointer;">About Us</a></td></tr>
+                                <tr><td><a href="faq.html" style="color:#d4e3f7;text-decoration:none;cursor:pointer;">F.A.Q.</a></td></tr>
+                                <tr><td><a href="testimonials.html" style="color:#d4e3f7;text-decoration:none;cursor:pointer;">Testimonials</a></td></tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Immediate Online Access</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <fieldset>
+                        <legend>Live Demo</legend>
+                        <div class="form-group">
+                            <label for="exampleInputPassword">First Name*</label>
+                            <input type="text" class="form-control" id="liveDemoFirstName" placeholder="First Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword">Last Name*</label>
+                            <input type="text" class="form-control" id="liveDemoLastName" placeholder="Last Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail">Email address*</label>
+                            <input type="text" class="form-control" id="liveDemoEmail" placeholder="Email Address">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="openDemoUser()">Access Now</button>
+            </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!--    Javascript includes -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.jcarousel.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.jshowoff.min.js" type="text/javascript"></script>
+    <script src="Scripts/db.js" type="text/javascript"></script>
+    <script src="Scripts/InTrackGPS.js" type="text/javascript"></script>
+    <script src="Scripts/webForms.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        function openDemoUser() {
+            try {
+
+                var data = 'formId=' + escape('7B8D67B5-E36A-4C3A-B1A4-B07D6F5B6342') +
+                           '&fn=' + escape($('#liveDemoFirstName').val()) +
+                           '&ln=' + escape($('#liveDemoLastName').val()) +
+                           '&email=' + escape($('#liveDemoEmail').val());
+
+                var result = saveWebForm(data);
+
+                window.open('https://easitrack.net/demo-login.html?t=417180C5-B1CF-40DD-BDE8-53070B9A63F9', '_blank');
+
+                $('#myModal').modal('hide')
+            }
+            catch (err) {
+            }
+        }
+
+        jQuery(document).ready(function () {
+            $("#ourSystemSubMenu").offset({ top: $('.ourSystemMenu').position().top + 25, left: $('.ourSystemMenu').position().left })
+            $('.ourSystemMenu').hover(ourSystemHoverIn, ourSystemHoverOut);
+            $('#ourSystemSubMenu').hover(ourSystemSubMenuHoverIn, ourSystemSubMenuHoverOut);
+
+            jQuery('#mycarousel2').jcarousel({
+                scroll: 1,
+                auto: 2,
+                wrap: 'circular'
+            });
+            loadInitContent();
+        });
+    </script>
+
+<!-- BEGIN ProvideSupport.com Graphics Chat Button Code -->
+<div id="ciamp8" style="z-index:100;position:absolute"></div><div id="scamp8" style="display:inline;position:fixed;z-index:9999;top:0px;left:0px;"></div><div id="sdamp8" style="display:none"></div><script type="text/javascript">                                                                                                                                                                                                         var seamp8 = document.createElement("script"); seamp8.type = "text/javascript"; var seamp8s = (location.protocol.indexOf("https") == 0 ? "https" : "http") + "://image.providesupport.com/js/0325vm2g5aj6809q0cspkf44yw/safe-standard.js?ps_h=amp8&ps_t=" + new Date().getTime(); setTimeout("seamp8.src=seamp8s;document.getElementById('sdamp8').appendChild(seamp8)", 1)</script><noscript><div style="display:inline"><a href="https://www.providesupport.com?messenger=0325vm2g5aj6809q0cspkf44yw">Customer Support Chat</a></div></noscript>
+<!-- END ProvideSupport.com Graphics Chat Button Code -->
+
+
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script type="text/javascript">
+    var __lc = {};
+    __lc.license = 6649801;
+    (function () {
+        var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+        lc.src = ('https:' == document.location.protocol ? 'https://' : 'https://') + 'cdn.livechatinc.com/tracking.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+    })();
+</script>
+<!-- End of LiveChat code -->
+
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-64561832-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

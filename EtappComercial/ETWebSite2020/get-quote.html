@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+    <title>EasiTrack - Get a Quote</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="images/img//favicon.png" rel="icon">
+    <!--    CSS includes -->
+    <link href="Styles/common.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/logo.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/ws.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+       <!-- Main Stylesheet File -->
+    <link href="Styles/style.css" rel="stylesheet"> </head>
+
+    <!--    Javascript includes -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script src="Scripts/ibp.js" type="text/javascript"></script>
+    <script src="Scripts/db.js" type="text/javascript"></script>
+    <script src="Scripts/webForms.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            loadPrices(1);
+            $("#cbxServices").change(function () {
+                calcForm()
+            });
+            $("#shippingOptions").change(function () {
+                calcForm()
+            });
+
+            //If there is a previous shopping cart, load it...
+            loadForm();
+        });
+    </script>
+
+
+</head>
+<body>
+     <!--==========================
+  Header
+  ============================-->
+    <header id="header" class="fixed-top navbar navbar-expand-lg navbar-light ">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="images/img/Home/EasiTracD04aR02bP01ZL-Jefferson2b_mdm.png" alt="" class="img-fluid"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav main-nav float-right">
+                    <li class="nav-item active"><a href="index.html">Home</a> </li>
+                    <li class="nav-item " id="feature"><a href="GTD-GPS-System.html">Features</a></li>
+                    <li class="nav-item "><a href="GTD-GPS-Installation.html" class="mainMenuOptionText">Installation</a></li>
+                    <li class="nav-item "><a href="about-us.html">About Us</a></li>
+                    <li class="nav-item "><a href="buy-now.html">Order Now</a></li>
+                    <li class="nav-item "><a href="contact-us.html">Contact Us</a></li> <a href="login.html" class="btn-get-started ">Login</a> </ul>
+            </div>
+        </div>
+    </header>
+    <div id="middleMenu">
+        <ul id="mainMenu">
+            <li><a href="index.html" class="mainMenuOption">Home</a></li>
+            <li><a href="gps-tracker.html" class="mainMenuOption">Tracker Specs</a></li>
+            <li><a href="gps-service.html" class="mainMenuOption">Service Description</a></li>
+            <!--<li><a href="installation.html" class="mainMenuOption">Installation</a></li>-->
+            <li><a href="prices.html" class="mainMenuOption">Prices</a></li>
+            <li><a href="gps-demo.html" class="mainMenuOption">Watch Demo</a></li>
+            <li><a href="faq.html" class="mainMenuOption">F.A.Q.</a></li>
+            <li><a href="testimonials.html" class="mainMenuOption">Testimonials</a></li>                
+            <li><a href="contact-us.html" class="mainMenuOption">Contact Us</a></li>
+            <li><a href="get-quote.html" class="mainMenuOption mainMenuOptionSelected">Get a Quote</a></li>
+            <li><a href="https://easitrack.net/buy-now.html" class="mainMenuOption" style="background-image: none;">Buy Now</a></li>
+        </ul>
+    </div>
+    <div id="wsWrapper">
+        <div style="width:1024px; margin:auto;">
+            <div>
+                <h2>easiTrack Quote Form</h2>
+            </div>
+            <fieldset style="padding: 10px;">
+                <div style="width:230px;float:right;">
+                    <div style="width:200px;height:80px;cursor:pointer; background-image:url(images/CallMe.png);background-repeat:no-repeat;background-position:left; margin-bottom:10px;">
+                        <p style="margin-left:15px;padding-top:10px;font-size:10px;font-weight:500; color:#a1a1a1; margin-bottom: 0px;">Enter your number and we will call</p>
+                        <p style="margin-left:15px;padding-top:0px;font-size:10px;font-weight:500; color:#a1a1a1; margin-bottom: 0px;">you to answer any question.</p>
+                    <input type="text" id="txtAreaCode" style="margin-left:15px;margin-top:10px;width:30px;height:15px;border:1px solid #a1a1a1;" size="3" maxlength="3" onkeyup="autofocus(this, 3, 'txtPhone3', event)" />
+                    <input type="text" id="txtPhone3" style="margin-left:5px;margin-top:10px;width:30px;height:15px;border:1px solid #a1a1a1;" size="3" maxlength="3" onkeyup="autofocus(this, 3, 'txtPhone4', event)"/>
+                    <input type="text" id="txtPhone4" style="margin-left:5px;margin-top:10px;width:40px;height:15px;border:1px solid #a1a1a1;" size="4" maxlength="4" onkeyup="autofocus(this, 4, 'click2CallBtn', event)"/>
+                    <button type="button" id="click2CallBtn" style="margin-left:5px;margin-top:5px;border:0px;cursor:pointer;width:45px;height:18px;" onclick='click2call(60221)'><img src="images/CallMeBtn.png" height="18" width="45" alt="Call Me button"/></button>
+                    </div>
+                </div>
+                <div style="float:left;width:750px;">
+                    <fieldset style="margin-left:100px;width:620px;padding:10px;">
+                        <input id="formId" name="formId" type="hidden" value="8C72B46A-D8F4-4C0F-BFF7-2E277C763011" />
+                        <div style="width:590px; margin:1px; background-color:#d5edf7; padding:5px;text-align:center;">
+                            <h1 style="margin-left:10px;">Get immediately a Quote via email</h1>
+                        </div>
+                        <table style="background-color:#f1f1f1;width:600px;">
+                            <tr>
+                                <td style="padding:5px;padding-left:30px;vertical-align:middle;font-weight:600;">
+                                    <label for="firstName">First Name</label>
+                                </td>
+                                <td style="padding:5px;">
+                                    <input id="firstName" name="firstName" type="text" maxlength="20" size="30" class="formField mandatoryField"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:5px;padding-left:30px;vertical-align:middle;font-weight:600;">
+                                    <label for="lastName">Last Name</label>
+                                </td>
+                                <td style="padding:5px;">
+                                    <input id="lastName" name="lastName" type="text" maxlength="20" size="30" class="formField mandatoryField"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:5px;padding-left:30px;vertical-align:middle;font-weight:600;">
+                                    <label for="email">Email</label>
+                                </td>
+                                <td style="padding:5px;">
+                                    <input id="email" name="email" type="text" maxlength="100" size="30" class="formField mandatoryField"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:5px;padding-left:30px;vertical-align:middle;">
+                                    <label for="phone">Phone</label>
+                                </td>
+                                <td style="padding:5px;">
+                                    <input id="phone" name="phone" type="text" maxlength="20" size="30" class="formField"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:5px;padding-left:30px;vertical-align:middle;">
+                                    <label for="company">Company Name</label>
+                                </td>
+                                <td style="padding:5px;">
+                                    <input id="company" name="company" type="text" maxlength="20" size="30" class="formField"/>
+                                </td>
+                            </tr>
+                        </table>
+                        <table style="background-color:#f1f1f1;width:600px;">
+                            <tr style="background-color:#c1c1c1;font-weight:600;">
+                                <td style="padding:5px;width:150px;">
+                                    <span>Product</span>
+                                </td>
+                                <td style="text-align:right;padding-right:10px;width:90px;">
+                                    <span>Unit Price</span>
+                                </td>
+                                <td style="text-align:right;padding-right:10px;width:100px;">
+                                    <span>Quantity</span>
+                                </td>
+                                <td style="text-align:right;padding-right:10px;width:180px;">
+                                    <span>Total</span>
+                                </td>
+                            </tr>
+                            <tr class="orderItem">
+                                <td style="padding:5px;">
+                                    <span>GPS Tracker (One time payment)</span>
+                                </td>
+                                <td style="text-align:right;padding-right:5px;">
+                                    <span>USD </span>
+                                    <span class="itemPrice itm1">$119</span>
+                                </td>
+                                <td style="text-align:right;padding-right:5px;">
+                                    <input type="text" id="qty" name="qty" size="5" class="formField mandatoryField rightAligned" onfocus="onEdit(this)" onkeyup="calcForm()" onblur="onEndEdit(this)" value="0" />
+                                </td>
+                                <td style="text-align:right;padding-right:5px;">
+                                    <span>USD </span>
+                                    <span class="itemTotal">0.00</span>
+                                </td>
+                            </tr>
+                            <tr class="orderItem">
+                                <td style="padding:5px;border-top:1px dotted #a1a1a1;">
+                                    <select id="cbxServices" name="cbxServices">
+                                        <!--<option value="0">[Please pick a Service Edition]</option>
+                                        <option value="11">Lite Edition</option>
+                                        <option value="12">Basic Edition</option>-->
+                                        <option value="13">Professional Edition (Monthly Fee)</option>
+                                        <!--<option value="14">Enterprise Edition</option>-->
+                                    </select>
+                                    <!--<a href="https://www.easitrack.com/prices.html" style="font-size:11px;">Learn about EasiTrack Editions</a>-->
+                                </td>
+                                <td style="border-top:1px dotted #a1a1a1;text-align:right;padding-right:5px;">
+                                    <span>USD </span>
+                                    <span class="itemPrice itm2">17.99</span>
+                                </td>
+                                <td style="border-top:1px dotted #a1a1a1;text-align:right;padding-right:5px;">
+                                    <span class="enteredQty">0</span>
+                                </td>
+                                <td style="border-top:1px dotted #a1a1a1;text-align:right;padding-right:5px;">
+                                    <span>USD </span>
+                                    <span class="itemTotal">0.00</span>
+                                </td>
+                            </tr>
+                            <tr class="orderItem">
+                                <td style="padding:5px;border-top:1px dotted #a1a1a1;">
+                                    <span>Activation</span>
+                                </td>
+                                <td style="border-top:1px dotted #a1a1a1;text-align:right;padding-right:5px;">
+                                    <span>USD </span>
+                                    <span class="itemPrice itm3">0.00</span>
+                                </td>
+                                <td style="border-top:1px dotted #a1a1a1;text-align:right;padding-right:5px;">
+                                    <span class="enteredQty">0</span>
+                                </td>
+                                <td style="border-top:1px dotted #a1a1a1;text-align:right;padding-right:5px;">
+                                    <span>USD </span>
+                                    <span class="itemTotal">0.00</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td style="border-top:1px solid #a1a1a1;text-align:right;padding:5px 5px 5px 0px;font-weight:600;">
+                                    <span>Subtotal USD </span>
+                                    <span class="subTotal">0.00</span>
+                                </td>
+                            </tr>
+                            <tr class="shippingItem">
+                                <td colspan="2" style="padding:5px;">
+                                    <span>Shipping: </span>
+                                    <select id="shippingOptions" name="shippingOptions">
+                                        <option value="0">Ground - FREE</option>
+                                        <option value="50">Next Day - USD 50</option>
+                                        <option value="10">Second day - USD 10</option>
+                                        <option value="5">Third Day - USD 5</option>
+                                    </select>
+                                </td>
+                                <td style="text-align:right;padding-right:5px;">
+                                    <span class="enteredQty">0</span>
+                                </td>
+                                <td style="text-align:right;padding-right:5px;">
+                                    <span>USD </span>
+                                    <span class="shippingTotal">0.00</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:5px;">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td style="border-top:1px solid #a1a1a1;text-align:right;padding:5px 5px 5px 0px;font-weight:600;">
+                                    <span>Total USD </span>
+                                    <span class="grandTotal">0.00</span>
+                                </td>
+                            </tr>
+
+<!--                            <tr>
+                                <td colspan="4">
+                                    <div style="cursor:pointer;text-align:center;padding-top:15px;margin-right:10px;float:right;width:100px;height:28px;background-image:url(images/btnGreen.png); background-position:left; background-repeat:no-repeat;" onclick="goTo('https://easitrack.net/buy-now.html')">
+                                        <a href="https://easitrack.net/buy-now.html" style="color:#000000;text-decoration:none;">Buy Now</a>
+                                    </div>
+                                </td>
+                            </tr>-->
+
+<!--                            <tr>
+                                <td colspan="4">
+                                    <div id="contactInfo">
+                                    </div>
+                                </td>
+                            </tr>-->
+
+                        </table>
+
+<!--                        <div style="width:590px; margin:1px; background-color:#d5edf7; padding:5px;">
+                            <h3 style="margin-left:10px;">Send Quote via Email:</h3>
+                        </div>-->
+
+                        <table style="background-color:#f1f1f1;width:600px;">
+                            <tr style="text-align:center;">
+                                <td colspan="2" style="padding:10px;">
+                                    <input name="submit" type="button" value="Send My Quote Via Email Now" style="width:200px;" onclick="getQuote()"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </div>
+            </fieldset>
+        </div>
+        <div style="font-size:10px;">
+            <span style="color:#888888;">Rep.ID:</span><input type="text" id="repId" name="repId" size="5" value="" style="height:15px;width:40px;" />
+        </div>
+    </div>
+    <br style="clear:both;" />
+<!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact">
+      <div class="container">
+        <div class="row ">
+          <div class="col-lg-12">
+            <nav class="main-nav">
+              <ul>
+                <li><a href="gps-tracker.html">GPS Tracker Info</a></li>
+                <li><a href="gps-service.html">Web Application Info</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="faq.html">F.A.Q.</a></li>
+                <li><a target="_blank" href="https://www.privacypolicies.com/privacy/view/ed7c28d730bef2361658a1b6d5a20e80">Privacy Policy</a></li>
+              </ul>
+            </nav>
+            <!-- .main-nav -->
+          </div>
+          <!--  <h5 class="col-lg-4 pull-right"> <img class="padding-top" src="images/img/Home/telephone1.png" class="img-fluid" alt="">   (888) 744-6449</h5> -->
+        </div>
+      </div>
+    </section>
+
+<!-- BEGIN ProvideSupport.com Graphics Chat Button Code -->
+<div id="ciamp8" style="z-index:100;position:absolute"></div><div id="scamp8" style="display:inline;position:fixed;z-index:9999;top:120px;left:0px;"></div><div id="sdamp8" style="display:none"></div><script type="text/javascript">                                                                                                                                                                                                           var seamp8 = document.createElement("script"); seamp8.type = "text/javascript"; var seamp8s = (location.protocol.indexOf("https") == 0 ? "https" : "http") + "://image.providesupport.com/js/0325vm2g5aj6809q0cspkf44yw/safe-standard.js?ps_h=amp8&ps_t=" + new Date().getTime(); setTimeout("seamp8.src=seamp8s;document.getElementById('sdamp8').appendChild(seamp8)", 1)</script><noscript><div style="display:inline"><a href="https://www.providesupport.com?messenger=0325vm2g5aj6809q0cspkf44yw">Customer Support Chat</a></div></noscript>
+<!-- END ProvideSupport.com Graphics Chat Button Code -->
+
+<script type="text/javascript">
+    var releadTrackingId = '0bd351b65c000c494d7287409d262faa';
+
+    (function () {
+        var rl = document.createElement('script');
+        rl.type = 'text/javascript';
+        rl.async = true;
+        rl.src = (document.location.protocol == 'https:' ? 'https://' : 'https://') + 'relead.s3.amazonaws.com/tracking.relead.js';
+        var e = document.getElementsByTagName('script')[0];
+        e.parentNode.insertBefore(rl, e);
+    })();
+</script>
+
+</body>
+</html>
