@@ -101,38 +101,13 @@
 
         <input id="formId" name="formId" type="hidden" value="DDCD27C3-23C5-4660-BCF0-D00692D165D3" />
         <span class="form-message">
-            * To order, please fill the form below
+            * To quote, please fill the form below or <a href="buy-now.html">Continue with my quote</a> <span id="cotizacion-number"></span>
         </span>
         <ul class="stepper non-linear">
-            <li class="step active">
-                <div class="step-title waves-effect">
-                    <i class="material-icons">receipt_long</i>
-                    <h3>Your purchase</h3>
-                </div>
-                <div class="step-content with-scroll">
-                    <table class="highlight">
-                        <thead>
-                            <tr>
-                                <th class="t-product"><span>Product</span></th>
-                                <th class="t-price"><span>Unit Price</span></th>
-                                <th class="t-price"><span>Monthly Payment</span></th>
-                                <th class="t-quantity"><span>Quantity</span></th>
-                                <th class="t-total"><span>Total</span></th>
-                            </tr>
-                        </thead>
-                        <tbody id="form-tbody">                            
-                        </tbody>
-                    </table>
-                    <div class="step-actions">
-                        <button class="waves-effect waves-dark btn next-step">Continue</button>
-                    </div>
-                </div>
-            </li>
-
             <li class="step" id="kiki">
                 <div class="step-title waves-effect">
                     <i class="material-icons">local_shipping</i>
-                    <h3>Shipping information</h3>
+                    <h3>Contact Information</h3>
                 </div>
                 <div class="step-content">
                     <div class="form">
@@ -188,106 +163,27 @@
                     </div>
                 </div>
             </li>
-
-            <li class="step">
+            <li class="step active">
                 <div class="step-title waves-effect">
-                    <i class="material-icons">payment</i>
-                    <h3>Billing information</h3>
-                    <a class="copy-btn waves-effect waves-light btn-small" onclick="copyShippingInfo()">
-                        Copy Shipping Information
-                    </a>
+                    <i class="material-icons">receipt_long</i>
+                    <h3>Your Purchase</h3>
                 </div>
-                <div class="step-content">
-                    <div class="form">
-                        <div class="card-images" style="width: 100%; margin-bottom: 1rem;">
-                            <img src="https://easitrack.net/images/logo_ccVisa.gif" alt="Visa" />
-                            <img src="https://easitrack.net/images/logo_ccMC.gif" alt="MasterCard" />
-                            <img src="https://easitrack.net/images/logo_ccAmex.gif" alt="Amex" />
-                        </div>
-                        <div class="input-field d3">
-                            <select id="ccType" class="cc-ddl-type">
-                                <option value="VISA">Visa</option>
-                                <option value="MC">MasterCard</option>
-                                <option value="AMEX">American Express</option>
-                                <option value="DIS">Discover</option>
-                            </select>
-                            <label for="ccType">Credit Card Type</label>
-                        </div>
-                        <div class="input-field d3">
-                            <label for="ccNumber">Credit Card Number</label>
-                            <input id="ccNumber"
-                                   name="ccNumber"
-                                   type="text"
-                                   size="30"
-                                   maxlength="21"
-                                   class="cc-card-number required validate"
-                                   required />
-                        </div>
-                        <div class="input-field d3">
-                            <label for="ccSecCode">Security Code</label>
-                            <input class="required validate" id="ccSecCode" name="ccSecCode" type="text" maxlength="5" size="5" required />
-                        </div>
-                        <div class="input-field exp-field">
-                            <select class="required validate" id="ccExpMonth" required>
-                                <option value="">Month</option>
-                                <option value="1">January</option>
-                                <option value="2">February</option>
-                                <option value="3">March</option>
-                                <option value="4">April</option>
-                                <option value="5">May</option>
-                                <option value="6">June</option>
-                                <option value="7">July</option>
-                                <option value="8">August</option>
-                                <option value="9">September</option>
-                                <option value="10">October</option>
-                                <option value="11">November</option>
-                                <option value="12">December</option>
-                            </select>
-                            <select class="required validate" id="ccExpYear" required>
-                                <option value="">Year</option>
-                                <option value="2021">2021</option>
-                                <option value="2022">2022</option>
-                                <option value="2023">2023</option>
-                                <option value="2024">2024</option>
-                                <option value="2025">2025</option>
-                                <option value="2026">2026</option>
-                                <option value="2027">2027</option>
-                                <option value="2028">2028</option>
-                                <option value="2029">2029</option>
-                                <option value="2030">2030</option>
-                            </select>
-                            <label for="ccExpMonth">Expiration</label>
-                        </div>
-                        <div class="input-field">
-                            <label for="ccFirstName">Credit Card First Name</label>
-                            <input class="required validate" id="ccFirstName" name="ccFirstName" type="text" maxlength="20" size="30" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="ccLastName">Credit Card Last Name</label>
-                            <input class="required validate" id="ccLastName" name="ccLastName" type="text" maxlength="20" size="30" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="ccStreet">Credit Card Street</label>
-                            <input class="required validate" id="ccStreet" name="ccStreet" type="text" maxlength="50" size="30" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="ccCity">Credit Card City</label>
-                            <input class="required validate" id="ccCity" name="ccCity" type="text" maxlength="20" size="30" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="ccState">Credit Card State</label>
-                            <input class="required validate" id="ccState" name="ccState" type="text" maxlength="15" size="15" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="ccPostalCode">Credit Card Postal Code</label>
-                            <input class="required validate" id="ccPostalCode" name="ccPostalCode" type="text" maxlength="15" size="15" required />
-                        </div>
-                    </div>
+                <div class="step-content with-scroll">
+                    <table class="highlight">
+                        <thead>
+                            <tr>
+                                <th class="t-product"><span>Product</span></th>
+                                <th class="t-price"><span>Unit Price</span></th>
+                                <th class="t-price"><span>Monthly Payment</span></th>
+                                <th class="t-quantity"><span>Quantity</span></th>
+                                <th class="t-total"><span>Total</span></th>
+                            </tr>
+                        </thead>
+                        <tbody id="form-tbody">
+                        </tbody>
+                    </table>
                     <div class="step-actions">
-                        <!-- Here goes your actions buttons -->
-                        <button class="waves-effect waves-dark btn next-step">
-                            CONTINUE
-                        </button>
+                        <button class="waves-effect waves-dark btn next-step">Continue</button>
                     </div>
                 </div>
             </li>
@@ -311,10 +207,14 @@
                     </div>
                 </div>
             </li>
+
+
+
+
         </ul>
-        <div style="font-size:10px;">
+        <!--<div style="font-size:10px;">
             <span style="color:#888888;">Rep.ID:</span><input type="text" id="repId" name="repId" size="5" value="" style="height:15px;width:40px;">
-        </div>
+        </div>-->
     </main>
     <div class="modals">
         <div id="whatis-obd" class="modal">
@@ -602,7 +502,7 @@
                                     }
                                 }
                                 else {
-                                    ret = jsonObj.isOk;
+                                    ret = jsonObj;//jsonObj.isOk;
                                 }
                             }
                         }
@@ -949,6 +849,8 @@
         }
         function buyNowN2() {
             try {
+                $("#cotizacion-number").css("background-color", "white"); 
+                $("#cotizacion-number").text('');
                 var formComertial = {};
                 var formProductList = [];                
                 var shippingInformation = {};
@@ -970,13 +872,13 @@
                 
                 formProductList=loadProducts();
                 shippingInformation=loadShippingInformation();
-                billingInformation=loadBillingInformation();
+                //billingInformation=loadBillingInformation();
 
                 
                 debugger;
                 formComertial.shippingInformation = shippingInformation;
                 formComertial.products = formProductList;
-                formComertial.billingInformation = billingInformation;
+                //formComertial.billingInformation = billingInformation;
                 formComertial.subTotal = subTotal;
                 formComertial.formTotal = formTotal;
                 formComertial.isQuote = true;
@@ -987,6 +889,17 @@
 
 
                 var result = saveWebFormN2(formComertial, true);
+                if (result.isOk) {
+                    alert('Your quote was successfully created. your quote number is ' + result.docNum);
+                    $("#cotizacion-number").text('Quote Number ' + result.docNum);
+                    $("#cotizacion-number").css("background-color", "#A6EEC6");
+                    cleanFields();
+                } else {
+                    alert('error creating quote');                    
+                    $("#cotizacion-number").text('error creating quote');
+                    $("#cotizacion-number").css("background-color", "#E2BDA1");
+                }
+                
                 return;
 
 
@@ -1111,35 +1024,6 @@
             return shippingInformation;
             
         }
-        function loadBillingInformation() {
-            let billingInformation = {};
-            var creditCardType = $("#ccType").val();
-            var creditCardNumber = $("#ccNumber").val();
-            var securityCode = $("#ccSecCode").val();
-            var expirationMonth = $("#ccExpMonth").val();
-            var expirationYear = $("#ccExpYear").val();
-            var creditCardFirstName = $("#ccFirstName").val();
-            var creditCardLastName = $("#ccLastName").val();
-            var creditCardStreet = $("#ccStreet").val();
-            var creditCardCity = $("#ccCity").val();
-            var creditCardState = $("#ccState").val();
-            var creditCardPostalCode = $("#ccPostalCode").val();
-
-            billingInformation = {
-                creditCardType: creditCardType,
-                creditCardNumber: creditCardNumber,
-                securityCode: securityCode,
-                expirationMonth: expirationMonth,
-                expirationYear: expirationYear,
-                creditCardFirstName: creditCardFirstName,
-                creditCardLastName: creditCardLastName,
-                creditCardStreet: creditCardStreet,
-                creditCardCity: creditCardCity,
-                creditCardState: creditCardState,
-                creditCardPostalCode: creditCardPostalCode
-            }; 
-            return billingInformation;
-        }
         function loadProducts() {
             let formProductList = [];  
             let formProduct = {};
@@ -1165,7 +1049,30 @@
             formProductList.push(shipingSelect);
             return formProductList;
         }
+        function cleanFields() {
+            $("#firstName").val('');
+            $("#lastName").val('');
+            $("#email").val('');
+            $("#phone").val('');
+            $("#cellPhone").val('');
+            $("#company").val('');
+            $("#street").val('');
+            $("#city").val('');
+            $("#state").val('');
+            $("#postalCode").val('');
 
+            $("#ccType").val('');
+            $("#ccNumber").val('');
+            $("#ccSecCode").val('');
+            $("#ccExpMonth").val('');
+            $("#ccExpYear").val('');
+            $("#ccFirstName").val('');
+            $("#ccLastName").val('');
+            $("#ccStreet").val('');
+            $("#ccCity").val('');
+            $("#ccState").val('');
+            $("#ccPostalCode").val('');
+        }
     </script>
 
 </body>
