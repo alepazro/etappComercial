@@ -873,7 +873,7 @@ function qtyfunction() {
 }
 function buyNowN() {
     try {
-        debugger;
+       
         //Valida the CC
         var isValidCC = false;
         isValidCC = ValidateCreditCard();

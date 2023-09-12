@@ -297,7 +297,7 @@
         function getAccessLinkN(){
             try {
                 var data = {};
-                debugger;
+               
                 if (validateFields()) {
                     data = {
                         "formId": escape($('#formId').val()),
@@ -350,11 +350,11 @@
         }
         function saveWebFormN(data, isSLL) {
             try {
-                debugger;
+               
                 if (isSLL == undefined) {
                     isSLL = false;
                 }
-                debugger;
+               
                 var result = dbReadWriteNew('saveWebForm', data, true, false, isSLL);
 
                 return result;

@@ -99,12 +99,74 @@
     </div>
     <main>
 
-        <input id="formId" name="formId" type="hidden" value="DDCD27C3-23C5-4660-BCF0-D00692D165D3" />
+        <input id="formId" name="formId" type="hidden" value="0" /> <!--value="DDCD27C3-23C5-4660-BCF0-D00692D165D3" />-->
+        <input type="text" id="quote-number" placeholder="Do you have a prior quote? Enter the number and load it again." /><button id="btn-get-quote" onclick="getQuote()">Get Quote</button><br /><br />
+
         <span class="form-message">
             * To order, please fill the form below
         </span>
         <ul class="stepper non-linear">
-            <li class="step active">
+            <li class="step active" id="kiki">
+                <div class="step-title waves-effect">
+                    <i class="material-icons">local_shipping</i>
+                    <h3>Shipping information</h3>
+                </div>
+                <div class="step-content">
+                    <div class="form">
+                        <div class="input-field">
+                            <label for="firstName">First Name</label>
+                            <input class="required validate info" id="firstName" name="firstName" type="text" maxlength="20" size="30" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="lastName">Last Name</label>
+                            <input class="required validate info" id="lastName" name="lastName" type="text" maxlength="20" size="30" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="email">Email</label>
+                            <input class="required validate info" id="email" name="email" type="text" maxlength="100" size="30" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="phone">Phone</label>
+                            <input class="required validate info" id="phone" name="phone" type="text" maxlength="50" size="15" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="phone">Cell Phone</label>
+                            <input id="cellPhone" name="cellPhone" class="info" type="text" maxlength="50" size="15" />
+                            <span class="helper-text" data-error="wrong" data-success="right">
+                                Please provide your cell phone if you want us to keep you updated on the progress
+                                of this order via text message, including confirmation, shipping, etc.
+                            </span>
+                        </div>
+                        <div class="input-field">
+                            <label for="company">Company Name</label>
+                            <input id="company" class="info" name="company" type="text" maxlength="50" size="30" />
+                        </div>
+                        <div class="input-field">
+                            <label for="street">Street</label>
+                            <input class="required validate info" id="street" name="street" type="text" maxlength="50" size="30" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="city">City</label>
+                            <input class="required validate info" id="city" name="city" type="text" maxlength="20" size="30" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="state">State</label>
+                            <input class="required validate info" id="state" name="state" type="text" maxlength="15" size="15" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="postalCode">Postal Code</label>
+                            <input class="required validate info" id="postalCode" name="postalCode" type="text" maxlength="15" size="15" required />
+                        </div>
+                    </div>
+                    <div class="step-actions">
+                        <button class="waves-effect waves-dark btn next-step">
+                            CONTINUE
+                        </button>
+                    </div>
+                </div>
+            </li>
+
+            <li class="step">
                 <div class="step-title waves-effect">
                     <i class="material-icons">receipt_long</i>
                     <h3>Your purchase</h3>
@@ -120,7 +182,7 @@
                                 <th class="t-total"><span>Total</span></th>
                             </tr>
                         </thead>
-                        <tbody id="form-tbody">                            
+                        <tbody id="form-tbody">
                         </tbody>
                     </table>
                     <div class="step-actions">
@@ -129,65 +191,6 @@
                 </div>
             </li>
 
-            <li class="step" id="kiki">
-                <div class="step-title waves-effect">
-                    <i class="material-icons">local_shipping</i>
-                    <h3>Shipping information</h3>
-                </div>
-                <div class="step-content">
-                    <div class="form">
-                        <div class="input-field">
-                            <label for="firstName">First Name</label>
-                            <input class="required validate" id="firstName" name="firstName" type="text" maxlength="20" size="30" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="lastName">Last Name</label>
-                            <input class="required validate" id="lastName" name="lastName" type="text" maxlength="20" size="30" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="email">Email</label>
-                            <input class="required validate" id="email" name="email" type="text" maxlength="100" size="30" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="phone">Phone</label>
-                            <input class="required validate" id="phone" name="phone" type="text" maxlength="50" size="15" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="phone">Cell Phone</label>
-                            <input id="cellPhone" name="cellPhone" type="text" maxlength="50" size="15" />
-                            <span class="helper-text" data-error="wrong" data-success="right">
-                                Please provide your cell phone if you want us to keep you updated on the progress
-                                of this order via text message, including confirmation, shipping, etc.
-                            </span>
-                        </div>
-                        <div class="input-field">
-                            <label for="company">Company Name</label>
-                            <input id="company" name="company" type="text" maxlength="50" size="30" />
-                        </div>
-                        <div class="input-field">
-                            <label for="street">Street</label>
-                            <input class="required validate" id="street" name="street" type="text" maxlength="50" size="30" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="city">City</label>
-                            <input class="required validate" id="city" name="city" type="text" maxlength="20" size="30" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="state">State</label>
-                            <input class="required validate" id="state" name="state" type="text" maxlength="15" size="15" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="postalCode">Postal Code</label>
-                            <input class="required validate" id="postalCode" name="postalCode" type="text" maxlength="15" size="15" required />
-                        </div>
-                    </div>
-                    <div class="step-actions">
-                        <button class="waves-effect waves-dark btn next-step">
-                            CONTINUE
-                        </button>
-                    </div>
-                </div>
-            </li>
 
             <li class="step">
                 <div class="step-title waves-effect">
@@ -244,9 +247,7 @@
                                 <option value="12">December</option>
                             </select>
                             <select class="required validate" id="ccExpYear" required>
-                                <option value="">Year</option>
-                                <option value="2021">2021</option>
-                                <option value="2022">2022</option>
+                                <option value="">Year</option>                               
                                 <option value="2023">2023</option>
                                 <option value="2024">2024</option>
                                 <option value="2025">2025</option>
@@ -541,7 +542,7 @@
         }
         function saveWebFormN(data, isSLL) {
             try {
-                debugger;
+               
                 if (isSLL == undefined) {
                     isSLL = false;
                 }
@@ -556,7 +557,7 @@
         }
         function saveWebFormN2(data, isSLL) {
             try {
-                debugger;
+               
                 if (isSLL == undefined) {
                     isSLL = false;
                 }
@@ -655,7 +656,7 @@
             location.href = thisPage;
         }
         function loadInfoForm(listForm) {
-            debugger;
+           
             
             $.each(listForm, function (indexes, values) {
                 ;
@@ -701,7 +702,7 @@
             let priceMonth = 0;
             let qty = 0;
             let total = 0;
-            debugger;
+           
             switch (numberItem) {
                 case 1:
                     resetItem();
@@ -816,7 +817,7 @@
 
                 default: console.log("no item");
             }
-            debugger;
+           
             subTotal();
 
         }
@@ -827,12 +828,12 @@
             total = 0;
         }
         function subTotal() {
-            debugger;
+           
             let subtotal1 = 0;
             let formTotal1 = 0; 
             subtotal1 = parseFloat($("#item1Total").text()) + parseFloat($("#item2Total").text()) + parseFloat($("#item3Total").text()) + parseFloat($("#item4Total").text()) + parseFloat($("#item5Total").text());// + parseFloat($("#item6Total").text()) + parseFloat($("#item7Total").text());
             formTotal1 = ($("#shipping-total").text() == "" ? 0 : parseFloat($("#shipping-total").text())) + subtotal1;
-            debugger;
+           
             $("#subTotal").text(subtotal1.toFixed(2));
             $("#formTotal").text(formTotal1.toFixed(2));
 
@@ -846,16 +847,17 @@
                 key++;
                 if (!value.isShipping) {
                     row += "<tr class='product orderItem hover1'>";
-                    row += "<td style=display:none>" + value.id + "</td>";                    
+                    row += "<td style=display:none>" + value.id + "</td>";    
                     row += "<td class='t-product'><span>" + value.name + "</span></td>";
                     row += "<td class='t-price'><span> USD </span><span class='itemPrice itm1' id='item" + value.itemNumber + "Price'>" + value.price + "</span></td>";
                     row += "<td class='t-price'><span> USD </span><span class='itemPrice itm1' id='item" + value.itemNumber + "MonthlyPayment'>" + value.monthlyPayment + "</span></td>";
-                    row += "<td class='t-quantity'><input type='number' id='qty" + value.itemNumber + "' name='qty" + value.itemNumber + "' size='5' onchange='qtyfunctionnew(" + value.itemNumber + ")' onkeyup='qtyfunctionnew(" + value.itemNumber + ")' value='0' </td>";
+                    row += "<td class='t-quantity'><input type='number' class='qty' id='qty" + value.itemNumber + "' name='qty" + value.itemNumber + "' size='5' onchange='qtyfunctionnew(" + value.itemNumber + ")' onkeyup='qtyfunctionnew(" + value.itemNumber + ")' value='0' </td>";
                     row += "<td class='t-total'><span> USD </span><span class='itemTotal' id='item" + value.itemNumber + "Total'>0.00</span></td>";
+                    row += "<td style=display:none>" + value.itemNumber + "</td>"; 
                     row += "</tr>";
                 }
                
-                
+                debugger;
                 
             });                  
            
@@ -886,13 +888,14 @@
             //row += "<td class='t-total'><span>USD</span><span class='shippingTotal'>0.00</span></td>";
             //row += "</tr>";
 
-            debugger;
+           
             row += "<tr>";
             row += "<td class='t-product'>&nbsp;</td>";
             row += "<td class='t-price'>&nbsp;</td>";
             row += "<td class='t-price'>&nbsp;</td>";
             row += "<td class='t-quantity'>&nbsp;</td>";
             row += "<td class='t-total text-bold'<span>Subtotal USD </span><span class='subTotal' id='subTotal'>0.00</span></td>";
+
             row += "</tr>";
 
             
@@ -932,7 +935,7 @@
 
         }
         function onSelect(event) {
-            debugger;
+           
             var id = $('option:selected', event).attr('value');
             var price = $('option:selected', event).attr('data-price');
             var monthly = $('option:selected', event).attr('data-monthly');
@@ -966,14 +969,14 @@
                 //    alert('Invalid Credit Card number');
                 //    return;
                 //}
-                debugger;
+               
                 
                 formProductList=loadProducts();
                 shippingInformation=loadShippingInformation();
                 billingInformation=loadBillingInformation();
 
                 
-                debugger;
+               
                 formComertial.shippingInformation = shippingInformation;
                 formComertial.products = formProductList;
                 formComertial.billingInformation = billingInformation;
@@ -1148,10 +1151,11 @@
                 formProduct = {};
                 /*var formId = $(this).find("td").eq(1).html();*/
                 var id = $(this).find("td").eq(0).text();
-                debugger;
+               
                 var quantity = $(this).find("td").eq(4).find("input").val();
                 var totalProduct = $(this).find("td").eq(5).find("span").eq(1).text();
-                formProduct = { id: id, quantity: quantity, totalProduct: totalProduct }
+                var itemNumber = $(this).find("td").eq(6).text();
+                formProduct = { id: id, quantity: quantity, totalProduct: totalProduct, itemNumber:itemNumber }
 
                 if (quantity != "") {
                     quantity = parseInt(quantity)
@@ -1165,6 +1169,90 @@
             formProductList.push(shipingSelect);
             return formProductList;
         }
+        function getQuote() {
+            const quote = $("#quote-number").val();
+            debugger;
+            const json = dbGetQuote(quote);            
+            const obj = JSON.parse(json);
+            debugger;
+            loadQuoteForm(obj);
+            
+
+        }
+        function dbGetQuote(number) {
+            var url = 'https://localhost:44385/Comertial.svc/comertial/cotizacion?number=' + number;
+            
+            var data1 = null;
+            $.ajax({
+                type: "GET",
+                url: url,
+                contentType: "application/json",
+                //data: null,
+                dataType: "json",
+                processdata: false,
+                success: function (data, textStatus) {                    
+                    infoForm = null;
+                    if (textStatus == 'success') {
+                        data1 = data;
+                    }
+                    else {
+                        data1 = null;
+                    }
+                },
+                error: function (err) {
+                    data1 = null;
+                },
+                async: false
+            });
+            return data1;
+        }
+        function loadQuoteForm(quote) {
+            $(".qty").prop('disabled', true);
+            //$(".info").remove('input-field');
+            
+            $("#formId").val(quote.id);
+            debugger;
+            $.each(quote.products, function (indexes, values) {
+
+                $("#qty" + values.itemNumber).val(values.quantity);                
+                $("#item" + values.itemNumber + "Total").text(values.totalProduct);
+            });
+            $("#subTotal").text(quote.subTotal);
+            $("#formTotal").text(quote.formTotal);
+
+            $("#firstName").focus();
+            $("#firstName").val(quote.shippingInformation.firsName);
+
+            $("#lastName").focus();
+            $("#lastName").val(quote.shippingInformation.lastName);
+
+            $("#email").focus();
+            $("#email").val(quote.shippingInformation.email);
+
+            $("#phone").focus();
+            $("#phone").val(quote.shippingInformation.phone);
+
+            $("#cellPhone").focus();
+            $("#cellPhone").val(quote.shippingInformation.cellPhone);
+
+            $("#company").focus();
+            $("#company").val(quote.shippingInformation.companyName);
+
+            $("#street").focus();
+            $("#street").val(quote.shippingInformation.street);
+
+            $("#city").focus();
+            $("#city").val(quote.shippingInformation.city);
+
+            $("#state").focus();
+            $("#state").val(quote.shippingInformation.state);
+
+            $("#postalCode").focus();
+            $("#postalCode").val(quote.shippingInformation.postalCode);
+
+            $(".info").prop('disabled', true);
+        }
+
 
     </script>
 

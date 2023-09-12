@@ -115,7 +115,7 @@ function applyPromoCode() {
 function applyPromoCodeV2() {
     try {
         var isValid = false;
-        debugger;
+       
         promoPrice = 0;
         promoPriceService = 0;
         promoPriceOBD = 0;

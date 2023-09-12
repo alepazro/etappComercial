@@ -546,7 +546,7 @@ function buyNow() {
 }
 function buyNowN() {
     try {
-        debugger;
+       
         //Valida the CC
         var isValidCC = false;
         isValidCC = ValidateCreditCard();
@@ -649,12 +649,12 @@ function buyNowN() {
 
 function saveWebForm(data, isSLL) {
     try {
-        debugger;
-        debugger;
+       
+       
         if (isSLL == undefined) {
             isSLL = false;
         }
-        debugger;
+       
         var result = dbReadWriteNew('saveWebForm', data, true, false, isSLL);
 
         return result;
