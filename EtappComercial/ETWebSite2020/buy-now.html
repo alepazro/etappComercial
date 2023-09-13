@@ -313,9 +313,9 @@
                 </div>
             </li>
         </ul>
-        <div style="font-size:10px;">
+        <!--<div style="font-size:10px;">
             <span style="color:#888888;">Rep.ID:</span><input type="text" id="repId" name="repId" size="5" value="" style="height:15px;width:40px;">
-        </div>
+        </div>-->
     </main>
     <div class="modals">
         <div id="whatis-obd" class="modal">
@@ -574,7 +574,7 @@
         function dbReadWriteNew(method, data, params) {
             try {
                 var ret = false;
-                var url = 'https://localhost:44385/Comertial.svc/' + method;
+                var url = 'https://devetws.easitrack.net/Comertial.svc/' + method;
                 data = JSON.stringify(data);
                 $.ajax({
                     type: "POST",
@@ -625,7 +625,7 @@
             }
         }
         function dbGetForm() {
-            var url = 'https://localhost:44385/Comertial.svc/comertial/form';
+            var url = 'https://devetws.easitrack.net/Comertial.svc/comertial/form';
             
             var data1 = null;
             $.ajax({
@@ -831,7 +831,7 @@
            
             let subtotal1 = 0;
             let formTotal1 = 0; 
-            subtotal1 = parseFloat($("#item1Total").text()) + parseFloat($("#item2Total").text()) + parseFloat($("#item3Total").text()) + parseFloat($("#item4Total").text()) + parseFloat($("#item5Total").text());// + parseFloat($("#item6Total").text()) + parseFloat($("#item7Total").text());
+            subtotal1 = parseFloat($("#item1Total").text() == "" ? 0 : $("#item1Total").text()) + parseFloat($("#item2Total").text() == "" ? 0 : $("#item2Total").text()) + parseFloat($("#item3Total").text() == "" ? 0 : $("#item3Total").text()) + parseFloat($("#item4Total").text() == "" ? 0 : $("#item4Total").text()) + parseFloat($("#item5Total").text() == "" ? 0 : $("#item5Total").text()) + parseFloat($("#item6Total").text() == "" ? 0 : $("#item6Total").text()) + parseFloat($("#item7Total").text() == "" ? 0 : $("#item7Total").text()) + parseFloat($("#item8Total").text() == "" ? 0 : $("#item8Total").text());// + parseFloat($("#item6Total").text()) + parseFloat($("#item7Total").text());
             formTotal1 = ($("#shipping-total").text() == "" ? 0 : parseFloat($("#shipping-total").text())) + subtotal1;
            
             $("#subTotal").text(subtotal1.toFixed(2));
@@ -982,7 +982,7 @@
                 formComertial.billingInformation = billingInformation;
                 formComertial.subTotal = subTotal;
                 formComertial.formTotal = formTotal;
-                formComertial.isQuote = true;
+                formComertial.isQuote = false;
                 formComertial.dateQuote = '';
                 formComertial.isBuy = true;
                 formComertial.dateBuy = '';
@@ -1180,7 +1180,7 @@
 
         }
         function dbGetQuote(number) {
-            var url = 'https://localhost:44385/Comertial.svc/comertial/cotizacion?number=' + number;
+            var url = 'https://devetws.easitrack.net/Comertial.svc/comertial/cotizacion?number=' + number;
             
             var data1 = null;
             $.ajax({

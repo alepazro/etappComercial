@@ -124,7 +124,7 @@ function applyPromoCodeV2() {
 
         var promoCode = $('#promoCode').val();
         jQuery.ajax({
-            url: 'https://localhost:44385/Comertial.svc/comertial?promoCode=' + promoCode,
+            url: 'https://devetws.easitrack.net/Comertial.svc/comertial?promoCode=' + promoCode,
             //data: 't=' + escape(t),
             dataType: 'json',
             type: "GET",

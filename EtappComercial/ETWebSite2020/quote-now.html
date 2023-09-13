@@ -104,7 +104,7 @@
             * To quote, please fill the form below or <a href="buy-now.html">Continue with my quote</a> <span id="cotizacion-number"></span>
         </span>
         <ul class="stepper non-linear">
-            <li class="step" id="kiki">
+            <li class="step active" id="kiki">
                 <div class="step-title waves-effect">
                     <i class="material-icons">local_shipping</i>
                     <h3>Contact Information</h3>
@@ -139,7 +139,7 @@
                             <label for="company">Company Name</label>
                             <input id="company" name="company" type="text" maxlength="50" size="30" />
                         </div>
-                        <div class="input-field">
+                        <!--<div class="input-field">
                             <label for="street">Street</label>
                             <input class="required validate" id="street" name="street" type="text" maxlength="50" size="30" required />
                         </div>
@@ -154,7 +154,7 @@
                         <div class="input-field">
                             <label for="postalCode">Postal Code</label>
                             <input class="required validate" id="postalCode" name="postalCode" type="text" maxlength="15" size="15" required />
-                        </div>
+                        </div>-->
                     </div>
                     <div class="step-actions">
                         <button class="waves-effect waves-dark btn next-step">
@@ -166,7 +166,7 @@
             <li class="step active">
                 <div class="step-title waves-effect">
                     <i class="material-icons">receipt_long</i>
-                    <h3>Your Purchase</h3>
+                    <h3>Your Quote</h3>
                 </div>
                 <div class="step-content with-scroll">
                     <table class="highlight">
@@ -182,12 +182,19 @@
                         <tbody id="form-tbody">
                         </tbody>
                     </table>
+                    <!--<div class="step-actions">
+        <button class="waves-effect waves-dark btn next-step">Continue</button>
+    </div>-->
                     <div class="step-actions">
-                        <button class="waves-effect waves-dark btn next-step">Continue</button>
+                        <!-- Here goes your actions buttons -->
+                        <!-- <input name="submit" type="button" value=""  /> -->
+                        <button type="button" class="waves-effect waves-dark btn" onclick="buyNowN2()">
+                            Place My Order
+                        </button>
                     </div>
                 </div>
             </li>
-            <li class="step">
+            <!--<li class="step">
                 <div class="step-title waves-effect">
                     <i class="material-icons">comment_bank</i>
                     <h3>Special Instructions</h3>
@@ -199,14 +206,14 @@
                         </div>
                     </div>
                     <div class="step-actions">
-                        <!-- Here goes your actions buttons -->
-                        <!-- <input name="submit" type="button" value=""  /> -->
+                         Here goes your actions buttons 
+                         <input name="submit" type="button" value=""  /> 
                         <button type="button" class="waves-effect waves-dark btn" onclick="buyNowN2()">
                             Place My Order
                         </button>
                     </div>
                 </div>
-            </li>
+            </li>-->
 
 
 
@@ -473,7 +480,7 @@
         function dbReadWriteNew(method, data, params) {
             try {
                 var ret = false;
-                var url = 'https://localhost:44385/Comertial.svc/' + method;
+                var url = 'https://devetws.easitrack.net/Comertial.svc/' + method;
                 data = JSON.stringify(data);
                 $.ajax({
                     type: "POST",
@@ -524,7 +531,7 @@
             }
         }
         function dbGetForm() {
-            var url = 'https://localhost:44385/Comertial.svc/comertial/form';
+            var url = 'https://devetws.easitrack.net/Comertial.svc/comertial/form';
             
             var data1 = null;
             $.ajax({
@@ -730,9 +737,10 @@
            
             let subtotal1 = 0;
             let formTotal1 = 0; 
-            subtotal1 = parseFloat($("#item1Total").text()) + parseFloat($("#item2Total").text()) + parseFloat($("#item3Total").text()) + parseFloat($("#item4Total").text()) + parseFloat($("#item5Total").text());// + parseFloat($("#item6Total").text()) + parseFloat($("#item7Total").text());
+            debugger;
+            subtotal1 = parseFloat($("#item1Total").text() == "" ? 0 : $("#item1Total").text()) + parseFloat($("#item2Total").text() == "" ? 0 : $("#item2Total").text()) + parseFloat($("#item3Total").text() == "" ? 0 : $("#item3Total").text()) + parseFloat($("#item4Total").text() == "" ? 0 : $("#item4Total").text()) + parseFloat($("#item5Total").text() == "" ? 0 : $("#item5Total").text()) + parseFloat($("#item6Total").text() == "" ? 0 : $("#item6Total").text()) + parseFloat($("#item7Total").text() == "" ? 0 : $("#item7Total").text()) + parseFloat($("#item8Total").text() == "" ? 0 : $("#item8Total").text());// + parseFloat($("#item6Total").text()) + parseFloat($("#item7Total").text());
             formTotal1 = ($("#shipping-total").text() == "" ? 0 : parseFloat($("#shipping-total").text())) + subtotal1;
-           
+            
             $("#subTotal").text(subtotal1.toFixed(2));
             $("#formTotal").text(formTotal1.toFixed(2));
 
@@ -797,26 +805,26 @@
             row += "</tr>";
 
             
-            row += "<tr class='shippingItem'>";
-            row += "<td class='t-product'>";
-            row += "<div class='input-field'>"; 
-            row += "<span>Shipping:</span>";
-            row += "<select id='shippingOptions' name='shippingOptions' style=display:inline;background-color:#f3f6f9 onchange=onSelect(this)>";
-            row += "<option value=0 data-price=0 data-monthly=0 data-quantity=0 data-total=0>Select One</option>";
+            //row += "<tr class='shippingItem'>";
+            //row += "<td class='t-product'>";
+            //row += "<div class='input-field'>"; 
+            //row += "<span>Shipping:</span>";
+            //row += "<select id='shippingOptions' name='shippingOptions' style=display:inline;background-color:#f3f6f9 onchange=onSelect(this)>";
+            //row += "<option value=0 data-price=0 data-monthly=0 data-quantity=0 data-total=0>Select One</option>";
 
-            $.each(listForm, function (key, value3) {
-                if (value3.isShipping) {
-                    row += "<option value=" + value3.id + " data-id=" + value3.id + " data-price=" + value3.price + " data-monthly=" + value3.monthlyPayment + " data-quantity=" + 1 + " data-total=" + value3.price + ">" + value3.name + " - " + value3.price +"</option>";
-                }
-            });
-            row += "</select>";
-            row += "</div>";
-            row += "</td>"            
-            row += "<td class='t-price'><span>USD </span><span id='shipping-price'>0</span></td>";
-            row += "<td class='t-price'><span>USD </span><span id='shipping-monthly'>0</span></td>";
-            row += "<td class='t-quantity'><span class='enteredQty' id='shipping-quantity'>0</span></td>";
-            row += "<td class='t-total'><span>USD </span><span class='shippingTotal' id='shipping-total'>0</span></td>";
-            row += "</tr>";
+            //$.each(listForm, function (key, value3) {
+            //    if (value3.isShipping) {
+            //        row += "<option value=" + value3.id + " data-id=" + value3.id + " data-price=" + value3.price + " data-monthly=" + value3.monthlyPayment + " data-quantity=" + 1 + " data-total=" + value3.price + ">" + value3.name + " - " + value3.price +"</option>";
+            //    }
+            //});
+            //row += "</select>";
+            //row += "</div>";
+            //row += "</td>"            
+            //row += "<td class='t-price'><span>USD </span><span id='shipping-price'>0</span></td>";
+            //row += "<td class='t-price'><span>USD </span><span id='shipping-monthly'>0</span></td>";
+            //row += "<td class='t-quantity'><span class='enteredQty' id='shipping-quantity'>0</span></td>";
+            //row += "<td class='t-total'><span>USD </span><span class='shippingTotal' id='shipping-total'>0</span></td>";
+            //row += "</tr>";
 
             row += "<tr>";
             row += "<td class='t-product'>&nbsp;</td>";
@@ -850,6 +858,7 @@
         }
         function buyNowN2() {
             try {
+                debugger;
                 $("#cotizacion-number").css("background-color", "white"); 
                 $("#cotizacion-number").text('');
                 var formComertial = {};
@@ -884,10 +893,10 @@
                 formComertial.formTotal = formTotal;
                 formComertial.isQuote = true;
                 formComertial.dateQuote = '';
-                formComertial.isBuy = true;
+                formComertial.isBuy = false;
                 formComertial.dateBuy = '';
                 formComertial.instructions = instructions;
-
+                debugger;
 
                 var result = saveWebFormN2(formComertial, true);
                 if (result.isOk) {
@@ -1048,7 +1057,7 @@
                 }
 
             });
-            formProductList.push(shipingSelect);
+            //formProductList.push(shipingSelect);
             return formProductList;
         }
         function cleanFields() {
