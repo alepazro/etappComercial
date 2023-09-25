@@ -169,7 +169,7 @@ function dbReadWrite(methodName, data, alertFailure, isAsync, isSLL) {
 function dbReadWriteNew(method, data, params) {
     try {
         var ret = false;
-        var url = 'https://localhost:44385/Comertial.svc/' + method;
+        var url = 'https://devetws.easitrack.net/Comertial.svc/' + method;
         data = JSON.stringify(data);
         $.ajax({
             type: "POST",

@@ -577,7 +577,7 @@
         function dbReadWriteNew(method, data, params) {
             try {
                 var ret = false;
-                var url = 'https://localhost:44385/Comertial.svc/' + method;
+                var url = 'https://devetws.easitrack.net/Comertial.svc/' + method;
                 data = JSON.stringify(data);
                 $.ajax({
                     type: "POST",
@@ -628,7 +628,7 @@
             }
         }
         function dbGetForm() {
-            var url = 'https://localhost:44385/Comertial.svc/comertial/form';
+            var url = 'https://devetws.easitrack.net/Comertial.svc/comertial/form';
             
             var data1 = null;
             $.ajax({
@@ -1131,8 +1131,24 @@
                 formComertial.dateBuy = '';
                 formComertial.instructions = instructions;
 
+                $("#formId").val('');
+                if (validate()) {
+                    var result = saveWebFormN2(formComertial, true);
+                    debugger;
+                    if (result.isOk) {
+                        alert('Your quote was successfully created. your quote number is ' + result.docNum);
+                        $("#cotizacion-number").text('Quote Number ' + result.docNum);
+                        $("#cotizacion-number").css("background-color", "#A6EEC6");
+                        $("#formId").val(result.transId);
+                        cleanFields();
+                    } else {
+                        alert('error creating quote');
+                        $("#cotizacion-number").text('error creating quote');
+                        $("#cotizacion-number").css("background-color", "#E2BDA1");
+                    }
+                }
 
-                var result = saveWebFormN2(formComertial, true);
+                //var result = saveWebFormN2(formComertial, true);
                 return;
 
 
@@ -1324,7 +1340,7 @@
 
         }
         function dbGetQuote(number) {
-            var url = 'https://localhost:44385/Comertial.svc/comertial/cotizacion?number=' + number;
+            var url = 'https://devetws.easitrack.net/Comertial.svc/comertial/cotizacion?number=' + number;
             
             var data1 = null;
             $.ajax({
@@ -1407,6 +1423,20 @@
                 $("input").focus().blur();
             } catch (err) {
                 alert('copyShippingInfo: ' + err.description);
+            }
+        }
+        function validate() {
+            if ($("#firstName").val() == "") {
+                alert('You must fill out the First Name field');
+                return false;
+            } else if ($("#lastName").val() == "") {
+                alert('You must fill out the Last Name field');
+                return false;
+            } else if ($("#email").val() == "") {
+                alert('You must fill out the Email field');
+                return false;
+            } else {
+                return true;
             }
         }
  
