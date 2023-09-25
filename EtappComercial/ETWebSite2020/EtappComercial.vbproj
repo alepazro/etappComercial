@@ -96,7 +96,7 @@
     <Content Include="carouselSkins\tango\skin4.css" />
     <Content Include="contact-us.html" />
     <Content Include="contactus.html" />
-    <Content Include="demo-login.html" />
+    <Content Include="demo-https://easitrack.net/login.html" />
     <Content Include="device.html" />
     <Content Include="Emails\Email_BatchReport.html" />
     <Content Include="Emails\Email_CaseAssigned.html" />
@@ -717,7 +717,7 @@
     <Content Include="lib\owlcarousel\assets\owl.carousel.min.js" />
     <Content Include="lib\waypoints\waypoints.min.js" />
     <Content Include="lib\wow\wow.min.js" />
-    <Content Include="login.html" />
+    <Content Include="https://easitrack.net/login.html" />
     <Content Include="newfiles\buy-now.css" />
     <Content Include="newfiles\images\image1.png" />
     <Content Include="newfiles\images\image2.png" />
@@ -844,7 +844,7 @@
     <Content Include="RemovedHTLM\mDevicesList.html" />
     <Content Include="RemovedHTLM\mGeoLocation.html" />
     <Content Include="RemovedHTLM\mIndex.html" />
-    <Content Include="RemovedHTLM\mLogin.html" />
+    <Content Include="RemovedHTLM\mhttps://easitrack.net/login.html" />
     <Content Include="RemovedHTLM\mMap.html" />
     <Content Include="RemovedHTLM\mTracker.aspx" />
     <Content Include="RemovedHTLM\multi-tracking.html" />

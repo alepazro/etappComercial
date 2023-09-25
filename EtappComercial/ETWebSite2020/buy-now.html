@@ -74,7 +74,7 @@
     ============================-->
     <header id="header1" class="fixed-top navbar navbar-expand-lg navbar-light" style="background: #fff">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="images/img/Home/EasiTracD04aR02bP01ZL-Jefferson2b_mdm.png" alt="" class="img-fluid"></a>
+            <a class="navbar-brand" href="index.html"><img src="images/img/Home/EasiTracD04aR02bP01ZL-Jefferson2b_mdm.png" alt="" class="img-fluid" style="width:300px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav main-nav float-right">
@@ -84,7 +84,7 @@
                     <li class="nav-item "><a href="installation.html" class="mainMenuOptionText">Installation</a></li>
                     <li class="nav-item "><a href="about-us.html">About Us</a></li>
                     <li class="nav-item active"><a href="buy-now.html">Order Now</a></li>
-                    <a href="login.html" class="btn-get-started ">Login</a>
+                    <a href="https://easitrack.net/login.html" class="btn-get-started ">Login</a>
                 </ul>
             </div>
         </div>
@@ -100,12 +100,38 @@
     <main>
 
         <input id="formId" name="formId" type="hidden" value="0" /> <!--value="DDCD27C3-23C5-4660-BCF0-D00692D165D3" />-->
-        <input type="text" id="quote-number" placeholder="Do you have a prior quote? Enter the number and load it again." /><button id="btn-get-quote" onclick="getQuote()">Get Quote</button><br /><br />
+        <!--<input type="text" id="quote-number" placeholder="Do you have a prior quote? Enter the number and load it again." /><button id="btn-get-quote" onclick="getQuote()">Get Quote</button><br /><br />-->
 
         <span class="form-message">
             * To order, please fill the form below
         </span>
         <ul class="stepper non-linear">
+            <li class="step active">
+                <div class="step-title waves-effect">
+                    <i class="material-icons">receipt_long</i>
+                    <h3>Your purchase</h3>
+                </div>
+                <div class="step-content with-scroll">
+                    <table class="highlight">
+                        <thead>
+                            <tr>
+                                <th class="t-product"></th>
+                                <th class="t-product"><span>Product</span></th>
+                                <th class="t-price"><span>Unit Price</span></th>
+                                <th class="t-price"><span>Monthly Payment</span></th>
+                                <th class="t-quantity"><span>Quantity</span></th>
+                                <th class="t-total"><span>Total</span></th>
+                            </tr>
+                        </thead>
+                        <tbody id="form-tbody">
+                        </tbody>
+                    </table>
+                    <div class="step-actions">
+                        <button class="waves-effect waves-dark btn next-step">Continue</button>
+                    </div>
+                </div>
+            </li>
+
             <li class="step active" id="kiki">
                 <div class="step-title waves-effect">
                     <i class="material-icons">local_shipping</i>
@@ -166,30 +192,6 @@
                 </div>
             </li>
 
-            <li class="step">
-                <div class="step-title waves-effect">
-                    <i class="material-icons">receipt_long</i>
-                    <h3>Your purchase</h3>
-                </div>
-                <div class="step-content with-scroll">
-                    <table class="highlight">
-                        <thead>
-                            <tr>
-                                <th class="t-product"><span>Product</span></th>
-                                <th class="t-price"><span>Unit Price</span></th>
-                                <th class="t-price"><span>Monthly Payment</span></th>
-                                <th class="t-quantity"><span>Quantity</span></th>
-                                <th class="t-total"><span>Total</span></th>
-                            </tr>
-                        </thead>
-                        <tbody id="form-tbody">
-                        </tbody>
-                    </table>
-                    <div class="step-actions">
-                        <button class="waves-effect waves-dark btn next-step">Continue</button>
-                    </div>
-                </div>
-            </li>
 
 
             <li class="step">
@@ -247,7 +249,7 @@
                                 <option value="12">December</option>
                             </select>
                             <select class="required validate" id="ccExpYear" required>
-                                <option value="">Year</option>                               
+                                <option value="">Year</option>
                                 <option value="2023">2023</option>
                                 <option value="2024">2024</option>
                                 <option value="2025">2025</option>
@@ -387,7 +389,7 @@
                     <!-- .main-nav -->
                 </div>
                 <div class="col-lg-6">
-                    <p>Copyright 2021 © Easitrack  - All Rights Reserved.</p>
+                    <p>Copyright 2023 © Easitrack  - All Rights Reserved.</p>
                 </div>
                 <!--  <h5 class="col-lg-4 pull-right"> <img class="padding-top" src="images/img/Home/telephone1.png" class="img-fluid" alt="">   (888) 744-6449</h5> -->
             </div>
@@ -431,6 +433,7 @@
         $(document).ready(function () {
             var infoForm = null;
             var shipingSelect = null;
+            var formProductList = [];
             infoForm = dbGetForm();
             createForm(infoForm);
             loadInfoForm(infoForm);
@@ -574,7 +577,7 @@
         function dbReadWriteNew(method, data, params) {
             try {
                 var ret = false;
-                var url = 'https://devetws.easitrack.net/Comertial.svc/' + method;
+                var url = 'https://localhost:44385/Comertial.svc/' + method;
                 data = JSON.stringify(data);
                 $.ajax({
                     type: "POST",
@@ -625,7 +628,7 @@
             }
         }
         function dbGetForm() {
-            var url = 'https://devetws.easitrack.net/Comertial.svc/comertial/form';
+            var url = 'https://localhost:44385/Comertial.svc/comertial/form';
             
             var data1 = null;
             $.ajax({
@@ -697,12 +700,12 @@
            
         }
         function qtyfunctionnew(numberItem) {
-            ;
+
             let price = 0;
             let priceMonth = 0;
             let qty = 0;
             let total = 0;
-           
+
             switch (numberItem) {
                 case 1:
                     resetItem();
@@ -717,8 +720,8 @@
                     } else {
                         $("#qty1").val('0');
                     }
-                    $("#item1Total").text(total);  
-                                    
+                    $("#item1Total").text(total);
+
                     break;
                 case 2:
                     resetItem();
@@ -729,8 +732,8 @@
                         price = parseFloat($("#item2Price").text());
                         priceMonth = parseFloat($("#item2MonthlyPayment").text());
                         total = ((price * qty) + (priceMonth * qty)).toFixed(2);
-                        
-                    }else {
+
+                    } else {
                         $("#qty2").val('0');
                     }
                     $("#item2Total").text(total);
@@ -814,13 +817,159 @@
                     }
                     $("#item7Total").text(total);
                     break;
+                case 8:
+                    resetItem();
+                    qty = $("#qty8").val();
+
+                    if (qty == 0) {
+                        total = 0;
+                    } else if (qty > 0) {
+                        price = parseFloat($("#item8Price").text());
+                        priceMonth = parseFloat($("#item8MonthlyPayment").text());
+                        total = ((price * qty) + (priceMonth * qty)).toFixed(2);
+
+                    } else {
+                        $("#qty8").val('0');
+                    }
+                    $("#item8Total").text(total);
+                    break;
+                case 9:
+                    resetItem();
+                    qty = $("#qty9").val();
+
+                    if (qty == 0) {
+                        total = 0;
+                    } else if (qty > 0) {
+                        price = parseFloat($("#item9Price").text());
+                        priceMonth = parseFloat($("#item9MonthlyPayment").text());
+                        total = ((price * qty) + (priceMonth * qty)).toFixed(2);
+
+                    } else {
+                        $("#qty9").val('0');
+                    }
+                    $("#item9Total").text(total);
+                    break;
+                case 10:
+                    resetItem();
+                    qty = $("#qty10").val();
+
+                    if (qty == 0) {
+                        total = 0;
+                    } else if (qty > 0) {
+                        price = parseFloat($("#item10Price").text());
+                        priceMonth = parseFloat($("#item10MonthlyPayment").text());
+                        total = ((price * qty) + (priceMonth * qty)).toFixed(2);
+
+                    } else {
+                        $("#qty10").val('0');
+                    }
+                    $("#item10Total").text(total);
+                    break;
+                case 11:
+                    resetItem();
+                    qty = $("#qty11").val();
+
+                    if (qty == 0) {
+                        total = 0;
+                    } else if (qty > 0) {
+                        price = parseFloat($("#item11Price").text());
+                        priceMonth = parseFloat($("#item11MonthlyPayment").text());
+                        total = ((price * qty) + (priceMonth * qty)).toFixed(2);
+
+                    } else {
+                        $("#qty11").val('0');
+                    }
+                    $("#item11Total").text(total);
+                    break;
+                case 12:
+                    resetItem();
+                    qty = $("#qty12").val();
+
+                    if (qty == 0) {
+                        total = 0;
+                    } else if (qty > 0) {
+                        price = parseFloat($("#item12Price").text());
+                        priceMonth = parseFloat($("#item12MonthlyPayment").text());
+                        total = ((price * qty) + (priceMonth * qty)).toFixed(2);
+
+                    } else {
+                        $("#qty12").val('0');
+                    }
+                    $("#item12Total").text(total);
+                    break;
+                case 13:
+                    resetItem();
+                    qty = $("#qty13").val();
+
+                    if (qty == 0) {
+                        total = 0;
+                    } else if (qty > 0) {
+                        price = parseFloat($("#item13Price").text());
+                        priceMonth = parseFloat($("#item13MonthlyPayment").text());
+                        total = ((price * qty) + (priceMonth * qty)).toFixed(2);
+
+                    } else {
+                        $("#qty13").val('0');
+                    }
+                    $("#item13Total").text(total);
+                    break;
+                case 14:
+                    resetItem();
+                    qty = $("#qty14").val();
+
+                    if (qty == 0) {
+                        total = 0;
+                    } else if (qty > 0) {
+                        price = parseFloat($("#item14Price").text());
+                        priceMonth = parseFloat($("#item14MonthlyPayment").text());
+                        total = ((price * qty) + (priceMonth * qty)).toFixed(2);
+
+                    } else {
+                        $("#qty14").val('0');
+                    }
+                    $("#item14Total").text(total);
+                    break;
+                case 15:
+                    resetItem();
+                    qty = $("#qty15").val();
+
+                    if (qty == 0) {
+                        total = 0;
+                    } else if (qty > 0) {
+                        price = parseFloat($("#item15Price").text());
+                        priceMonth = parseFloat($("#item15MonthlyPayment").text());
+                        total = ((price * qty) + (priceMonth * qty)).toFixed(2);
+
+                    } else {
+                        $("#qty15").val('0');
+                    }
+                    $("#item7Total").text(total);
+                    break;
+                case 16:
+                    resetItem();
+                    qty = $("#qty16").val();
+
+                    if (qty == 0) {
+                        total = 0;
+                    } else if (qty > 0) {
+                        price = parseFloat($("#item16Price").text());
+                        priceMonth = parseFloat($("#item16MonthlyPayment").text());
+                        total = ((price * qty) + (priceMonth * qty)).toFixed(2);
+
+                    } else {
+                        $("#qty16").val('0');
+                    }
+                    $("#item16Total").text(total);
+                    break;
 
                 default: console.log("no item");
             }
-           
+
             subTotal();
 
         }
+
+
         function resetItem() {
             price = 0;
             priceMonth = 0;
@@ -828,17 +977,19 @@
             total = 0;
         }
         function subTotal() {
-           
+
             let subtotal1 = 0;
-            let formTotal1 = 0; 
-            subtotal1 = parseFloat($("#item1Total").text() == "" ? 0 : $("#item1Total").text()) + parseFloat($("#item2Total").text() == "" ? 0 : $("#item2Total").text()) + parseFloat($("#item3Total").text() == "" ? 0 : $("#item3Total").text()) + parseFloat($("#item4Total").text() == "" ? 0 : $("#item4Total").text()) + parseFloat($("#item5Total").text() == "" ? 0 : $("#item5Total").text()) + parseFloat($("#item6Total").text() == "" ? 0 : $("#item6Total").text()) + parseFloat($("#item7Total").text() == "" ? 0 : $("#item7Total").text()) + parseFloat($("#item8Total").text() == "" ? 0 : $("#item8Total").text());// + parseFloat($("#item6Total").text()) + parseFloat($("#item7Total").text());
+            let formTotal1 = 0;
+            subtotal1 = parseFloat($("#item1Total").text() == "" ? 0 : $("#item1Total").text()) + parseFloat($("#item2Total").text() == "" ? 0 : $("#item2Total").text()) + parseFloat($("#item3Total").text() == "" ? 0 : $("#item3Total").text()) + parseFloat($("#item4Total").text() == "" ? 0 : $("#item4Total").text()) + parseFloat($("#item5Total").text() == "" ? 0 : $("#item5Total").text()) + parseFloat($("#item6Total").text() == "" ? 0 : $("#item6Total").text()) + parseFloat($("#item7Total").text() == "" ? 0 : $("#item7Total").text()) + parseFloat($("#item8Total").text() == "" ? 0 : $("#item8Total").text())// + parseFloat($("#item6Total").text()) + parseFloat($("#item7Total").text());
+                + parseFloat($("#item9Total").text() == "" ? 0 : $("#item9Total").text()) + parseFloat($("#item10Total").text() == "" ? 0 : $("#item10Total").text()) + parseFloat($("#item11Total").text() == "" ? 0 : $("#item11Total").text()) + parseFloat($("#item12Total").text() == "" ? 0 : $("#item12Total").text()) + parseFloat($("#item13Total").text() == "" ? 0 : $("#item13Total").text()) + parseFloat($("#item14Total").text() == "" ? 0 : $("#item14Total").text()) + parseFloat($("#item15Total").text() == "" ? 0 : $("#item15Total").text()) + parseFloat($("#item16Total").text() == "" ? 0 : $("#item16Total").text());
+
             formTotal1 = ($("#shipping-total").text() == "" ? 0 : parseFloat($("#shipping-total").text())) + subtotal1;
-           
             $("#subTotal").text(subtotal1.toFixed(2));
             $("#formTotal").text(formTotal1.toFixed(2));
 
 
         }
+
         function createForm(listForm) {
             $("#form-tbody").empty();
             var row = "";
@@ -847,7 +998,8 @@
                 key++;
                 if (!value.isShipping) {
                     row += "<tr class='product orderItem hover1'>";
-                    row += "<td style=display:none>" + value.id + "</td>";    
+                    row += "<td style=display:none>" + value.id + "</td>"; 
+                    row += "<td class='t-product'><img src=" + value.urlImage + " onmouseover='this.width=250;this.height= 250;' onmouseout='this.width=74;this.height=74;' width='74' height='74'></td>";
                     row += "<td class='t-product'><span>" + value.name + "</span></td>";
                     row += "<td class='t-price'><span> USD </span><span class='itemPrice itm1' id='item" + value.itemNumber + "Price'>" + value.price + "</span></td>";
                     row += "<td class='t-price'><span> USD </span><span class='itemPrice itm1' id='item" + value.itemNumber + "MonthlyPayment'>" + value.monthlyPayment + "</span></td>";
@@ -856,50 +1008,33 @@
                     row += "<td style=display:none>" + value.itemNumber + "</td>"; 
                     row += "</tr>";
                 }
-               
-                debugger;
-                
-            });                  
-           
-            //$.each(listForm, function (key, value2) {
-            //    if (value2.isCamara) {
-            //        row += "<tr class='product orderItem hover1'>";
-            //        row += "<td style=display:none>" + value2.id + "</td>";
-            //        row += "<td class='t-product'><span>" + value2.name + "</span></td>";
-            //        row += "<td class='t-price'><span> USD </span><span class='itemPrice itm1' id='item" + value2.itemNumber + "Price'>" + value2.price + "</span></td>";
-            //        row += "<td class='t-price'><span> USD </span><span class='itemPrice itm1' id='item" + value2.itemNumber + "MonthlyPayment'>" + value2.monthlyPayment + "</span></td>";
-            //        row += "<td class='t-quantity'><input type='number' id='qty" + value2.itemNumber + "' name='qty" + value2.itemNumber + "' size='5' onchange='qtyfunctionnew(" + value2.itemNumber + ")' onkeyup='qtyfunctionnew(" + value2.itemNumber + ")' value='0' </td>";
-            //        row += "<td class='t-total'><span> USD </span><span class='itemTotal' id='item" + value2.itemNumber + "Total'>0.00</span></td>";
-            //        row += "</tr>";
-            //    }
-            //});
-            row += "<tr>";
-            row += "<td colspan=5>";            
-            row += "<hr>";
-            row += "</td>";
-            row += "</tr>";    
-
-            //row += "<select id=shippingOptions1 name=shippingOptions1 style=display:inline;background-color:#f3f6f9>";
-            //row += "</select>";
-            //row += "<tr>";           
-            //row += "<td class='t-price'><span> USD </span>0</td>";
-            //row += "<td class='t-price'><span> USD </span>0</td>";
-            //row += "<td class='t-quantity'><span class='enteredQty'>0</span></td>";
-            //row += "<td class='t-total'><span>USD</span><span class='shippingTotal'>0.00</span></td>";
-            //row += "</tr>";
-
-           
-            row += "<tr>";
-            row += "<td class='t-product'>&nbsp;</td>";
-            row += "<td class='t-price'>&nbsp;</td>";
-            row += "<td class='t-price'>&nbsp;</td>";
-            row += "<td class='t-quantity'>&nbsp;</td>";
-            row += "<td class='t-total text-bold'<span>Subtotal USD </span><span class='subTotal' id='subTotal'>0.00</span></td>";
-
-            row += "</tr>";
-
+            }); 
             
+            row += "<tr class='product orderItem hover1'>";
+            row += "<td style=display:none>0</td>";
+            row += "<td class='t-product'></td>";
+            row += "<td class='t-product'></td>";
+            row += "<td class='t-price'></td>";
+            row += "<td class='t-price'></td>";
+            row += "<td class='t-quantity'></td>";
+            row += "<td class='t-total'></td>";
+            row += "<td style=display:none></td>";
+            row += "</tr>"; 
+
+            row += "<tr class='product orderItem hover1'>";
+            row += "<td style=display:none>0</td>";
+            row += "<td class='t-product'></td>";
+            row += "<td class='t-product'></td>";
+            row += "<td class='t-price'></td>";
+            row += "<td class='t-price'></td>";
+            row += "<td class='t-quantity'></td>";
+            row += "<td class='t-total text-bold'><span>Subtotal USD </span><span class='subTotal' id='subTotal'>0.00</span></td>";
+            row += "<td style=display:none></td>";
+            row += "</tr>"; 
+
             row += "<tr class='shippingItem'>";
+            row += "<td style=display:none>0</td>";
+            row += "<td class='t-product'><img src='images/Shipping.png' width='74' height='74'></td>";
             row += "<td class='t-product'>";
             row += "<div class='input-field'>"; 
             row += "<span>Shipping:</span>";
@@ -913,29 +1048,36 @@
             });
             row += "</select>";
             row += "</div>";
-            row += "</td>"            
+            row += "</td>"    
             row += "<td class='t-price'><span>USD </span><span id='shipping-price'>0</span></td>";
             row += "<td class='t-price'><span>USD </span><span id='shipping-monthly'>0</span></td>";
-            row += "<td class='t-quantity'><span class='enteredQty' id='shipping-quantity'>0</span></td>";
-            row += "<td class='t-total'><span>USD </span><span class='shippingTotal' id='shipping-total'>0</span></td>";
+            row += "<td class='t-quantity'><span id='shipping-quantity'>0</span></td>";
+            row += "<td class='t-total text-bold'><span>USD </span><span class='shippingTotal' id='shipping-total'>0</span></td>";
+            row += "<td style=display:none></td>";
             row += "</tr>";
 
-            row += "<tr>";
-            row += "<td class='t-product'>&nbsp;</td>";
-            row += "<td class='t-price'>&nbsp;</td>";
-            row += "<td class='t-price'>&nbsp;</td>";
-            row += "<td class='t-quantity'>&nbsp;</td>";
-            row += "<td class='t-total text-bold'<span>Total USD </span><span class='subTotal' id='formTotal'>0.00</span></td>";
-            row += "</tr>";
+           
+            
 
-
+            row += "<tr class='product orderItem hover1'>";
+            row += "<td style=display:none></td>";
+            row += "<td class='t-product'></td>";
+            row += "<td class='t-product'></td>";
+            row += "<td class='t-price'></td>";
+            row += "<td class='t-price'></td>";
+            row += "<td class='t-quantity'></td>";
+            row += "<td class='t-total text-bold'><span>Total USD </span><span class='subTotal' id='formTotal'>0.00</span></td>";
+            row += "<td style=display:none></td>";
+            row += "</tr>"; 
 
             $("#form-tbody").append(row);
             
 
         }
         function onSelect(event) {
-           
+            debugger;
+            formProductList = [];
+            shipingSelect = {};
             var id = $('option:selected', event).attr('value');
             var price = $('option:selected', event).attr('data-price');
             var monthly = $('option:selected', event).attr('data-monthly');
@@ -946,14 +1088,15 @@
             $("#shipping-quantity").text(enteredQty);
             $("#shipping-total").text(total);
             shipingSelect = { id: id, quantity: 1, totalProduct: total };
+            formProductList.push(shipingSelect);
             subTotal();
-            loadProducts();
+            //loadProducts();
             
         }
         function buyNowN2() {
             try {
                 var formComertial = {};
-                var formProductList = [];                
+                //var formProductList = [];                
                 var shippingInformation = {};
                 var billingInformation = {};
 
@@ -1144,18 +1287,18 @@
             return billingInformation;
         }
         function loadProducts() {
-            let formProductList = [];  
+            
             let formProduct = {};
             $('#form-tbody tr').each(function () {
 
                 formProduct = {};
                 /*var formId = $(this).find("td").eq(1).html();*/
                 var id = $(this).find("td").eq(0).text();
-               
-                var quantity = $(this).find("td").eq(4).find("input").val();
-                var totalProduct = $(this).find("td").eq(5).find("span").eq(1).text();
-                var itemNumber = $(this).find("td").eq(6).text();
-                formProduct = { id: id, quantity: quantity, totalProduct: totalProduct, itemNumber:itemNumber }
+
+                var quantity = $(this).find("td").eq(5).find("input").val();
+                var totalProduct = $(this).find("td").eq(6).find("span").eq(1).text();
+                var itemNumber = $(this).find("td").eq(7).text();
+                formProduct = { id: id, quantity: quantity, totalProduct: totalProduct, itemNumber: itemNumber }
 
                 if (quantity != "") {
                     quantity = parseInt(quantity)
@@ -1166,21 +1309,22 @@
                 }
 
             });
-            formProductList.push(shipingSelect);
+            //formProductList.push(shipingSelect);
             return formProductList;
         }
+
         function getQuote() {
             const quote = $("#quote-number").val();
-            debugger;
+            
             const json = dbGetQuote(quote);            
             const obj = JSON.parse(json);
-            debugger;
+            
             loadQuoteForm(obj);
             
 
         }
         function dbGetQuote(number) {
-            var url = 'https://devetws.easitrack.net/Comertial.svc/comertial/cotizacion?number=' + number;
+            var url = 'https://localhost:44385/Comertial.svc/comertial/cotizacion?number=' + number;
             
             var data1 = null;
             $.ajax({
@@ -1211,7 +1355,7 @@
             //$(".info").remove('input-field');
             
             $("#formId").val(quote.id);
-            debugger;
+            
             $.each(quote.products, function (indexes, values) {
 
                 $("#qty" + values.itemNumber).val(values.quantity);                
@@ -1252,6 +1396,20 @@
 
             $(".info").prop('disabled', true);
         }
+        function copyShippingInfo() {
+            try {
+                $('#ccFirstName').val($('#firstName').val());
+                $('#ccLastName').val($('#lastName').val());
+                $('#ccStreet').val($('#street').val());
+                $('#ccCity').val($('#city').val());
+                $('#ccState').val($('#state').val());
+                $('#ccPostalCode').val($('#postalCode').val());
+                $("input").focus().blur();
+            } catch (err) {
+                alert('copyShippingInfo: ' + err.description);
+            }
+        }
+ 
 
 
     </script>

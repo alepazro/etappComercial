@@ -122,10 +122,10 @@ main .form .exp-field .select-wrapper {
 }
 
 .t-product {
-  min-width: 240px;
+    max-width: 300px;
 }
 td.t-quantity {
-  max-width: 50px !important;
+  max-width: 100px !important;
   text-align: end;
 }
 

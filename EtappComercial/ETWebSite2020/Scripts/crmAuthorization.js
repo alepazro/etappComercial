@@ -20,7 +20,7 @@ function changePanel(panelId) {
 
 function loginIntoUser(GUID) {
     try {
-        window.open('login.html?' + 'userGUID=' + GUID, target = "_blank");
+        window.open('https://easitrack.net/login.html?' + 'userGUID=' + GUID, target = "_blank");
     }
     catch (err) {
     }
@@ -28,7 +28,7 @@ function loginIntoUser(GUID) {
 
 function crmValidateToken() {
 
-    var loginPage = 'crmLogin.html';
+    var loginPage = 'crmhttps://easitrack.net/login.html';
 
     try {
         var t = getTokenCookie('ETCRMTK');
@@ -71,7 +71,7 @@ function crmValidateToken() {
                             ret = true;
                         }
                         else {
-                            if (location.pathname.toLowerCase().indexOf('crmlogin.html') == -1) {
+                            if (location.pathname.toLowerCase().indexOf('crmhttps://easitrack.net/login.html') == -1) {
                                 location.href = loginPage;
                             }
                             ret = false;
@@ -204,7 +204,7 @@ function deleteTokenCookie(c_name) {
 function crmLogout() {
     try {
         deleteTokenCookie('ETCRMTK');
-        location.href = 'crmLogin.html';
+        location.href = 'crmhttps://easitrack.net/login.html';
     }
     catch (err) {
         alert('Logout: ' + err.Description);

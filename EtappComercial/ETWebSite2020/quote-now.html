@@ -5,34 +5,28 @@
     <title>EasiTrack - Buy Now</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link href="images/img//favicon.png" rel="icon"/>
+    <link href="images/img//favicon.png" rel="icon" />
     <!--    CSS includes -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
     <!-- <link href="https://easitrack.com/Styles/common.css" rel="stylesheet" type="text/css" /> -->
     <link href="https://easitrack.com/Styles/logo.css" rel="stylesheet" type="text/css" />
     <link href="https://easitrack.com/Styles/ws.css" rel="stylesheet" type="text/css" />
     <!-- Bootstrap CSS File -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
     <link href="Styles/style.css" rel="stylesheet">
     <link href="newfiles/buy-now.css" rel="stylesheet" type="text/css" />
     <link href="newfiles/materializecustom.css" rel="stylesheet" type="text/css" />
     <!--    Javascript includes -->
-
-
-        <!--    Javascript includes -->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.min.js"
-      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-      crossorigin="anonymous"
-    ></script>
+    <!--    Javascript includes -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 
 
@@ -46,12 +40,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- STEPPER -->
     <script src="https://unpkg.com/materialize-stepper@3.1.0/dist/js/mstepper.min.js"></script>
-    
 
-    <link rel="stylesheet" href="https://unpkg.com/materialize-stepper@3.1.0/dist/css/mstepper.min.css"/>
+
+    <link rel="stylesheet" href="https://unpkg.com/materialize-stepper@3.1.0/dist/css/mstepper.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialisze.min.css" />
 
-    
+
 </head>
 
 <body>
@@ -74,7 +68,7 @@
     ============================-->
     <header id="header1" class="fixed-top navbar navbar-expand-lg navbar-light" style="background: #fff">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="images/img/Home/EasiTracD04aR02bP01ZL-Jefferson2b_mdm.png" alt="" class="img-fluid"></a>
+            <a class="navbar-brand" href="index.html"><img src="images/img/Home/EasiTracD04aR02bP01ZL-Jefferson2b_mdm.png" alt="" class="img-fluid" style="width:300px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav main-nav float-right">
@@ -84,7 +78,7 @@
                     <li class="nav-item "><a href="installation.html" class="mainMenuOptionText">Installation</a></li>
                     <li class="nav-item "><a href="about-us.html">About Us</a></li>
                     <li class="nav-item active"><a href="buy-now.html">Order Now</a></li>
-                    <a href="login.html" class="btn-get-started ">Login</a>
+                    <a href="https://easitrack.net/login.html" class="btn-get-started ">Login</a>
                 </ul>
             </div>
         </div>
@@ -100,78 +94,22 @@
     <main>
 
         <input id="formId" name="formId" type="hidden" value="0" /> <!--value="DDCD27C3-23C5-4660-BCF0-D00692D165D3" />-->
+        <!--<input type="text" id="quote-number" placeholder="Do you have a prior quote? Enter the number and load it again." /><button id="btn-get-quote" onclick="getQuote()">Get Quote</button><br /><br />-->
+
         <span class="form-message">
-            * To quote, please fill the form below or <a href="buy-now.html">Continue with my quote</a> <span id="cotizacion-number"></span>
+            * To order, please fill the form below <span id="cotizacion-number"></span>
         </span>
         <ul class="stepper non-linear">
-            <li class="step active" id="kiki">
-                <div class="step-title waves-effect">
-                    <i class="material-icons">local_shipping</i>
-                    <h3>Contact Information</h3>
-                </div>
-                <div class="step-content">
-                    <div class="form">
-                        <div class="input-field">
-                            <label for="firstName">First Name</label>
-                            <input class="required validate" id="firstName" name="firstName" type="text" maxlength="20" size="30" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="lastName">Last Name</label>
-                            <input class="required validate" id="lastName" name="lastName" type="text" maxlength="20" size="30" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="email">Email</label>
-                            <input class="required validate" id="email" name="email" type="text" maxlength="100" size="30" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="phone">Phone</label>
-                            <input class="required validate" id="phone" name="phone" type="text" maxlength="50" size="15" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="phone">Cell Phone</label>
-                            <input id="cellPhone" name="cellPhone" type="text" maxlength="50" size="15" />
-                            <span class="helper-text" data-error="wrong" data-success="right">
-                                Please provide your cell phone if you want us to keep you updated on the progress
-                                of this order via text message, including confirmation, shipping, etc.
-                            </span>
-                        </div>
-                        <div class="input-field">
-                            <label for="company">Company Name</label>
-                            <input id="company" name="company" type="text" maxlength="50" size="30" />
-                        </div>
-                        <!--<div class="input-field">
-                            <label for="street">Street</label>
-                            <input class="required validate" id="street" name="street" type="text" maxlength="50" size="30" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="city">City</label>
-                            <input class="required validate" id="city" name="city" type="text" maxlength="20" size="30" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="state">State</label>
-                            <input class="required validate" id="state" name="state" type="text" maxlength="15" size="15" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="postalCode">Postal Code</label>
-                            <input class="required validate" id="postalCode" name="postalCode" type="text" maxlength="15" size="15" required />
-                        </div>-->
-                    </div>
-                    <div class="step-actions">
-                        <button class="waves-effect waves-dark btn next-step">
-                            CONTINUE
-                        </button>
-                    </div>
-                </div>
-            </li>
             <li class="step active">
                 <div class="step-title waves-effect">
                     <i class="material-icons">receipt_long</i>
-                    <h3>Your Quote</h3>
+                    <h3>Your purchase</h3>
                 </div>
                 <div class="step-content with-scroll">
                     <table class="highlight">
                         <thead>
                             <tr>
+                                <th class="t-product"></th>
                                 <th class="t-product"><span>Product</span></th>
                                 <th class="t-price"><span>Unit Price</span></th>
                                 <th class="t-price"><span>Monthly Payment</span></th>
@@ -182,19 +120,185 @@
                         <tbody id="form-tbody">
                         </tbody>
                     </table>
-                    <!--<div class="step-actions">
-        <button class="waves-effect waves-dark btn next-step">Continue</button>
-    </div>-->
+                    <div class="step-actions">
+                        <button class="waves-effect waves-dark btn next-step">Continue</button>
+                    </div>
+                </div>
+            </li>
+
+            <li class="step active" id="kiki">
+                <div class="step-title waves-effect">
+                    <i class="material-icons">local_shipping</i>
+                    <h3>Contact Information</h3>
+                </div>
+                <div class="step-content">
+                    <div class="form">
+                        <div class="input-field">
+                            <label for="firstName">First Name</label>
+                            <input class="required validate info" id="firstName" name="firstName" type="text" maxlength="20" size="30" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="lastName">Last Name</label>
+                            <input class="required validate info" id="lastName" name="lastName" type="text" maxlength="20" size="30" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="email">Email</label>
+                            <input class="required validate info" id="email" name="email" type="text" maxlength="100" size="30" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="phone">Phone</label>
+                            <input class="required validate info" id="phone" name="phone" type="text" maxlength="50" size="15" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="phone">Cell Phone</label>
+                            <input id="cellPhone" name="cellPhone" class="info" type="text" maxlength="50" size="15" />
+                            <span class="helper-text" data-error="wrong" data-success="right">
+                                Please provide your cell phone if you want us to keep you updated on the progress
+                                of this order via text message, including confirmation, shipping, etc.
+                            </span>
+                        </div>
+                        <div class="input-field">
+                            <label for="company">Company Name</label>
+                            <input id="company" class="info" name="company" type="text" maxlength="50" size="30" />
+                        </div>
+                        <!--<div class="input-field">
+                            <label for="street">Street</label>
+                            <input class="required validate info" id="street" name="street" type="text" maxlength="50" size="30" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="city">City</label>
+                            <input class="required validate info" id="city" name="city" type="text" maxlength="20" size="30" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="state">State</label>
+                            <input class="required validate info" id="state" name="state" type="text" maxlength="15" size="15" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="postalCode">Postal Code</label>
+                            <input class="required validate info" id="postalCode" name="postalCode" type="text" maxlength="15" size="15" required />
+                        </div>-->
+                    </div>
                     <div class="step-actions">
                         <!-- Here goes your actions buttons -->
                         <!-- <input name="submit" type="button" value=""  /> -->
                         <button type="button" class="waves-effect waves-dark btn" onclick="buyNowN2()">
                             Place My Order
                         </button>
+                        <button type="button" class="waves-effect waves-dark btn" onclick="sendEmail()">
+                            Send to email
+                        </button>
+                    </div>
+                    <!--<div class="step-actions">
+                        <button class="waves-effect waves-dark btn next-step">
+                            CONTINUE
+                        </button>
+                    </div>-->
+                </div>
+            </li>
+
+
+
+            <!--<li class="step">
+                <div class="step-title waves-effect">
+                    <i class="material-icons">payment</i>
+                    <h3>Billing information</h3>
+                    <a class="copy-btn waves-effect waves-light btn-small" onclick="copyShippingInfo()">
+                        Copy Shipping Information
+                    </a>
+                </div>
+                <div class="step-content">
+                    <div class="form">
+                        <div class="card-images" style="width: 100%; margin-bottom: 1rem;">
+                            <img src="https://easitrack.net/images/logo_ccVisa.gif" alt="Visa" />
+                            <img src="https://easitrack.net/images/logo_ccMC.gif" alt="MasterCard" />
+                            <img src="https://easitrack.net/images/logo_ccAmex.gif" alt="Amex" />
+                        </div>
+                        <div class="input-field d3">
+                            <select id="ccType" class="cc-ddl-type">
+                                <option value="VISA">Visa</option>
+                                <option value="MC">MasterCard</option>
+                                <option value="AMEX">American Express</option>
+                                <option value="DIS">Discover</option>
+                            </select>
+                            <label for="ccType">Credit Card Type</label>
+                        </div>
+                        <div class="input-field d3">
+                            <label for="ccNumber">Credit Card Number</label>
+                            <input id="ccNumber"
+                                   name="ccNumber"
+                                   type="text"
+                                   size="30"
+                                   maxlength="21"
+                                   class="cc-card-number required validate"
+                                   required />
+                        </div>
+                        <div class="input-field d3">
+                            <label for="ccSecCode">Security Code</label>
+                            <input class="required validate" id="ccSecCode" name="ccSecCode" type="text" maxlength="5" size="5" required />
+                        </div>
+                        <div class="input-field exp-field">
+                            <select class="required validate" id="ccExpMonth" required>
+                                <option value="">Month</option>
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                            <select class="required validate" id="ccExpYear" required>
+                                <option value="">Year</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                            </select>
+                            <label for="ccExpMonth">Expiration</label>
+                        </div>
+                        <div class="input-field">
+                            <label for="ccFirstName">Credit Card First Name</label>
+                            <input class="required validate" id="ccFirstName" name="ccFirstName" type="text" maxlength="20" size="30" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="ccLastName">Credit Card Last Name</label>
+                            <input class="required validate" id="ccLastName" name="ccLastName" type="text" maxlength="20" size="30" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="ccStreet">Credit Card Street</label>
+                            <input class="required validate" id="ccStreet" name="ccStreet" type="text" maxlength="50" size="30" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="ccCity">Credit Card City</label>
+                            <input class="required validate" id="ccCity" name="ccCity" type="text" maxlength="20" size="30" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="ccState">Credit Card State</label>
+                            <input class="required validate" id="ccState" name="ccState" type="text" maxlength="15" size="15" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="ccPostalCode">Credit Card Postal Code</label>
+                            <input class="required validate" id="ccPostalCode" name="ccPostalCode" type="text" maxlength="15" size="15" required />
+                        </div>
+                    </div>
+                    <div class="step-actions">-->
+            <!-- Here goes your actions buttons -->
+            <!--<button class="waves-effect waves-dark btn next-step">
+                            CONTINUE
+                        </button>
                     </div>
                 </div>
             </li>
-            <!--<li class="step">
+            <li class="step">
                 <div class="step-title waves-effect">
                     <i class="material-icons">comment_bank</i>
                     <h3>Special Instructions</h3>
@@ -205,23 +309,19 @@
                             <textarea id="specialInstructions" rows="8" class="materialize-textarea"></textarea>
                         </div>
                     </div>
-                    <div class="step-actions">
-                         Here goes your actions buttons 
-                         <input name="submit" type="button" value=""  /> 
-                        <button type="button" class="waves-effect waves-dark btn" onclick="buyNowN2()">
+                    <div class="step-actions">-->
+            <!-- Here goes your actions buttons -->
+            <!-- <input name="submit" type="button" value=""  /> -->
+            <!--<button type="button" class="waves-effect waves-dark btn" onclick="buyNowN2()">
                             Place My Order
                         </button>
                     </div>
                 </div>
             </li>-->
-
-
-
-
         </ul>
         <!--<div style="font-size:10px;">
-        <span style="color:#888888;">Rep.ID:</span><input type="text" id="repId" name="repId" size="5" value="" style="height:15px;width:40px;">
-    </div>-->
+            <span style="color:#888888;">Rep.ID:</span><input type="text" id="repId" name="repId" size="5" value="" style="height:15px;width:40px;">
+        </div>-->
     </main>
     <div class="modals">
         <div id="whatis-obd" class="modal">
@@ -293,7 +393,7 @@
                     <!-- .main-nav -->
                 </div>
                 <div class="col-lg-6">
-                    <p>Copyright 2021 © Easitrack  - All Rights Reserved.</p>
+                    <p>Copyright 2023 © Easitrack  - All Rights Reserved.</p>
                 </div>
                 <!--  <h5 class="col-lg-4 pull-right"> <img class="padding-top" src="images/img/Home/telephone1.png" class="img-fluid" alt="">   (888) 744-6449</h5> -->
             </div>
@@ -343,7 +443,7 @@
         });
         function buyNowN() {
             try {
-                
+
                 //Valida the CC
                 var isValidCC = false;
                 //isValidCC = ValidateCreditCard();
@@ -448,7 +548,7 @@
         }
         function saveWebFormN(data, isSLL) {
             try {
-               
+
                 if (isSLL == undefined) {
                     isSLL = false;
                 }
@@ -463,11 +563,11 @@
         }
         function saveWebFormN2(data, isSLL) {
             try {
-               
+
                 if (isSLL == undefined) {
                     isSLL = false;
                 }
-                
+
                 var result = dbReadWriteNew('saveWebForm2', data, true, false, isSLL);
 
                 return result;
@@ -476,11 +576,10 @@
                 alert('saveWebForm: ' + err.description);
             }
         }
-
         function dbReadWriteNew(method, data, params) {
             try {
                 var ret = false;
-                var url = 'https://devetws.easitrack.net/Comertial.svc/' + method;
+                var url = 'https://localhost:44385/Comertial.svc/' + method;
                 data = JSON.stringify(data);
                 $.ajax({
                     type: "POST",
@@ -531,8 +630,8 @@
             }
         }
         function dbGetForm() {
-            var url = 'https://devetws.easitrack.net/Comertial.svc/comertial/form';
-            
+            var url = 'https://localhost:44385/Comertial.svc/comertial/form';
+
             var data1 = null;
             $.ajax({
                 type: "GET",
@@ -562,8 +661,8 @@
             location.href = thisPage;
         }
         function loadInfoForm(listForm) {
-           
-            
+
+
             $.each(listForm, function (indexes, values) {
                 ;
                 switch (values.itemNumber) {
@@ -600,15 +699,15 @@
                 }
 
             });
-           
+
         }
         function qtyfunctionnew(numberItem) {
-            ;
+            
             let price = 0;
             let priceMonth = 0;
             let qty = 0;
             let total = 0;
-           
+
             switch (numberItem) {
                 case 1:
                     resetItem();
@@ -623,8 +722,8 @@
                     } else {
                         $("#qty1").val('0');
                     }
-                    $("#item1Total").text(total);  
-                                    
+                    $("#item1Total").text(total);
+
                     break;
                 case 2:
                     resetItem();
@@ -635,8 +734,8 @@
                         price = parseFloat($("#item2Price").text());
                         priceMonth = parseFloat($("#item2MonthlyPayment").text());
                         total = ((price * qty) + (priceMonth * qty)).toFixed(2);
-                        
-                    }else {
+
+                    } else {
                         $("#qty2").val('0');
                     }
                     $("#item2Total").text(total);
@@ -720,10 +819,154 @@
                     }
                     $("#item7Total").text(total);
                     break;
+                case 8:
+                    resetItem();
+                    qty = $("#qty8").val();
+
+                    if (qty == 0) {
+                        total = 0;
+                    } else if (qty > 0) {
+                        price = parseFloat($("#item8Price").text());
+                        priceMonth = parseFloat($("#item8MonthlyPayment").text());
+                        total = ((price * qty) + (priceMonth * qty)).toFixed(2);
+
+                    } else {
+                        $("#qty8").val('0');
+                    }
+                    $("#item8Total").text(total);
+                    break;
+                case 9:
+                    resetItem();
+                    qty = $("#qty9").val();
+
+                    if (qty == 0) {
+                        total = 0;
+                    } else if (qty > 0) {
+                        price = parseFloat($("#item9Price").text());
+                        priceMonth = parseFloat($("#item9MonthlyPayment").text());
+                        total = ((price * qty) + (priceMonth * qty)).toFixed(2);
+
+                    } else {
+                        $("#qty9").val('0');
+                    }
+                    $("#item9Total").text(total);
+                    break;
+                case 10:
+                    resetItem();
+                    qty = $("#qty10").val();
+
+                    if (qty == 0) {
+                        total = 0;
+                    } else if (qty > 0) {
+                        price = parseFloat($("#item10Price").text());
+                        priceMonth = parseFloat($("#item10MonthlyPayment").text());
+                        total = ((price * qty) + (priceMonth * qty)).toFixed(2);
+
+                    } else {
+                        $("#qty10").val('0');
+                    }
+                    $("#item10Total").text(total);
+                    break;
+                case 11:
+                    resetItem();
+                    qty = $("#qty11").val();
+
+                    if (qty == 0) {
+                        total = 0;
+                    } else if (qty > 0) {
+                        price = parseFloat($("#item11Price").text());
+                        priceMonth = parseFloat($("#item11MonthlyPayment").text());
+                        total = ((price * qty) + (priceMonth * qty)).toFixed(2);
+
+                    } else {
+                        $("#qty11").val('0');
+                    }
+                    $("#item11Total").text(total);
+                    break;
+                case 12:
+                    resetItem();
+                    qty = $("#qty12").val();
+
+                    if (qty == 0) {
+                        total = 0;
+                    } else if (qty > 0) {
+                        price = parseFloat($("#item12Price").text());
+                        priceMonth = parseFloat($("#item12MonthlyPayment").text());
+                        total = ((price * qty) + (priceMonth * qty)).toFixed(2);
+
+                    } else {
+                        $("#qty12").val('0');
+                    }
+                    $("#item12Total").text(total);
+                    break;
+                case 13:
+                    resetItem();
+                    qty = $("#qty13").val();
+
+                    if (qty == 0) {
+                        total = 0;
+                    } else if (qty > 0) {
+                        price = parseFloat($("#item13Price").text());
+                        priceMonth = parseFloat($("#item13MonthlyPayment").text());
+                        total = ((price * qty) + (priceMonth * qty)).toFixed(2);
+
+                    } else {
+                        $("#qty13").val('0');
+                    }
+                    $("#item13Total").text(total);
+                    break;
+                case 14:
+                    resetItem();
+                    qty = $("#qty14").val();
+
+                    if (qty == 0) {
+                        total = 0;
+                    } else if (qty > 0) {
+                        price = parseFloat($("#item14Price").text());
+                        priceMonth = parseFloat($("#item14MonthlyPayment").text());
+                        total = ((price * qty) + (priceMonth * qty)).toFixed(2);
+
+                    } else {
+                        $("#qty14").val('0');
+                    }
+                    $("#item14Total").text(total);
+                    break;
+                case 15:
+                    resetItem();
+                    qty = $("#qty15").val();
+
+                    if (qty == 0) {
+                        total = 0;
+                    } else if (qty > 0) {
+                        price = parseFloat($("#item15Price").text());
+                        priceMonth = parseFloat($("#item15MonthlyPayment").text());
+                        total = ((price * qty) + (priceMonth * qty)).toFixed(2);
+
+                    } else {
+                        $("#qty15").val('0');
+                    }
+                    $("#item7Total").text(total);
+                    break;
+                case 16:
+                    resetItem();
+                    qty = $("#qty16").val();
+
+                    if (qty == 0) {
+                        total = 0;
+                    } else if (qty > 0) {
+                        price = parseFloat($("#item16Price").text());
+                        priceMonth = parseFloat($("#item16MonthlyPayment").text());
+                        total = ((price * qty) + (priceMonth * qty)).toFixed(2);
+
+                    } else {
+                        $("#qty16").val('0');
+                    }
+                    $("#item16Total").text(total);
+                    break;
 
                 default: console.log("no item");
             }
-           
+
             subTotal();
 
         }
@@ -734,13 +977,13 @@
             total = 0;
         }
         function subTotal() {
-           
+
             let subtotal1 = 0;
-            let formTotal1 = 0; 
-            debugger;
-            subtotal1 = parseFloat($("#item1Total").text() == "" ? 0 : $("#item1Total").text()) + parseFloat($("#item2Total").text() == "" ? 0 : $("#item2Total").text()) + parseFloat($("#item3Total").text() == "" ? 0 : $("#item3Total").text()) + parseFloat($("#item4Total").text() == "" ? 0 : $("#item4Total").text()) + parseFloat($("#item5Total").text() == "" ? 0 : $("#item5Total").text()) + parseFloat($("#item6Total").text() == "" ? 0 : $("#item6Total").text()) + parseFloat($("#item7Total").text() == "" ? 0 : $("#item7Total").text()) + parseFloat($("#item8Total").text() == "" ? 0 : $("#item8Total").text());// + parseFloat($("#item6Total").text()) + parseFloat($("#item7Total").text());
+            let formTotal1 = 0;
+            subtotal1 = parseFloat($("#item1Total").text() == "" ? 0 : $("#item1Total").text()) + parseFloat($("#item2Total").text() == "" ? 0 : $("#item2Total").text()) + parseFloat($("#item3Total").text() == "" ? 0 : $("#item3Total").text()) + parseFloat($("#item4Total").text() == "" ? 0 : $("#item4Total").text()) + parseFloat($("#item5Total").text() == "" ? 0 : $("#item5Total").text()) + parseFloat($("#item6Total").text() == "" ? 0 : $("#item6Total").text()) + parseFloat($("#item7Total").text() == "" ? 0 : $("#item7Total").text()) + parseFloat($("#item8Total").text() == "" ? 0 : $("#item8Total").text())// + parseFloat($("#item6Total").text()) + parseFloat($("#item7Total").text());
+                        + parseFloat($("#item9Total").text() == "" ? 0 : $("#item9Total").text()) + parseFloat($("#item10Total").text() == "" ? 0 : $("#item10Total").text()) + parseFloat($("#item11Total").text() == "" ? 0 : $("#item11Total").text()) + parseFloat($("#item12Total").text() == "" ? 0 : $("#item12Total").text()) + parseFloat($("#item13Total").text() == "" ? 0 : $("#item13Total").text()) + parseFloat($("#item14Total").text() == "" ? 0 : $("#item14Total").text()) + parseFloat($("#item15Total").text() == "" ? 0 : $("#item15Total").text()) + parseFloat($("#item16Total").text() == "" ? 0 : $("#item16Total").text());
+
             formTotal1 = ($("#shipping-total").text() == "" ? 0 : parseFloat($("#shipping-total").text())) + subtotal1;
-            
             $("#subTotal").text(subtotal1.toFixed(2));
             $("#formTotal").text(formTotal1.toFixed(2));
 
@@ -754,94 +997,60 @@
                 key++;
                 if (!value.isShipping) {
                     row += "<tr class='product orderItem hover1'>";
-                    row += "<td style=display:none>" + value.id + "</td>";                    
+                    row += "<td style=display:none>" + value.id + "</td>";
+                    row += "<td class='t-product'><img src=" + value.urlImage + " onmouseover='this.width=400;this.height= 300;' onmouseout='this.width=100;this.height=100;' width='100' height='100'></td>";
                     row += "<td class='t-product'><span>" + value.name + "</span></td>";
                     row += "<td class='t-price'><span> USD </span><span class='itemPrice itm1' id='item" + value.itemNumber + "Price'>" + value.price + "</span></td>";
                     row += "<td class='t-price'><span> USD </span><span class='itemPrice itm1' id='item" + value.itemNumber + "MonthlyPayment'>" + value.monthlyPayment + "</span></td>";
-                    row += "<td class='t-quantity'><input type='number' id='qty" + value.itemNumber + "' name='qty" + value.itemNumber + "' size='5' onchange='qtyfunctionnew(" + value.itemNumber + ")' onkeyup='qtyfunctionnew(" + value.itemNumber + ")' value='0' </td>";
+                    row += "<td class='t-quantity'><input type='number' class='qty' id='qty" + value.itemNumber + "' name='qty" + value.itemNumber + "' size='5' onchange='qtyfunctionnew(" + value.itemNumber + ")' onkeyup='qtyfunctionnew(" + value.itemNumber + ")' value='0' </td>";
                     row += "<td class='t-total'><span> USD </span><span class='itemTotal' id='item" + value.itemNumber + "Total'>0.00</span></td>";
                     row += "<td style=display:none>" + value.itemNumber + "</td>";
                     row += "</tr>";
                 }
-               
-                
-                
-            });                  
-           
-            //$.each(listForm, function (key, value2) {
-            //    if (value2.isCamara) {
-            //        row += "<tr class='product orderItem hover1'>";
-            //        row += "<td style=display:none>" + value2.id + "</td>";
-            //        row += "<td class='t-product'><span>" + value2.name + "</span></td>";
-            //        row += "<td class='t-price'><span> USD </span><span class='itemPrice itm1' id='item" + value2.itemNumber + "Price'>" + value2.price + "</span></td>";
-            //        row += "<td class='t-price'><span> USD </span><span class='itemPrice itm1' id='item" + value2.itemNumber + "MonthlyPayment'>" + value2.monthlyPayment + "</span></td>";
-            //        row += "<td class='t-quantity'><input type='number' id='qty" + value2.itemNumber + "' name='qty" + value2.itemNumber + "' size='5' onchange='qtyfunctionnew(" + value2.itemNumber + ")' onkeyup='qtyfunctionnew(" + value2.itemNumber + ")' value='0' </td>";
-            //        row += "<td class='t-total'><span> USD </span><span class='itemTotal' id='item" + value2.itemNumber + "Total'>0.00</span></td>";
-            //        row += "</tr>";
-            //    }
-            //});
-            row += "<tr>";
-            row += "<td colspan=5>";            
-            row += "<hr>";
-            row += "</td>";
-            row += "</tr>";    
 
-            //row += "<select id=shippingOptions1 name=shippingOptions1 style=display:inline;background-color:#f3f6f9>";
-            //row += "</select>";
-            //row += "<tr>";           
-            //row += "<td class='t-price'><span> USD </span>0</td>";
-            //row += "<td class='t-price'><span> USD </span>0</td>";
-            //row += "<td class='t-quantity'><span class='enteredQty'>0</span></td>";
-            //row += "<td class='t-total'><span>USD</span><span class='shippingTotal'>0.00</span></td>";
-            //row += "</tr>";
+                
 
-           
-            row += "<tr>";
-            row += "<td class='t-product'>&nbsp;</td>";
-            row += "<td class='t-price'>&nbsp;</td>";
-            row += "<td class='t-price'>&nbsp;</td>";
-            row += "<td class='t-quantity'>&nbsp;</td>";
+            });
+
+            row += "<tr class='product orderItem hover1'>";
+            row += "<td style=display:none>0</td>";
+            row += "<td class='t-product'></td>";
+            row += "<td class='t-product'></td>";
+            row += "<td class='t-price'></td>";
+            row += "<td class='t-price'></td>";
+            row += "<td class='t-quantity'></td>";
+            row += "<td class='t-total'></td>";
+            row += "<td style=display:none>0</td>";
+            row += "</tr>";
+
+            row += "<tr class='product orderItem hover1'>";
+            row += "<td style=display:none>0</td>";
+            row += "<td class='t-product'></td>";
+            row += "<td class='t-product'></td>";
+            row += "<td class='t-price'></td>";
+            row += "<td class='t-price'></td>";
+            row += "<td class='t-quantity'></td>";
             row += "<td class='t-total text-bold'<span>Subtotal USD </span><span class='subTotal' id='subTotal'>0.00</span></td>";
+            row += "<td style=display:none>0</td>";
             row += "</tr>";
 
-            
-            //row += "<tr class='shippingItem'>";
-            //row += "<td class='t-product'>";
-            //row += "<div class='input-field'>"; 
-            //row += "<span>Shipping:</span>";
-            //row += "<select id='shippingOptions' name='shippingOptions' style=display:inline;background-color:#f3f6f9 onchange=onSelect(this)>";
-            //row += "<option value=0 data-price=0 data-monthly=0 data-quantity=0 data-total=0>Select One</option>";
-
-            //$.each(listForm, function (key, value3) {
-            //    if (value3.isShipping) {
-            //        row += "<option value=" + value3.id + " data-id=" + value3.id + " data-price=" + value3.price + " data-monthly=" + value3.monthlyPayment + " data-quantity=" + 1 + " data-total=" + value3.price + ">" + value3.name + " - " + value3.price +"</option>";
-            //    }
-            //});
-            //row += "</select>";
-            //row += "</div>";
-            //row += "</td>"            
-            //row += "<td class='t-price'><span>USD </span><span id='shipping-price'>0</span></td>";
-            //row += "<td class='t-price'><span>USD </span><span id='shipping-monthly'>0</span></td>";
-            //row += "<td class='t-quantity'><span class='enteredQty' id='shipping-quantity'>0</span></td>";
-            //row += "<td class='t-total'><span>USD </span><span class='shippingTotal' id='shipping-total'>0</span></td>";
-            //row += "</tr>";
-
-            row += "<tr>";
-            row += "<td class='t-product'>&nbsp;</td>";
-            row += "<td class='t-price'>&nbsp;</td>";
-            row += "<td class='t-price'>&nbsp;</td>";
-            row += "<td class='t-quantity'>&nbsp;</td>";
+            row += "<tr class='product orderItem hover1'>";
+            row += "<td style=display:none>0</td>";
+            row += "<td class='t-product'></td>";
+            row += "<td class='t-product'></td>";
+            row += "<td class='t-price'></td>";
+            row += "<td class='t-price'></td>";
+            row += "<td class='t-quantity'></td>";
             row += "<td class='t-total text-bold'<span>Total USD </span><span class='subTotal' id='formTotal'>0.00</span></td>";
+            row += "<td style=display:none>0</td>";
             row += "</tr>";
-
-
 
             $("#form-tbody").append(row);
-            
+
 
         }
         function onSelect(event) {
-           
+
             var id = $('option:selected', event).attr('value');
             var price = $('option:selected', event).attr('data-price');
             var monthly = $('option:selected', event).attr('data-monthly');
@@ -854,15 +1063,15 @@
             shipingSelect = { id: id, quantity: 1, totalProduct: total };
             subTotal();
             loadProducts();
-            
+
         }
         function buyNowN2() {
             try {
-                debugger;
-                $("#cotizacion-number").css("background-color", "white"); 
+                
+                $("#cotizacion-number").css("background-color", "white");
                 $("#cotizacion-number").text('');
                 var formComertial = {};
-                var formProductList = [];                
+                var formProductList = [];
                 var shippingInformation = {};
                 var billingInformation = {};
 
@@ -878,14 +1087,14 @@
                 //    alert('Invalid Credit Card number');
                 //    return;
                 //}
-               
-                
-                formProductList=loadProducts();
-                shippingInformation=loadShippingInformation();
+
+
+                formProductList = loadProducts();
+                shippingInformation = loadShippingInformation();
                 //billingInformation=loadBillingInformation();
 
-                
-               
+
+
                 formComertial.shippingInformation = shippingInformation;
                 formComertial.products = formProductList;
                 //formComertial.billingInformation = billingInformation;
@@ -896,20 +1105,25 @@
                 formComertial.isBuy = false;
                 formComertial.dateBuy = '';
                 formComertial.instructions = instructions;
-                debugger;
-
-                var result = saveWebFormN2(formComertial, true);
-                if (result.isOk) {
-                    alert('Your quote was successfully created. your quote number is ' + result.docNum);
-                    $("#cotizacion-number").text('Quote Number ' + result.docNum);
-                    $("#cotizacion-number").css("background-color", "#A6EEC6");
-                    cleanFields();
-                } else {
-                    alert('error creating quote');                    
-                    $("#cotizacion-number").text('error creating quote');
-                    $("#cotizacion-number").css("background-color", "#E2BDA1");
+                
+                $("#formId").val('');
+                if (validate()) {
+                    var result = saveWebFormN2(formComertial, true);
+                    debugger;
+                    if (result.isOk) {
+                        alert('Your quote was successfully created. your quote number is ' + result.docNum);
+                        $("#cotizacion-number").text('Quote Number ' + result.docNum);
+                        $("#cotizacion-number").css("background-color", "#A6EEC6");
+                        $("#formId").val(result.transId);
+                        cleanFields();
+                    } else {
+                        alert('error creating quote');
+                        $("#cotizacion-number").text('error creating quote');
+                        $("#cotizacion-number").css("background-color", "#E2BDA1");
+                    }
                 }
                 
+
                 return;
 
 
@@ -1006,8 +1220,7 @@
             catch (err) {
                 alert('buyNow: ' + err.description);
             }
-        }
-        function loadShippingInformation() {
+        }        function loadShippingInformation() {
             let shippingInformation = {};
             var firsName = $("#firstName").val();
             var lastName = $("#lastName").val();
@@ -1032,20 +1245,49 @@
                 postalCode: postalCode
             };
             return shippingInformation;
-            
+
+        }
+        function loadBillingInformation() {
+            let billingInformation = {};
+            var creditCardType = $("#ccType").val();
+            var creditCardNumber = $("#ccNumber").val();
+            var securityCode = $("#ccSecCode").val();
+            var expirationMonth = $("#ccExpMonth").val();
+            var expirationYear = $("#ccExpYear").val();
+            var creditCardFirstName = $("#ccFirstName").val();
+            var creditCardLastName = $("#ccLastName").val();
+            var creditCardStreet = $("#ccStreet").val();
+            var creditCardCity = $("#ccCity").val();
+            var creditCardState = $("#ccState").val();
+            var creditCardPostalCode = $("#ccPostalCode").val();
+
+            billingInformation = {
+                creditCardType: creditCardType,
+                creditCardNumber: creditCardNumber,
+                securityCode: securityCode,
+                expirationMonth: expirationMonth,
+                expirationYear: expirationYear,
+                creditCardFirstName: creditCardFirstName,
+                creditCardLastName: creditCardLastName,
+                creditCardStreet: creditCardStreet,
+                creditCardCity: creditCardCity,
+                creditCardState: creditCardState,
+                creditCardPostalCode: creditCardPostalCode
+            };
+            return billingInformation;
         }
         function loadProducts() {
-            let formProductList = [];  
+            let formProductList = [];
             let formProduct = {};
             $('#form-tbody tr').each(function () {
 
                 formProduct = {};
                 /*var formId = $(this).find("td").eq(1).html();*/
                 var id = $(this).find("td").eq(0).text();
-               
-                var quantity = $(this).find("td").eq(4).find("input").val();
-                var totalProduct = $(this).find("td").eq(5).find("span").eq(1).text();
-                var itemNumber = $(this).find("td").eq(6).text();
+
+                var quantity = $(this).find("td").eq(5).find("input").val();
+                var totalProduct = $(this).find("td").eq(6).find("span").eq(1).text();
+                var itemNumber = $(this).find("td").eq(7).text();
                 formProduct = { id: id, quantity: quantity, totalProduct: totalProduct, itemNumber: itemNumber }
 
                 if (quantity != "") {
@@ -1059,6 +1301,141 @@
             });
             //formProductList.push(shipingSelect);
             return formProductList;
+        }
+        function getQuote() {
+            const quote = $("#quote-number").val();
+            
+            const json = dbGetQuote(quote);
+            const obj = JSON.parse(json);
+            
+            loadQuoteForm(obj);
+
+
+        }
+        function dbGetQuote(number) {
+            var url = 'https://localhost:44385/Comertial.svc/comertial/cotizacion?number=' + number;
+
+            var data1 = null;
+            $.ajax({
+                type: "GET",
+                url: url,
+                contentType: "application/json",
+                //data: null,
+                dataType: "json",
+                processdata: false,
+                success: function (data, textStatus) {
+                    infoForm = null;
+                    if (textStatus == 'success') {
+                        data1 = data;
+                    }
+                    else {
+                        data1 = null;
+                    }
+                },
+                error: function (err) {
+                    data1 = null;
+                },
+                async: false
+            });
+            return data1;
+        }
+        function loadQuoteForm(quote) {
+            $(".qty").prop('disabled', true);
+            //$(".info").remove('input-field');
+
+            $("#formId").val(quote.id);
+            
+            $.each(quote.products, function (indexes, values) {
+
+                $("#qty" + values.itemNumber).val(values.quantity);
+                $("#item" + values.itemNumber + "Total").text(values.totalProduct);
+            });
+            $("#subTotal").text(quote.subTotal);
+            $("#formTotal").text(quote.formTotal);
+
+            $("#firstName").focus();
+            $("#firstName").val(quote.shippingInformation.firsName);
+
+            $("#lastName").focus();
+            $("#lastName").val(quote.shippingInformation.lastName);
+
+            $("#email").focus();
+            $("#email").val(quote.shippingInformation.email);
+
+            $("#phone").focus();
+            $("#phone").val(quote.shippingInformation.phone);
+
+            $("#cellPhone").focus();
+            $("#cellPhone").val(quote.shippingInformation.cellPhone);
+
+            $("#company").focus();
+            $("#company").val(quote.shippingInformation.companyName);
+
+            $("#street").focus();
+            $("#street").val(quote.shippingInformation.street);
+
+            $("#city").focus();
+            $("#city").val(quote.shippingInformation.city);
+
+            $("#state").focus();
+            $("#state").val(quote.shippingInformation.state);
+
+            $("#postalCode").focus();
+            $("#postalCode").val(quote.shippingInformation.postalCode);
+
+            $(".info").prop('disabled', true);
+        }
+        function copyShippingInfo() {
+            try {
+                $('#ccFirstName').val($('#firstName').val());
+                $('#ccLastName').val($('#lastName').val());
+                $('#ccStreet').val($('#street').val());
+                $('#ccCity').val($('#city').val());
+                $('#ccState').val($('#state').val());
+                $('#ccPostalCode').val($('#postalCode').val());
+                $("input").focus().blur();
+            } catch (err) {
+                alert('copyShippingInfo: ' + err.description);
+            }
+        }
+        function sendEmail() {
+            var data1 = $("#formId").val();
+            
+            var result = null;
+            if (data1.length > 0 && data1 > 0) {
+                var url = 'https://localhost:44385/Comertial.svc/comertial/email?id=' + data1;
+                $.ajax({
+                    type: "GET",
+                    url: url,
+                    contentType: "application/json",
+                    //data: null,
+                    dataType: "json",
+                    processdata: false,
+                    success: function (data, textStatus) {
+                        if (textStatus == 'success') {
+                            result = data;
+                        }
+                        else {
+                            result = null;
+                        }
+                    },
+                    error: function (err) {
+                        result = null;
+                    },
+                    async: false
+                });
+            } else {
+                alert('First, you must make a quote')
+                result = null;
+
+            }
+
+            if (result != null && result.isOk) {
+                alert('Mail sent successfully');
+            }
+            else {
+                alert('Error sending the email.');
+            }
         }
         function cleanFields() {
             $("#firstName").val('');
@@ -1084,6 +1461,24 @@
             $("#ccState").val('');
             $("#ccPostalCode").val('');
         }
+        function validate(){
+            if ($("#firstName").val() == "") {
+                alert('You must fill out the First Name field');
+                return false;
+            } else if ($("#lastName").val() == "") {
+                alert('You must fill out the Last Name field');
+                return false;
+            } else if ($("#email").val() == "") {
+                alert('You must fill out the Email field');
+                return false;
+            } else {
+                return true;
+            }         
+        }
+
+
+
+
     </script>
 
 </body>

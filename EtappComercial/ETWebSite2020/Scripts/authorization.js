@@ -20,7 +20,7 @@ function recoverCredentialsResponse(xml, textStatus) {
             var jsonResponse = eval('(' + objResponse + ')');
             if (jsonResponse.value == 'OK') {
                 alert('Your credentials have been sent to your email.');
-                location.href = 'login.html';
+                location.href = 'https://easitrack.net/login.html';
             }
             else {
                 alert('Email not found.  Please try again.');
@@ -275,7 +275,7 @@ function validateCredentials(isMobile) {
 function logout() {
     try {
         deleteTokenCookie('ETTK');
-        location.href = 'login.html';
+        location.href = 'https://easitrack.net/login.html';
     }
     catch (err) {
         alert('Logout: ' + err.Description);
@@ -294,10 +294,10 @@ function validateToken(isMobile, sourcePage) {
 
     var loginPage = ''
     if (isMobile == true) {
-        loginPage = 'mLogin.html';
+        loginPage = 'mhttps://easitrack.net/login.html';
     }
     else {
-        loginPage = 'login.html';
+        loginPage = 'https://easitrack.net/login.html';
     }
 
     try {
@@ -347,7 +347,7 @@ function validateToken(isMobile, sourcePage) {
                             ret = true;
                         }
                         else {
-                            if (location.pathname.toLowerCase().indexOf('login.html') == -1) {
+                            if (location.pathname.toLowerCase().indexOf('https://easitrack.net/login.html') == -1) {
                                 location.href = loginPage;
                             }
                             ret = false;
