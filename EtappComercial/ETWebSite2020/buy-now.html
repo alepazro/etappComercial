@@ -103,7 +103,7 @@
         <!--<input type="text" id="quote-number" placeholder="Do you have a prior quote? Enter the number and load it again." /><button id="btn-get-quote" onclick="getQuote()">Get Quote</button><br /><br />-->
 
         <span class="form-message">
-            * To order, please fill the form below
+            * To order, please fill the form below <span id="cotizacion-number"></span>
         </span>
         <ul class="stepper non-linear">
             <li class="step active">
@@ -560,11 +560,11 @@
         }
         function saveWebFormN2(data, isSLL) {
             try {
-               
+
                 if (isSLL == undefined) {
                     isSLL = false;
                 }
-                
+
                 var result = dbReadWriteNew('saveWebForm2', data, true, false, isSLL);
 
                 return result;
@@ -573,7 +573,6 @@
                 alert('saveWebForm: ' + err.description);
             }
         }
-
         function dbReadWriteNew(method, data, params) {
             try {
                 var ret = false;
@@ -606,7 +605,7 @@
                                     }
                                 }
                                 else {
-                                    ret = jsonObj.isOk;
+                                    ret = jsonObj;//jsonObj.isOk;
                                 }
                             }
                         }
@@ -627,6 +626,8 @@
 
             }
         }
+
+
         function dbGetForm() {
             var url = 'https://devetws.easitrack.net/Comertial.svc/comertial/form';
             
@@ -1439,6 +1440,31 @@
                 return true;
             }
         }
+        function cleanFields() {
+            $("#firstName").val('');
+            $("#lastName").val('');
+            $("#email").val('');
+            $("#phone").val('');
+            $("#cellPhone").val('');
+            $("#company").val('');
+            $("#street").val('');
+            $("#city").val('');
+            $("#state").val('');
+            $("#postalCode").val('');
+
+            $("#ccType").val('');
+            $("#ccNumber").val('');
+            $("#ccSecCode").val('');
+            $("#ccExpMonth").val('');
+            $("#ccExpYear").val('');
+            $("#ccFirstName").val('');
+            $("#ccLastName").val('');
+            $("#ccStreet").val('');
+            $("#ccCity").val('');
+            $("#ccState").val('');
+            $("#ccPostalCode").val('');
+        }
+
  
 
 
