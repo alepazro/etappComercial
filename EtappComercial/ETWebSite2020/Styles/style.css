@@ -377,13 +377,13 @@ a.navbar-brand img {
 #intro .intro-info h3
   {color: #fff;}
 #intro .intro-img {
-  width: 50%;
+  width: 80%;
   float: right;
 
 }
 
 #intro .intro-info {
-  width: 50%;
+  width: 80%;
   float: left;
 
 }
