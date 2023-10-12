@@ -383,10 +383,15 @@ a.navbar-brand img {
 }
 
 #intro .intro-info {
-  width: 80%;
+  width: 50%;
   float: left;
 
 }
+#intro .intro-info-2 {
+    width: 50%;
+    float: right;
+}
+
 #intro .carousel-caption{
   text-align: left !important;
   padding: auto ;
@@ -1983,10 +1988,9 @@ display: block;
   .section-header p {
     width: 100%;
   }
-
   #testimonials .testimonial-item {
-    text-align: center;
-  }
+        text-align: center;
+    }
 
   #testimonials .testimonial-item .testimonial-img {
     float: none;

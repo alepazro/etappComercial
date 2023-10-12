@@ -74,7 +74,9 @@
     ============================-->
     <header id="header1" class="fixed-top navbar navbar-expand-lg navbar-light" style="background: #fff">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="images/img/Home/EasiTracD04aR02bP01ZL-Jefferson2b_mdm.png" alt="" class="img-fluid" style="width:300px"></a>
+            <!--<a class="navbar-brand" href="index.html"><img src="images/img/Home/EasiTracD04aR02bP01ZL-Jefferson2b_mdm.png" alt="" class="img-fluid" style="width:300px"></a>-->
+            <a class="navbar-brand" href="index.html"><img src="images/Logo3.png" alt="" class="img-fluid" style="width:300px"></a>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav main-nav float-right">
@@ -1034,28 +1036,37 @@
             row += "</tr>"; 
 
             row += "<tr class='shippingItem'>";
+            row += "<tr class='shippingItem'>";
             row += "<td style=display:none>0</td>";
             row += "<td class='t-product'><img src='images/Shipping.png' width='74' height='74'></td>";
-            row += "<td class='t-product'>";
-            row += "<div class='input-field'>"; 
-            row += "<span>Shipping:</span>";
-            row += "<select id='shippingOptions' name='shippingOptions' style=display:inline;background-color:#f3f6f9 onchange=onSelect(this)>";
-            row += "<option value=0 data-price=0 data-monthly=0 data-quantity=0 data-total=0>Select One</option>";
-
-            $.each(listForm, function (key, value3) {
-                if (value3.isShipping) {
-                    row += "<option value=" + value3.id + " data-id=" + value3.id + " data-price=" + value3.price + " data-monthly=" + value3.monthlyPayment + " data-quantity=" + 1 + " data-total=" + value3.price + ">" + value3.name + " - " + value3.price +"</option>";
-                }
-            });
-            row += "</select>";
-            row += "</div>";
-            row += "</td>"    
-            row += "<td class='t-price'><span>USD </span><span id='shipping-price'>0</span></td>";
-            row += "<td class='t-price'><span>USD </span><span id='shipping-monthly'>0</span></td>";
-            row += "<td class='t-quantity'><span id='shipping-quantity'>0</span></td>";
-            row += "<td class='t-total text-bold'><span>USD </span><span class='shippingTotal' id='shipping-total'>0</span></td>";
-            row += "<td style=display:none></td>";
+            row += "<td class='t-product' colspan='4'>";
+            row += "Standard shipping is free; expedited shipping will be quoted for customer's approval";
+            row += "</td>" 
             row += "</tr>";
+
+            //row += "<tr class='shippingItem'>";
+            //row += "<td style=display:none>0</td>";
+            //row += "<td class='t-product'><img src='images/Shipping.png' width='74' height='74'></td>";
+            //row += "<td class='t-product'>";
+            //row += "<div class='input-field'>"; 
+            //row += "<span>Shipping:</span>";
+            //row += "<select id='shippingOptions' name='shippingOptions' style=display:inline;background-color:#f3f6f9 onchange=onSelect(this)>";
+            //row += "<option value=0 data-price=0 data-monthly=0 data-quantity=0 data-total=0>Select One</option>";
+
+            //$.each(listForm, function (key, value3) {
+            //    if (value3.isShipping) {
+            //        row += "<option value=" + value3.id + " data-id=" + value3.id + " data-price=" + value3.price + " data-monthly=" + value3.monthlyPayment + " data-quantity=" + 1 + " data-total=" + value3.price + ">" + value3.name + " - " + value3.price +"</option>";
+            //    }
+            //});
+            //row += "</select>";
+            //row += "</div>";
+            //row += "</td>"    
+            //row += "<td class='t-price'><span>USD </span><span id='shipping-price'>0</span></td>";
+            //row += "<td class='t-price'><span>USD </span><span id='shipping-monthly'>0</span></td>";
+            //row += "<td class='t-quantity'><span id='shipping-quantity'>0</span></td>";
+            //row += "<td class='t-total text-bold'><span>USD </span><span class='shippingTotal' id='shipping-total'>0</span></td>";
+            //row += "<td style=display:none></td>";
+            //row += "</tr>";
 
            
             
