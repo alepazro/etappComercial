@@ -75,11 +75,12 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav main-nav float-right">
                     <li class="nav-item "><a href="index.html">Home</a> </li>
-                    <li class="nav-item " id="feature"><a href="features.html">Features</a></li>
-                    <li class="nav-item " id="device"><a href="device.html">Devices</a></li>
-                    <li class="nav-item "><a href="installation.html" class="mainMenuOptionText">Installation</a></li>
-                    <li class="nav-item "><a href="about-us.html">About Us</a></li>
-                    <li class="nav-item active"><a href="buy-now.html">Order Now</a></li>
+                    <li class="nav-item" id="feature"><a href="features.html">Gps Features</a></li>
+                    <li class="nav-item" id="video"><a href="video.html">Video</a></li>
+                    <li class="nav-item" id="device"><a href="device.html">Devices</a></li>
+                    <li class="nav-item"><a href="installation.html" class="mainMenuOptionText">Installation</a></li>
+                    <li class="nav-item"><a href="about-us.html">About Us</a></li>
+                    <li class="nav-item"><a href="buy-now.html">Order Now</a></li>
                     <a href="https://easitrack.net/login.html" class="btn-get-started ">Login</a>
                 </ul>
             </div>
@@ -99,7 +100,7 @@
         <!--<input type="text" id="quote-number" placeholder="Do you have a prior quote? Enter the number and load it again." /><button id="btn-get-quote" onclick="getQuote()">Get Quote</button><br /><br />-->
 
         <span class="form-message">
-            * To order, please fill the form below <span id="cotizacion-number"></span>
+            * To quote, please fill the form below <span id="cotizacion-number"></span>
         </span>
         <ul class="stepper non-linear">
             <li class="step active">
@@ -155,8 +156,7 @@
                             <label for="phone">Cell Phone</label>
                             <input id="cellPhone" name="cellPhone" class="info" type="text" maxlength="50" size="15" />
                             <span class="helper-text" data-error="wrong" data-success="right">
-                                Please provide your cell phone if you want us to keep you updated on the progress
-                                of this order via text message, including confirmation, shipping, etc.
+                                Please provide your cell phone if you want us to keep you updated on the progress of this quote via text message, including confirmation, shipping, etc.
                             </span>
                         </div>
                         <div class="input-field">
@@ -184,7 +184,7 @@
                         <!-- Here goes your actions buttons -->
                         <!-- <input name="submit" type="button" value=""  /> -->
                         <button type="button" class="waves-effect waves-dark btn" onclick="buyNowN2()">
-                            Place My Order
+                            Place My Quote
                         </button>
                         <button type="button" class="waves-effect waves-dark btn" onclick="sendEmail()">
                             Send to email
@@ -1022,6 +1022,16 @@
             row += "<td class='t-price'></td>";
             row += "<td class='t-quantity'></td>";
             row += "<td class='t-total'></td>";
+            row += "<td style=display:none>0</td>";
+            row += "</tr>";
+
+            row += "<tr class='product orderItem hover1'>";
+            row += "<td style=display:none>0</td>";
+            row += "<td colspan=2 class='t-total text-bold'<span>Note: Prices DO NOT include applicable taxes. </span><span class='subTotal' id='subTotal'>0.00</span></td>";
+            row += "<td class='t-product'></td>";
+            row += "<td class='t-price'></td>";
+            row += "<td class='t-price'></td>";
+            row += "<td class='t-quantity'></td>";
             row += "<td style=display:none>0</td>";
             row += "</tr>";
 

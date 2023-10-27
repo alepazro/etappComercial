@@ -81,10 +81,11 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav main-nav float-right">
                     <li class="nav-item "><a href="index.html">Home</a> </li>
-                    <li class="nav-item " id="feature"><a href="features.html">Features</a></li>
-                    <li class="nav-item " id="device"><a href="device.html">Devices</a></li>
-                    <li class="nav-item "><a href="installation.html" class="mainMenuOptionText">Installation</a></li>
-                    <li class="nav-item "><a href="about-us.html">About Us</a></li>
+                    <li class="nav-item" id="feature"><a href="features.html">Gps Features</a></li>
+                    <li class="nav-item" id="video"><a href="video.html">Video</a></li>
+                    <li class="nav-item" id="device"><a href="device.html">Devices</a></li>
+                    <li class="nav-item"><a href="installation.html" class="mainMenuOptionText">Installation</a></li>
+                    <li class="nav-item"><a href="about-us.html">About Us</a></li>
                     <li class="nav-item active"><a href="buy-now.html">Order Now</a></li>
                     <a href="https://easitrack.net/login.html" class="btn-get-started ">Login</a>
                 </ul>
@@ -1021,6 +1022,16 @@
             row += "<td class='t-price'></td>";
             row += "<td class='t-quantity'></td>";
             row += "<td class='t-total'></td>";
+            row += "<td style=display:none></td>";
+            row += "</tr>"; 
+
+            row += "<tr class='product orderItem hover1'>";
+            row += "<td style=display:none>0</td>";
+            row += "<td colspan=2 class='t-total text-bold'><span>Note: Prices DO NOT include applicable taxes. </span><span class='subTotal' id='subTotal'>0.00</span></td>";
+            row += "<td class='t-product'></td>";
+            row += "<td class='t-price'></td>";
+            row += "<td class='t-price'></td>";
+            row += "<td class='t-quantity'></td>";
             row += "<td style=display:none></td>";
             row += "</tr>"; 
 
