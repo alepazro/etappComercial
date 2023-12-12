@@ -101,8 +101,7 @@
         <img class="image5 responsive-img" src="newfiles/images/image5.png" alt="Assets" />
     </div>
     <main>
-
-        <input id="formId" name="formId" type="hidden" value="0" /> <!--value="DDCD27C3-23C5-4660-BCF0-D00692D165D3" />-->
+        <input id="formId" name="formId" type="hidden" value="DDCD27C3-23C5-4660-BCF0-D00692D165D3">
         <!--<input type="text" id="quote-number" placeholder="Do you have a prior quote? Enter the number and load it again." /><button id="btn-get-quote" onclick="getQuote()">Get Quote</button><br /><br />-->
 
         <span class="form-message">
@@ -134,7 +133,6 @@
                     </div>
                 </div>
             </li>
-
             <li class="step active" id="kiki">
                 <div class="step-title waves-effect">
                     <i class="material-icons">local_shipping</i>
@@ -194,9 +192,6 @@
                     </div>
                 </div>
             </li>
-
-
-
             <li class="step">
                 <div class="step-title waves-effect">
                     <i class="material-icons">payment</i>
@@ -317,10 +312,12 @@
                     </div>
                 </div>
             </li>
+            .
         </ul>
+
         <!--<div style="font-size:10px;">
-            <span style="color:#888888;">Rep.ID:</span><input type="text" id="repId" name="repId" size="5" value="" style="height:15px;width:40px;">
-        </div>-->
+        <span style="color:#888888;">Rep.ID:</span><input type="text" id="repId" name="repId" size="5" value="" style="height:15px;width:40px;">
+    </div>-->
     </main>
     <div class="modals">
         <div id="whatis-obd" class="modal">
@@ -433,10 +430,12 @@
         })();
     </script>
     <script type="text/javascript">
+        var formProductList = [];
+        var infoForm = null;
+        var shipingSelect = null;
         $(document).ready(function () {
-            var infoForm = null;
-            var shipingSelect = null;
-            var formProductList = [];
+            
+            
             infoForm = dbGetForm();
             createForm(infoForm);
             loadInfoForm(infoForm);
@@ -579,7 +578,7 @@
         function dbReadWriteNew(method, data, params) {
             try {
                 var ret = false;
-                var url = 'https://devetws.easitrack.net/Comertial.svc/' + method;
+                var url = 'https://localhost:44385/Comertial.svc/' + method;
                 data = JSON.stringify(data);
                 $.ajax({
                     type: "POST",
@@ -632,7 +631,7 @@
 
 
         function dbGetForm() {
-            var url = 'https://devetws.easitrack.net/Comertial.svc/comertial/form';
+            var url = 'https://localhost:44385/Comertial.svc/comertial/form';
             
             var data1 = null;
             $.ajax({
@@ -1153,8 +1152,8 @@
                 formComertial.isBuy = true;
                 formComertial.dateBuy = '';
                 formComertial.instructions = instructions;
-
-                $("#formId").val('');
+                formComertial.formId = $("#formId").val();
+                debugger;
                 if (validate()) {
                     var result = saveWebFormN2(formComertial, true);
                     debugger;
@@ -1329,7 +1328,7 @@
             
             let formProduct = {};
             $('#form-tbody tr').each(function () {
-
+                debugger;
                 formProduct = {};
                 /*var formId = $(this).find("td").eq(1).html();*/
                 var id = $(this).find("td").eq(0).text();
@@ -1342,6 +1341,7 @@
                 if (quantity != "") {
                     quantity = parseInt(quantity)
                     if (quantity > 0) {
+                        debugger;
                         formProductList.push(formProduct);
                     }
 
@@ -1363,7 +1363,7 @@
 
         }
         function dbGetQuote(number) {
-            var url = 'https://devetws.easitrack.net/Comertial.svc/comertial/cotizacion?number=' + number;
+            var url = 'https://localhost:44385/Comertial.svc/comertial/cotizacion?number=' + number;
             
             var data1 = null;
             $.ajax({
