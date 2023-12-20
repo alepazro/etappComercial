@@ -581,7 +581,7 @@
         function dbReadWriteNew(method, data, params) {
             try {
                 var ret = false;
-                var url = 'https://devetws.easitrack.net/Comertial.svc/' + method;
+                var url = 'https://localhost:44385/Comertial.svc/' + method;
                 data = JSON.stringify(data);
                 $.ajax({
                     type: "POST",
@@ -632,7 +632,7 @@
             }
         }
         function dbGetForm() {
-            var url = 'https://devetws.easitrack.net/Comertial.svc/comertial/form';
+            var url = 'https://localhost:44385/Comertial.svc/comertial/form';
 
             var data1 = null;
             $.ajax({
@@ -1325,7 +1325,7 @@
 
         }
         function dbGetQuote(number) {
-            var url = 'https://devetws.easitrack.net/Comertial.svc/comertial/cotizacion?number=' + number;
+            var url = 'https://localhost:44385/Comertial.svc/comertial/cotizacion?number=' + number;
 
             var data1 = null;
             $.ajax({
@@ -1415,7 +1415,7 @@
             
             var result = null;
             if (data1.length > 0 && data1 > 0) {
-                var url = 'https://devetws.easitrack.net/Comertial.svc/comertial/email?id=' + data1;
+                var url = 'https://localhost:44385/Comertial.svc/comertial/email?id=' + data1;
                 $.ajax({
                     type: "GET",
                     url: url,
