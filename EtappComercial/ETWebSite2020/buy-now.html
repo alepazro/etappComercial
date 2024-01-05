@@ -1158,7 +1158,7 @@
                     var result = saveWebFormN2(formComertial, true);
                     debugger;
                     if (result.isOk) {
-                        alert('Your quote was successfully created. your quote number is ' + result.docNum);
+                        alert('Your order was successfully created. your order number is ' + result.docNum);
                         $("#cotizacion-number").text('Buy Number ' + result.docNum);
                         $("#cotizacion-number").css("background-color", "#A6EEC6");
                         $("#formId").val(result.transId);

@@ -1415,7 +1415,7 @@
             
             var result = null;
             if (data1.length > 0 && data1 > 0) {
-                var url = 'https://localhost:44385/Comertial.svc/comertial/email?id=' + data1;
+                var url = 'https://localhost:44385/Comertial.svc/comertial/email?id=' + data1 +"&copyET="+0;
                 $.ajax({
                     type: "GET",
                     url: url,
