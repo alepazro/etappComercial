@@ -96,7 +96,9 @@
     </div>
     <main>
 
-        <input id="formId" name="formId" type="hidden" value="0" /> <!--value="DDCD27C3-23C5-4660-BCF0-D00692D165D3" />-->
+        <input id="formId" name="formId" type="hidden" value="DDCD27C3-23C5-4660-BCF0-D00692D165D3" />
+        <input id="transId" name="transId" type="hidden" value="" />
+
         <!--<input type="text" id="quote-number" placeholder="Do you have a prior quote? Enter the number and load it again." /><button id="btn-get-quote" onclick="getQuote()">Get Quote</button><br /><br />-->
 
         <span class="form-message">
@@ -164,21 +166,21 @@
                             <input id="company" class="info" name="company" type="text" maxlength="50" size="30" />
                         </div>
                         <!--<div class="input-field">
-                            <label for="street">Street</label>
-                            <input class="required validate info" id="street" name="street" type="text" maxlength="50" size="30" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="city">City</label>
-                            <input class="required validate info" id="city" name="city" type="text" maxlength="20" size="30" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="state">State</label>
-                            <input class="required validate info" id="state" name="state" type="text" maxlength="15" size="15" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="postalCode">Postal Code</label>
-                            <input class="required validate info" id="postalCode" name="postalCode" type="text" maxlength="15" size="15" required />
-                        </div>-->
+                        <label for="street">Street</label>
+                        <input class="required validate info" id="street" name="street" type="text" maxlength="50" size="30" required />
+                    </div>
+                    <div class="input-field">
+                        <label for="city">City</label>
+                        <input class="required validate info" id="city" name="city" type="text" maxlength="20" size="30" required />
+                    </div>
+                    <div class="input-field">
+                        <label for="state">State</label>
+                        <input class="required validate info" id="state" name="state" type="text" maxlength="15" size="15" required />
+                    </div>
+                    <div class="input-field">
+                        <label for="postalCode">Postal Code</label>
+                        <input class="required validate info" id="postalCode" name="postalCode" type="text" maxlength="15" size="15" required />
+                    </div>-->
                     </div>
                     <div class="step-actions">
                         <!-- Here goes your actions buttons -->
@@ -191,139 +193,139 @@
                         </button>
                     </div>
                     <!--<div class="step-actions">
-                        <button class="waves-effect waves-dark btn next-step">
-                            CONTINUE
-                        </button>
-                    </div>-->
+                    <button class="waves-effect waves-dark btn next-step">
+                        CONTINUE
+                    </button>
+                </div>-->
                 </div>
             </li>
 
 
 
             <!--<li class="step">
-                <div class="step-title waves-effect">
-                    <i class="material-icons">payment</i>
-                    <h3>Billing information</h3>
-                    <a class="copy-btn waves-effect waves-light btn-small" onclick="copyShippingInfo()">
-                        Copy Shipping Information
-                    </a>
+        <div class="step-title waves-effect">
+            <i class="material-icons">payment</i>
+            <h3>Billing information</h3>
+            <a class="copy-btn waves-effect waves-light btn-small" onclick="copyShippingInfo()">
+                Copy Shipping Information
+            </a>
+        </div>
+        <div class="step-content">
+            <div class="form">
+                <div class="card-images" style="width: 100%; margin-bottom: 1rem;">
+                    <img src="https://easitrack.net/images/logo_ccVisa.gif" alt="Visa" />
+                    <img src="https://easitrack.net/images/logo_ccMC.gif" alt="MasterCard" />
+                    <img src="https://easitrack.net/images/logo_ccAmex.gif" alt="Amex" />
                 </div>
-                <div class="step-content">
-                    <div class="form">
-                        <div class="card-images" style="width: 100%; margin-bottom: 1rem;">
-                            <img src="https://easitrack.net/images/logo_ccVisa.gif" alt="Visa" />
-                            <img src="https://easitrack.net/images/logo_ccMC.gif" alt="MasterCard" />
-                            <img src="https://easitrack.net/images/logo_ccAmex.gif" alt="Amex" />
-                        </div>
-                        <div class="input-field d3">
-                            <select id="ccType" class="cc-ddl-type">
-                                <option value="VISA">Visa</option>
-                                <option value="MC">MasterCard</option>
-                                <option value="AMEX">American Express</option>
-                                <option value="DIS">Discover</option>
-                            </select>
-                            <label for="ccType">Credit Card Type</label>
-                        </div>
-                        <div class="input-field d3">
-                            <label for="ccNumber">Credit Card Number</label>
-                            <input id="ccNumber"
-                                   name="ccNumber"
-                                   type="text"
-                                   size="30"
-                                   maxlength="21"
-                                   class="cc-card-number required validate"
-                                   required />
-                        </div>
-                        <div class="input-field d3">
-                            <label for="ccSecCode">Security Code</label>
-                            <input class="required validate" id="ccSecCode" name="ccSecCode" type="text" maxlength="5" size="5" required />
-                        </div>
-                        <div class="input-field exp-field">
-                            <select class="required validate" id="ccExpMonth" required>
-                                <option value="">Month</option>
-                                <option value="1">January</option>
-                                <option value="2">February</option>
-                                <option value="3">March</option>
-                                <option value="4">April</option>
-                                <option value="5">May</option>
-                                <option value="6">June</option>
-                                <option value="7">July</option>
-                                <option value="8">August</option>
-                                <option value="9">September</option>
-                                <option value="10">October</option>
-                                <option value="11">November</option>
-                                <option value="12">December</option>
-                            </select>
-                            <select class="required validate" id="ccExpYear" required>
-                                <option value="">Year</option>
-                                <option value="2023">2023</option>
-                                <option value="2024">2024</option>
-                                <option value="2025">2025</option>
-                                <option value="2026">2026</option>
-                                <option value="2027">2027</option>
-                                <option value="2028">2028</option>
-                                <option value="2029">2029</option>
-                                <option value="2030">2030</option>
-                            </select>
-                            <label for="ccExpMonth">Expiration</label>
-                        </div>
-                        <div class="input-field">
-                            <label for="ccFirstName">Credit Card First Name</label>
-                            <input class="required validate" id="ccFirstName" name="ccFirstName" type="text" maxlength="20" size="30" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="ccLastName">Credit Card Last Name</label>
-                            <input class="required validate" id="ccLastName" name="ccLastName" type="text" maxlength="20" size="30" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="ccStreet">Credit Card Street</label>
-                            <input class="required validate" id="ccStreet" name="ccStreet" type="text" maxlength="50" size="30" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="ccCity">Credit Card City</label>
-                            <input class="required validate" id="ccCity" name="ccCity" type="text" maxlength="20" size="30" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="ccState">Credit Card State</label>
-                            <input class="required validate" id="ccState" name="ccState" type="text" maxlength="15" size="15" required />
-                        </div>
-                        <div class="input-field">
-                            <label for="ccPostalCode">Credit Card Postal Code</label>
-                            <input class="required validate" id="ccPostalCode" name="ccPostalCode" type="text" maxlength="15" size="15" required />
-                        </div>
-                    </div>
-                    <div class="step-actions">-->
+                <div class="input-field d3">
+                    <select id="ccType" class="cc-ddl-type">
+                        <option value="VISA">Visa</option>
+                        <option value="MC">MasterCard</option>
+                        <option value="AMEX">American Express</option>
+                        <option value="DIS">Discover</option>
+                    </select>
+                    <label for="ccType">Credit Card Type</label>
+                </div>
+                <div class="input-field d3">
+                    <label for="ccNumber">Credit Card Number</label>
+                    <input id="ccNumber"
+                           name="ccNumber"
+                           type="text"
+                           size="30"
+                           maxlength="21"
+                           class="cc-card-number required validate"
+                           required />
+                </div>
+                <div class="input-field d3">
+                    <label for="ccSecCode">Security Code</label>
+                    <input class="required validate" id="ccSecCode" name="ccSecCode" type="text" maxlength="5" size="5" required />
+                </div>
+                <div class="input-field exp-field">
+                    <select class="required validate" id="ccExpMonth" required>
+                        <option value="">Month</option>
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                    <select class="required validate" id="ccExpYear" required>
+                        <option value="">Year</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                    </select>
+                    <label for="ccExpMonth">Expiration</label>
+                </div>
+                <div class="input-field">
+                    <label for="ccFirstName">Credit Card First Name</label>
+                    <input class="required validate" id="ccFirstName" name="ccFirstName" type="text" maxlength="20" size="30" required />
+                </div>
+                <div class="input-field">
+                    <label for="ccLastName">Credit Card Last Name</label>
+                    <input class="required validate" id="ccLastName" name="ccLastName" type="text" maxlength="20" size="30" required />
+                </div>
+                <div class="input-field">
+                    <label for="ccStreet">Credit Card Street</label>
+                    <input class="required validate" id="ccStreet" name="ccStreet" type="text" maxlength="50" size="30" required />
+                </div>
+                <div class="input-field">
+                    <label for="ccCity">Credit Card City</label>
+                    <input class="required validate" id="ccCity" name="ccCity" type="text" maxlength="20" size="30" required />
+                </div>
+                <div class="input-field">
+                    <label for="ccState">Credit Card State</label>
+                    <input class="required validate" id="ccState" name="ccState" type="text" maxlength="15" size="15" required />
+                </div>
+                <div class="input-field">
+                    <label for="ccPostalCode">Credit Card Postal Code</label>
+                    <input class="required validate" id="ccPostalCode" name="ccPostalCode" type="text" maxlength="15" size="15" required />
+                </div>
+            </div>
+            <div class="step-actions">-->
             <!-- Here goes your actions buttons -->
             <!--<button class="waves-effect waves-dark btn next-step">
-                            CONTINUE
-                        </button>
+                        CONTINUE
+                    </button>
+                </div>
+            </div>
+        </li>
+        <li class="step">
+            <div class="step-title waves-effect">
+                <i class="material-icons">comment_bank</i>
+                <h3>Special Instructions</h3>
+            </div>
+            <div class="step-content">
+                <div class="form">
+                    <div class="input-field" style="min-width: calc(100% - 1rem);">
+                        <textarea id="specialInstructions" rows="8" class="materialize-textarea"></textarea>
                     </div>
                 </div>
-            </li>
-            <li class="step">
-                <div class="step-title waves-effect">
-                    <i class="material-icons">comment_bank</i>
-                    <h3>Special Instructions</h3>
-                </div>
-                <div class="step-content">
-                    <div class="form">
-                        <div class="input-field" style="min-width: calc(100% - 1rem);">
-                            <textarea id="specialInstructions" rows="8" class="materialize-textarea"></textarea>
-                        </div>
-                    </div>
-                    <div class="step-actions">-->
+                <div class="step-actions">-->
             <!-- Here goes your actions buttons -->
             <!-- <input name="submit" type="button" value=""  /> -->
             <!--<button type="button" class="waves-effect waves-dark btn" onclick="buyNowN2()">
-                            Place My Order
-                        </button>
-                    </div>
+                        Place My Order
+                    </button>
                 </div>
-            </li>-->
+            </div>
+        </li>-->
         </ul>
         <!--<div style="font-size:10px;">
-            <span style="color:#888888;">Rep.ID:</span><input type="text" id="repId" name="repId" size="5" value="" style="height:15px;width:40px;">
-        </div>-->
+        <span style="color:#888888;">Rep.ID:</span><input type="text" id="repId" name="repId" size="5" value="" style="height:15px;width:40px;">
+    </div>-->
     </main>
     <div class="modals">
         <div id="whatis-obd" class="modal">
@@ -1079,7 +1081,7 @@
         }
         function buyNowN2() {
             try {
-                
+                debugger;
                 $("#cotizacion-number").css("background-color", "white");
                 $("#cotizacion-number").text('');
                 var formComertial = {};
@@ -1117,8 +1119,9 @@
                 formComertial.isBuy = false;
                 formComertial.dateBuy = '';
                 formComertial.instructions = instructions;
+                formComertial.formId = $("#formId").val();
                 
-                $("#formId").val('');
+                //$("#formId").val('');
                 if (validate()) {
                     var result = saveWebFormN2(formComertial, true);
                     debugger;
@@ -1126,7 +1129,7 @@
                         alert('Your quote was successfully created. your quote number is ' + result.docNum);
                         $("#cotizacion-number").text('Quote Number ' + result.docNum);
                         $("#cotizacion-number").css("background-color", "#A6EEC6");
-                        $("#formId").val(result.transId);
+                        $("#transId").val(result.transId);
                         cleanFields();
                     } else {
                         alert('error creating quote');
@@ -1355,7 +1358,7 @@
             $(".qty").prop('disabled', true);
             //$(".info").remove('input-field');
 
-            $("#formId").val(quote.id);
+            //$("#formId").val(quote.id);
             
             $.each(quote.products, function (indexes, values) {
 
@@ -1411,7 +1414,7 @@
             }
         }
         function sendEmail() {
-            var data1 = $("#formId").val();
+            var data1 = $("#transId").val();
             
             var result = null;
             if (data1.length > 0 && data1 > 0) {
