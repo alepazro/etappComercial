@@ -303,10 +303,16 @@
                             <textarea id="specialInstructions" rows="8" class="materialize-textarea"></textarea>
                         </div>
                     </div>
+                    <div class="form">
+                        <label style="font-size:20px">
+                            <input type="checkbox" id="accept_terms" value="first_checkbox" style="position: relative; opacity:initial" /> Accept <a href="accept_terms.html" target="_blank">Terms and Conditions</a>
+                        </label>                        
+                    </div>
                     <div class="step-actions">
                         <!-- Here goes your actions buttons -->
                         <!-- <input name="submit" type="button" value=""  /> -->
-                        <button type="button" class="waves-effect waves-dark btn" onclick="buyNowN2()">
+
+                        <button type="button" id="btn_order" class="waves-effect waves-dark btn" onclick="buyNowN2()" disabled>
                             Place My Order
                         </button>
                     </div>
@@ -439,6 +445,15 @@
             infoForm = dbGetForm();
             createForm(infoForm);
             loadInfoForm(infoForm);
+            $('#accept_terms').change(function () {
+                if ($(this).is(':checked')) {
+                    $('#btn_order').prop('disabled', false);
+                }
+                else {
+                    $('#btn_order').prop('disabled', true);
+                }
+                
+            });
         });
         function buyNowN() {
             try {
@@ -1126,7 +1141,7 @@
                 var formTotal = $("#formTotal").text();
 
                 var instructions = $("#specialInstructions").val();
-
+                var accept_terms = $("#accept_terms").is(':checked');
                 //Valida the CC
                 var isValidCC = false;
                 //isValidCC = ValidateCreditCard();
@@ -1153,6 +1168,8 @@
                 formComertial.dateBuy = '';
                 formComertial.instructions = instructions;
                 formComertial.formId = $("#formId").val();
+                formComertial.accept_terms = accept_terms;
+                
                 debugger;
                 if (validate()) {
                     var result = saveWebFormN2(formComertial, true);
