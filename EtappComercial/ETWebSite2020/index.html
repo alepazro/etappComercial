@@ -413,39 +413,15 @@
         function getAccessLinkN() {
             try {
                 var data = {};
-
+                debugger;
                 if (validateFields()) {
                     data = {
                         "formId": escape($('#formId').val()),
-                        "qty": "0",
-                        "serviceId": "0",
-                        "isOBDOption": false,
-                        "isPostedSLOption": false,
-                        "ship": "0",
-                        "firsName": escape($('#firstName').val()),
+                        "firstName": escape($('#firstName').val()),
                         "lastName": escape($('#lastName').val()),
                         "email": escape($('#email').val()),
                         "phone": escape($('#phone').val()),
-                        "cell": "",
-                        "co": "",
-                        "street": "",
-                        "city": "",
-                        "state": "",
-                        "postal": "",
-                        "ccType": "",
-                        "ccNo": "",
-                        "ccSec": "",
-                        "ccMonth": "0",
-                        "ccYear": "0",
-                        "ccFn": "",
-                        "ccLn": "",
-                        "ccStreet": "",
-                        "ccCity": "",
-                        "ccState": "",
-                        "ccPostal": "",
-                        "promoCode": "",
-                        "msg": "",
-                        "repId": escape($('#repId').val())
+                        "company": escape($('#company').val())
                     };
                     var result = saveWebFormN(data);
                     if (result) {
@@ -471,7 +447,7 @@
                     isSLL = false;
                 }
 
-                var result = dbReadWriteNew('saveWebForm', data, true, false, isSLL);
+                var result = dbReadWriteNew('demo', data, true, false, isSLL);
 
                 return result;
             }
