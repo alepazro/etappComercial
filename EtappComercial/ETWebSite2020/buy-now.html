@@ -1142,11 +1142,11 @@
                 //Valida the CC
                 var isValidCC = false;
                 debugger;
-                //isValidCC = ValidateCreditCard();
-                //if (!isValidCC) {
-                //   alert('Invalid Credit Card number');
-                //    return;
-                //}
+                isValidCC = ValidateCreditCard();
+                if (!isValidCC) {
+                   alert('Invalid Credit Card number');
+                    return;
+                }
                
                 
                 formProductList=loadProducts();
