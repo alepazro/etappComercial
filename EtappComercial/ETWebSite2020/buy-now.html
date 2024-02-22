@@ -1142,11 +1142,11 @@
                 //Valida the CC
                 var isValidCC = false;
                 debugger;
-                isValidCC = ValidateCreditCard();
-                if (!isValidCC) {
-                   alert('Invalid Credit Card number');
-                    return;
-                }
+                //isValidCC = ValidateCreditCard();
+                //if (!isValidCC) {
+                //   alert('Invalid Credit Card number');
+                //    return;
+                //}
                
                 
                 formProductList=loadProducts();
@@ -1169,7 +1169,7 @@
                 formComertial.accept_terms = accept_terms;
                 
                 debugger;
-                if (validate()) {
+                if (validate(formComertial.products)) {
                     var result = saveWebFormN2(formComertial, true);
                     debugger;
                     if (result.isOk) {
@@ -1463,7 +1463,7 @@
                 alert('copyShippingInfo: ' + err.description);
             }
         }
-        function validate() {
+        function validate(products) {
             if ($("#firstName").val() == "") {
                 alert('You must fill out the First Name field');
                 return false;
@@ -1473,7 +1473,14 @@
             } else if ($("#email").val() == "") {
                 alert('You must fill out the Email field');
                 return false;
-            } else {
+            } else if (!validateEmail($('#email').val())) {
+                alert('Invalid Email Address');
+                return false;
+            } else if (products == null || products.length == 0) {
+                alert('There Are No Products Selected');
+                return false;
+            }
+            else {
                 return true;
             }
         }

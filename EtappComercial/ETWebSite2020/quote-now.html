@@ -1121,7 +1121,7 @@
                 formComertial.instructions = instructions;
                 
                 //$("#formId").val('');
-                if (validate()) {
+                if (validate(formComertial.products) ) {
                     var result = saveWebFormN2(formComertial, true);
                     debugger;
                     if (result.isOk) {
@@ -1475,7 +1475,7 @@
             $("#ccState").val('');
             $("#ccPostalCode").val('');
         }
-        function validate(){
+        function validate(products){
             if ($("#firstName").val() == "") {
                 alert('You must fill out the First Name field');
                 return false;
@@ -1485,7 +1485,14 @@
             } else if ($("#email").val() == "") {
                 alert('You must fill out the Email field');
                 return false;
-            } else {
+            } else if (!validateEmail($('#email').val())) {
+                alert('Invalid Email Address');
+                return false;
+            } else if (products == null || products.length==0) {
+                alert('There Are No Products Selected');
+                return false;
+            }
+            else {
                 return true;
             }         
         }
