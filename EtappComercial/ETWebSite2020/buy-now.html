@@ -245,7 +245,6 @@
                             </select>
                             <select class="required validate" id="ccExpYear" required>
                                 <option value="">Year</option>
-                                <option value="2023">2023</option>
                                 <option value="2024">2024</option>
                                 <option value="2025">2025</option>
                                 <option value="2026">2026</option>
@@ -436,12 +435,25 @@
         var formProductList = [];
         var infoForm = null;
         var shipingSelect = null;
+        var customer = null;
         $(document).ready(function () {
-            
+            debugger;
             
             infoForm = dbGetForm();
             createForm(infoForm);
             loadInfoForm(infoForm);
+            var s = getParameterByName('s');
+            if (s == 1) {
+                var t = getParameterByName('t');
+                if (t != '') {
+                    //loadCustomer(t);
+                    customer = dbGetCustomer(t);
+                    if (customer != null) {
+                        $(".step").addClass("active");
+                        LoadFields(customer);
+                    }
+                }
+            }
             $('#accept_terms').change(function () {
                 if ($(this).is(':checked')) {
                     $('#btn_order').prop('disabled', false);
@@ -640,7 +652,34 @@
 
             }
         }
+        function dbGetCustomer(token) {
+            var url = 'https://localhost:44385/Comertial.svc/comertial/getShoppingCartInfo?token=' + token;
 
+            var data1 = null;
+            $.ajax({
+                type: "GET",
+                url: url,
+                contentType: "application/json",
+                //data: null,
+                dataType: "json",
+                processdata: false,
+                success: function (data, textStatus) {
+                    
+                    infoForm = null;
+                    if (textStatus == 'success') {
+                        data1 = data;
+                    }
+                    else {
+                        data1 = null;
+                    }
+                },
+                error: function (err) {
+                    data1 = null;
+                },
+                async: false
+            });
+            return data1;
+        }
 
         function dbGetForm() {
             var url = 'https://localhost:44385/Comertial.svc/comertial/form';
@@ -654,7 +693,7 @@
                 dataType: "json",
                 processdata: false,
                 success: function (data, textStatus) {
-                    ;
+                    
                     infoForm = null;
                     if (textStatus == 'success') {
                         data1 = data;
@@ -677,7 +716,7 @@
            
             
             $.each(listForm, function (indexes, values) {
-                ;
+                
                 switch (values.itemNumber) {
                     case 1:
                         $("#item1Price").text(values.price);
@@ -1109,7 +1148,7 @@
 
         }
         function onSelect(event) {
-            debugger;
+            
             formProductList = [];
             shipingSelect = {};
             var id = $('option:selected', event).attr('value');
@@ -1141,7 +1180,7 @@
                 var accept_terms = $("#accept_terms").is(':checked');
                 //Valida the CC
                 var isValidCC = false;
-                debugger;
+                
                 isValidCC = ValidateCreditCard();
                 if (!isValidCC) {
                    alert('Invalid Credit Card number');
@@ -1168,10 +1207,10 @@
                 formComertial.formId = $("#formId").val();
                 formComertial.accept_terms = accept_terms;
                 
-                debugger;
+                
                 if (validate(formComertial.products)) {
                     var result = saveWebFormN2(formComertial, true);
-                    debugger;
+                    
                     if (result.isOk) {
                         alert('Your order was successfully created. your order number is ' + result.docNum);
                         $("#cotizacion-number").text('Buy Number ' + result.docNum);
@@ -1343,7 +1382,7 @@
             
             let formProduct = {};
             $('#form-tbody tr').each(function () {
-                debugger;
+                
                 formProduct = {};
                 /*var formId = $(this).find("td").eq(1).html();*/
                 var id = $(this).find("td").eq(0).text();
@@ -1356,7 +1395,7 @@
                 if (quantity != "") {
                     quantity = parseInt(quantity)
                     if (quantity > 0) {
-                        debugger;
+                        
                         formProductList.push(formProduct);
                     }
 
@@ -1507,6 +1546,72 @@
             $("#ccCity").val('');
             $("#ccState").val('');
             $("#ccPostalCode").val('');
+        }
+        function LoadFields(data) {
+            
+            if (data != null) { 
+                $("#firstName").focus();
+                $("#firstName").val(data.firsName);
+                $("#lastName").focus();
+                $("#lastName").val(data.lastName);
+                $("#email").focus();
+                $("#email").val(data.email);
+                $("#phone").focus();
+                $("#phone").val(data.phone);
+                $("#cellPhone").focus();
+                $("#cellPhone").val(data.cell);
+                $("#company").focus();
+                $("#company").val(data.co);
+                $("#street").focus();
+                $("#street").val(data.street);
+                $("#city").focus();
+                $("#city").val(data.city);
+                $("#state").focus();
+                $("#state").val(data.state);
+                $("#postalCode").focus();
+                $("#postalCode").val(data.postal);
+                
+                $("#ccType").focus();
+                $('#ccType').val(data.ccType).change();
+                document.getElementsByClassName("select-dropdown dropdown-trigger").item(0).click();
+                document.getElementsByClassName("select-dropdown dropdown-trigger").item(0).click();
+
+
+                $("#ccNumber").focus();
+                $("#ccNumber").val(data.ccNo);
+
+                $("#ccSecCode").focus();
+                $("#ccSecCode").val(data.ccSec);
+
+                $("#ccExpMonth").focus();
+                $("#ccExpMonth").val(data.ccMonth);
+                document.getElementsByClassName("select-dropdown dropdown-trigger").item(1).click();
+                document.getElementsByClassName("select-dropdown dropdown-trigger").item(1).click();
+                
+
+                $("#ccExpYear").focus();
+                $("#ccExpYear").val(data.ccYear);
+                document.getElementsByClassName("select-dropdown dropdown-trigger").item(2).click();
+                document.getElementsByClassName("select-dropdown dropdown-trigger").item(2).click();
+
+                $("#ccFirstName").focus();
+                $("#ccFirstName").val(data.ccFn);
+
+                $("#ccLastName").focus();
+                $("#ccLastName").val(data.ccLn);
+
+                $("#ccStreet").focus();
+                $("#ccStreet").val(data.ccStreet);
+
+                $("#ccCity").focus();
+                $("#ccCity").val(data.ccCity);
+
+                $("#ccState").focus();
+                $("#ccState").val(data.ccState);
+
+                $("#ccPostalCode").focus();
+                $("#ccPostalCode").val(data.ccPostal);
+            }
         }
 
  

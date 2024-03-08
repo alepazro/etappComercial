@@ -1081,7 +1081,7 @@
         }
         function buyNowN2() {
             try {
-                debugger;
+                
                 $("#cotizacion-number").css("background-color", "white");
                 $("#cotizacion-number").text('');
                 var formComertial = {};
@@ -1123,7 +1123,7 @@
                 //$("#formId").val('');
                 if (validate(formComertial.products) ) {
                     var result = saveWebFormN2(formComertial, true);
-                    debugger;
+                    
                     if (result.isOk) {
                         alert('Your quote was successfully created. your quote number is ' + result.docNum);
                         $("#cotizacion-number").text('Quote Number ' + result.docNum);

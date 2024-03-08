@@ -102,7 +102,7 @@ function applyPromoCode() {
 
         if (isValid) {
           alert('Valid Promotion Code!');
-          calcForm();
+          //calcForm();
         } else {
           alert('Promo code not valid');
         }
@@ -218,7 +218,7 @@ function applyPromoCodeV2() {
 
         //        if (isValid) {
         //            alert('Valid Promotion Code!');
-        //            calcForm();
+        //            //calcForm();
         //        } else {
         //            alert('Promo code not valid');
         //        }
@@ -351,7 +351,7 @@ function onEndEdit(obj) {
   }
 }
 
-function calcForm() {
+function //calcForm() {
 console.log('entro');
   try {
     var qtyaux = document.getElementById('qty').value;
@@ -501,7 +501,7 @@ function loadForm(docId) {
       }
       itm1=0;
       loadPrices(qty);
-      calcForm();
+      //calcForm();
     }
   } catch (err) {
     alert('loadForm: ' + err.description);
@@ -830,7 +830,7 @@ function loadCustomer(t) {
     loadPrices(1);
     itm1 = jsonItem.price;
     $('.itm1').attr('data-price', itm1.toFixed(2)).html(itm1.toFixed(2));
-    calcForm();
+    //calcForm();
 
     isResultOk = true;
   } catch (err) {
@@ -986,6 +986,6 @@ function getPrice() {
 function qtyfunction() {
   if ($('.optionalCheck').is(':checked') && $('.optionalcable').is(":visible"))
     $('#custom3').val($('#qty').val());
-  calcForm();
+  //calcForm();
 
 }

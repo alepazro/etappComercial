@@ -19,10 +19,10 @@ $(document).ready(function () {
   $("#cbxServices").val("13");
 
   $("#cbxServices").change(function () {
-    calcForm();
+    /*calcForm();*/
   });
   $("#shippingOptions").change(function () {
-    calcForm();
+    /*calcForm();*/
   });
   $("#obdConnector").change(function () {
     if($(this).is(':checked')){
@@ -33,10 +33,10 @@ $(document).ready(function () {
       $('#custom3').val(0);
       $('#custom3').prop('disabled', 'disabled');
     }
-    calcForm();
+    /*calcForm();*/
   });
   $("#postedSpeedLimit").change(function () {
-    calcForm();
+   /* calcForm();*/
   });
   $("#type1").change(function () {
     if(this.value=="TF"){
@@ -44,7 +44,7 @@ $(document).ready(function () {
       $('.image2').hide();
       $('.optionalcable').hide();
       $('#obdConnector').prop('disabled', 'disabled');
-      calcForm();
+      /*calcForm();*/
     }
     else{
       $('.image1').hide();
@@ -53,7 +53,7 @@ $(document).ready(function () {
       $('#obdConnector').prop('disabled', false);
       if ($('.optionalCheck').is(':checked') && $('.optionalcable').is(":visible")) {
         $('#custom3').val($('#qty').val());
-        calcForm();
+        /*calcForm();*/
       }
     }
 
