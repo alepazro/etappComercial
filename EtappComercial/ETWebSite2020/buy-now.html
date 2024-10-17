@@ -1179,9 +1179,9 @@
                 var instructions = $("#specialInstructions").val();
                 var accept_terms = $("#accept_terms").is(':checked');
                 //Valida the CC
-                var isValidCC = false;
+                var isValidCC = true;
                 
-                isValidCC = ValidateCreditCard();
+                //isValidCC = ValidateCreditCard();
                 if (!isValidCC) {
                    alert('Invalid Credit Card number');
                     return;
