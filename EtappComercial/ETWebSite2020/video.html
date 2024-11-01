@@ -61,14 +61,22 @@
       Services Section
     ============================-->
     <section id="services" class="section-bg">
+        <!-- Modal -->
+        <div class="modal fade" id="modalBanner" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <img src="images/bannerNovember.jpg" width="500px" height="500px" />
+                </div>
+            </div>
+        </div>
         <div class="container">
             <center>
                 <h1 style="color:black">Easitrack Smart Video Solutions</h1>
                 <img src="video/video1.png" class="img-fluid " alt="">
                 <!--<video autoplay="" loop="" muted="" style="width:1100px">-->
-                    <!-- cambias esa url por tu video y tipo de video. (en tu caso sera: video/mp4) -->
-                    <!--<img src="video/video1.png" class="img-fluid " alt="">-->
-                    <!--<source src="video/video1.png" type="video/mp4">-->
+                <!-- cambias esa url por tu video y tipo de video. (en tu caso sera: video/mp4) -->
+                <!--<img src="video/video1.png" class="img-fluid " alt="">-->
+                <!--<source src="video/video1.png" type="video/mp4">-->
                 <!--</video>-->
             </center>
         </div>
@@ -146,15 +154,15 @@
                         <div class="carousel-item active">
                             <h1 style="color:black">Advance Driver Assistance System (ADAS)</h1>
                             <img src="video/ADAS.png" style="width:1150px;height:600px" />
-                            <div class="carousel-caption d-none d-md-block" style="text-align:left" >
+                            <div class="carousel-caption d-none d-md-block" style="text-align:left">
                                 <h1>ADAS</h1>
                                 <ul style="font-size:25px">
                                     <li><img src="images/CheckmarkX20.png" />Speed Limits</li>
                                     <li><img src="images/CheckmarkX20.png" />Tailgating</li>
                                     <li><img src="images/CheckmarkX20.png" />Lane Drifting</li>
                                     <li><img src="images/CheckmarkX20.png" />Stop Signs</li>
-                                </ul>                                                            
-                            </div>                            
+                                </ul>
+                            </div>
                         </div>
                         <div class="carousel-item">
                             <h1 style="color:black">Driver Monitoring System (DMS)</h1>
@@ -172,7 +180,7 @@
                         <div class="carousel-item">
                             <h1 style="color:black">Driver Behavior (G-Sensor Events)</h1>
                             <img src="video/DriverBehavior.png" style="width:1150px;height:600px" />
-                            <div class="carousel-caption d-none d-md-block" style="text-align:left" >
+                            <div class="carousel-caption d-none d-md-block" style="text-align:left">
                                 <h1>G-Sensor Events</h1>
                                 <ul style="font-size:25px">
                                     <li><img src="images/CheckmarkX20.png" />Braking</li>
@@ -195,7 +203,7 @@
                 </div>
 
             </div>
-            
+
 
         </div>
     </section>   
@@ -316,6 +324,10 @@
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
   <script type="text/javascript">
+      window.onload = function () {
+          // Mostrar el banner cuando se carga la página
+          $('#modalBanner').modal("show");
+      };
   $("#feature").click(function() {
     $('html, body').animate({
       scrollTop: $("#services").offset().top - 70

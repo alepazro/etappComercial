@@ -83,6 +83,13 @@
     <!-- #intro -->
     <main id="main">
         <!-- Modal -->
+        <div class="modal fade" id="modalBanner" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">                   
+                    <img src="images/bannerNovember.jpg" width="500px" height="500px" />
+                </div>
+            </div>
+        </div>
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -403,6 +410,10 @@
     <!-- Template Main Javascript File -->
     <!--<script src="js/main.js"></script>-->
     <script type="text/javascript">
+        window.onload = function () {
+            // Mostrar el banner cuando se carga la página
+            $('#modalBanner').modal("show");
+        };
         $("#feature").click(function () {
             $('html, body').animate({
                 scrollTop: $("#services").offset().top - 70

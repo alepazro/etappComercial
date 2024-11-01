@@ -48,6 +48,14 @@
     <!--========================== Intro Section ============================-->
     <!-- #intro -->
     <main id="main">
+        <!-- Modal -->
+        <div class="modal fade" id="modalBanner" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <img src="images/bannerNovember.jpg" width="500px" height="500px" />
+                </div>
+            </div>
+        </div>
 
         <section id="benefits">
             <div class="container">
@@ -62,8 +70,8 @@
         </section>
 
         <!--==========================
-          New Section
-        ============================-->
+      New Section
+    ============================-->
         <section id="benefits" class="section-bg">
             <div class="container-lg">
                 <div class="row about-extra">
@@ -196,7 +204,7 @@
                                     <li>GPS tracking</li>
                                     <li>Live streaming</li>
                                     <li>Loop recording (DVR)</li>
-                                    <li>Positive recognition</li>                                   
+                                    <li>Positive recognition</li>
                                 </ul>
                             </p>
                         </div>
@@ -208,8 +216,8 @@
 
 
         <!--==========================
-          Services Section
-        ============================-->
+      Services Section
+    ============================-->
         <section id="services" class="section-bg">
             <div class="container">
                 <header class="section-header">
@@ -244,8 +252,8 @@
         </section>
         <!-- #services -->
         <!--==========================
-          Contact Section
-        ============================-->
+      Contact Section
+    ============================-->
         <section id="contact">
             <div class="container">
                 <div class="row ">
@@ -289,6 +297,10 @@
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
     <script type="text/javascript">
+        window.onload = function () {
+            // Mostrar el banner cuando se carga la página
+            $('#modalBanner').modal("show");
+        };
         $("#feature").click(function () {
             $('html, body').animate({
                 scrollTop: $("#services").offset().top - 70

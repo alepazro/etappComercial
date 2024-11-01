@@ -173,24 +173,34 @@
     <!--==========================
       Contact Section
     ============================-->
-<section id="contact">
-      <div class="container">
-        <div class="row ">
-          <div class="col-lg-6">
-            <nav class="main-nav">
-              <ul>
-                <li class="active"><a href="about-us.html">About Us</a></li>
-                <li><a target="_blank" href="https://www.privacypolicies.com/privacy/view/ed7c28d730bef2361658a1b6d5a20e80">Privacy Policy</a></li>
-                <li><a target="_blank" href="terms-of-service.html">Terms of Service</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li> 
-              </ul>
-            </nav>
-            <!-- .main-nav -->
-          </div>
-          <div class="col-lg-6">
-            <p>Copyright 2024 © Easitrack  - All Rights Reserved.</p></div>
-          <!--  <h5 class="col-lg-4 pull-right"> <img class="padding-top" src="images/img/Home/telephone1.png" class="img-fluid" alt="">   (888) 744-6449</h5> --></div>
-      </div>
+    <section id="contact">
+        <!-- Modal -->
+        <div class="modal fade" id="modalBanner" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <img src="images/bannerNovember.jpg" width="500px" height="500px" />
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-6">
+                    <nav class="main-nav">
+                        <ul>
+                            <li class="active"><a href="about-us.html">About Us</a></li>
+                            <li><a target="_blank" href="https://www.privacypolicies.com/privacy/view/ed7c28d730bef2361658a1b6d5a20e80">Privacy Policy</a></li>
+                            <li><a target="_blank" href="terms-of-service.html">Terms of Service</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                    <!-- .main-nav -->
+                </div>
+                <div class="col-lg-6">
+                    <p>Copyright 2024 © Easitrack  - All Rights Reserved.</p>
+                </div>
+                <!--  <h5 class="col-lg-4 pull-right"> <img class="padding-top" src="images/img/Home/telephone1.png" class="img-fluid" alt="">   (888) 744-6449</h5> -->
+            </div>
+        </div>
     </section>
     <!-- #contact -->
   </main> <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
@@ -213,6 +223,10 @@
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
   <script type="text/javascript">
+      window.onload = function () {
+          // Mostrar el banner cuando se carga la página
+          $('#modalBanner').modal("show");
+      };
   $("#feature").click(function() {
     $('html, body').animate({
       scrollTop: $("#services").offset().top - 70
